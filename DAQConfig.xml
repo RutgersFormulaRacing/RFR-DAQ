@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<AnalogInputs>
+	<AnalogInput>
+		<Name>Shock Pot 1</Name>
+		<Bank>0</Bank>
+		<Channel>0</Channel>
+		<MapFromMin>0</MapFromMin>
+		<MapFromMax>4095</MapFromMax>
+		<MapToMin>-5</MapToMin>
+		<MapToMax>5</MapToMax>
+	</AnalogInput>
+	<AnalogInput>
+        <Name>Shock Pot 2+</Name>
+		<Bank>0</Bank>
+		<Channel>0</Channel>
+		<MapFromMin>0</MapFromMin>
+		<MapFromMax>4095</MapFromMax>
+		<MapToMin>-5</MapToMin>
+		<MapToMax>5</MapToMax>
+	</AnalogInput>
+</AnalogInputs>
+<DigitalInputs>
+</DigitalInputs>

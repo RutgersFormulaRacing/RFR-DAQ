@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<SPI>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</SPI>
+<UART>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</UART>
+<I2C>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</I2C>
+<ADCs>
+    <ADC>
+        <Comm>SPI</Comm>
+        <Select>0</Select>
+        <Bank>0</Bank>
+        <Channels>8</Channels>
+    </ADC>
+    <ADC>
+        <Comm>SPI</Comm>
+        <Select>0</Select>
+        <Bank>1</Bank>
+        <Channels>8</Channels>
+    </ADC>
+    <ADC>
+        <Comm>SPI</Comm>
+        <Select>0</Select>
+        <Bank>2</Bank>
+        <Channels>8</Channels>
+    </ADC>
+    <ADC>
+        <Comm>SPI</Comm>
+        <Select>0</Select>
+        <Bank>3custom </Bank>
+        <Channels>8</Channels>
+    </ADC>
+</ADCs>
+<Digitals>
+</Digital>

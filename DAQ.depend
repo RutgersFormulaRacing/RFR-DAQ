@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1438983410 source:/home/pi/Code/DAQ/main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<exception>
+	<map>
+	<boost/property_tree/ptree.hpp>
+	<boost/property_tree/xml_parser.hpp>
+	<boost/foreach.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	"utils.h"
+	"AnalogInput.h"
+	"ADC.h"
+	"DataLoggingThread.h"
+
+1438732609 source:/home/pi/Code/DAQ/ADC.cpp
+	<string.h>
+	<cstdlib>
+	<wiringPiSPI.h>
+	"ADC.h"
+	"utils.h"
+
+1438732442 /home/pi/Code/DAQ/ADC.h
+	<stdint.h>
+
+1438717480 source:/home/pi/Code/DAQ/utils.cpp
+	"utils.h"
+
+1438909560 /home/pi/Code/DAQ/utils.h
+
+1438727544 source:/home/pi/Code/DAQ/AnalogInput.cpp
+	"AnalogInput.h"
+
+1438726048 /home/pi/Code/DAQ/AnalogInput.h
+	<utility>
+	<string>
+
+1438984196 source:/home/pi/Code/DAQ/DataLoggingThread.cpp
+	<boost/thread/xtime.hpp>
+	"DataLoggingThread.h"
+
+1438982129 /home/pi/Code/DAQ/DataLoggingThread.h
+	"utils.h"
+
