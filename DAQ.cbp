@@ -16,7 +16,9 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../../usr/include/lib/libboost_system.a" />
+					<Add option="-lboost_system -lboost_thread -lpthread" />
+					<Add directory="/usr/lib" />
+					<Add directory="/usr/include/boost" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -29,7 +31,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="../../../../usr/include/lib/libboost_system.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -47,8 +48,11 @@
 		<Unit filename="DataLoggingThread.cpp" />
 		<Unit filename="DataLoggingThread.h" />
 		<Unit filename="PinConfig.xml" />
+		<Unit filename="connection.cpp" />
+		<Unit filename="connection.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="server.h" />
+		<Unit filename="server.cpp" />
+		<Unit filename="server.hpp" />
 		<Unit filename="utils.cpp" />
 		<Unit filename="utils.h" />
 		<Extensions>

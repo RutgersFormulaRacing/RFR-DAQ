@@ -1,6 +1,8 @@
 #define HARDWARE_VER    0
 #define SOFTWARE_VER    0.1
 
+#define BOOST_SYSTEM_NO_DEPRECATED
+
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
@@ -16,6 +18,7 @@
 #include <boost/foreach.hpp>
 
 #include <boost/thread/thread.hpp>
+
 #include <boost/bind.hpp>
 
 #include "utils.h"
@@ -23,6 +26,7 @@
 #include "ADC.h"
 
 #include "DataLoggingThread.h"
+#include "server.hpp"
 
 int main()
 {
@@ -72,7 +76,7 @@ int main()
     std::cout << "Success" << std::endl;
     std::cout << std::endl;
 
-    std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
+    /*std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
     system("gpio load spi 1");
 
     std::cout << "Loading I2C Kernel: 100 Kbps" << std::endl;
@@ -81,9 +85,16 @@ int main()
     std::cout << "Searching for I2C devices..." << std::endl;
     system("gpio i2cdetect");
 
-    //Starting logging thread
-    DataLoggingThread dataLoggingThread(10);
-    boost::thread t(boost::bind(&DataLoggingThread::start, &dataLoggingThread));
+    DataLoggingThread dataLogger(10);
+    boost::thread dataLoggingThread(boost::bind(&DataLoggingThread::start, &dataLogger));*/
+
+    http::server3::server Server(4660, 5);
+    Server.run();
+
+    while(1)
+    {
+
+    }
 
     return 0;
 }

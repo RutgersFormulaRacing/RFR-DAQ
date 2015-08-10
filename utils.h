@@ -3,7 +3,7 @@
 
 typedef struct logDataFrame
 {
-
+    int data;
 };
 
 char* itoa(int value, char* result, int base);

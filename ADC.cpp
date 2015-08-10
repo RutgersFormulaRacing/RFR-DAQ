@@ -1,7 +1,7 @@
 #include <string.h>
 #include <cstdlib>
 
-#include <wiringPiSPI.h>
+//#include <wiringPiSPI.h>
 
 #include "ADC.h"
 #include "utils.h"
@@ -28,7 +28,7 @@ uint16_t ADC::read(byte channel)
     buf[0] = (byte)(1 << 5) | (byte)(1 << 6) | (byte)((channel >> 2) << 7);
     buf[1] = (byte)(channel & 0x03);
 
-    wiringPiSPIDataRW(piCE, buf, length);
+    //wiringPiSPIDataRW(piCE, buf, length);
 
     buf[1] &= 0x0F; //Clear uncessary bits
 
