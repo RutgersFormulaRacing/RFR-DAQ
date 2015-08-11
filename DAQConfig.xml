@@ -2,22 +2,24 @@
 <AnalogInputs>
 	<AnalogInput>
 		<Name>Shock Pot 1</Name>
-		<Bank>0</Bank>
-		<Channel>0</Channel>
-		<MapFromMin>0</MapFromMin>
-		<MapFromMax>4095</MapFromMax>
-		<MapToMin>-5</MapToMin>
-		<MapToMax>5</MapToMax>
+		<Pin>(ADCs.Bank[0].Channel[0])<Pin>
+		<MapFrom>0,4096</MapFrom>
+		<MapTo>-5,5</MapTo>
 	</AnalogInput>
 	<AnalogInput>
-        <Name>Shock Pot 2+</Name>
-		<Bank>0</Bank>
-		<Channel>0</Channel>
-		<MapFromMin>0</MapFromMin>
-		<MapFromMax>4095</MapFromMax>
-		<MapToMin>-5</MapToMin>
-		<MapToMax>5</MapToMax>
+        <Name>Shock Pot 2</Name>
+		<Pin>(ADCs.Bank[0].Channel[1])</Pin>
+        <MapFrom>0,4096</MapFrom>
+		<MapTo>-5,5</MapTo>
 	</AnalogInput>
 </AnalogInputs>
 <DigitalInputs>
+    <DigitalInput>
+        <Name></Name>
+        <Pin>(IOExpanders.Bank[0].Channel[0])</Pin>
+    </DigitalInput>
+    <DigitalInput>
+        <Name></Name>
+        <Pin>(IOExpanders.Bank[0].Channel[1])</Pin>
+    </DigitalInput>
 </DigitalInputs>

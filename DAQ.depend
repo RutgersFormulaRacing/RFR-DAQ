@@ -179,3 +179,86 @@
 	<boost/shared_ptr.hpp>
 	"connection.hpp"
 
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\adc.cpp
+	<string.h>
+	<cstdlib>
+	"ADC.h"
+	"utils.h"
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\adc.h
+	<stdint.h>
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\utils.h
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\analoginput.cpp
+	"AnalogInput.h"
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\analoginput.h
+	<utility>
+	<string>
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\connection.cpp
+	"connection.hpp"
+	<vector>
+	<boost/bind.hpp>
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\connection.hpp
+	<boost/asio.hpp>
+	<boost/array.hpp>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/enable_shared_from_this.hpp>
+	<boost/logic/tribool.hpp>
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\dataloggingthread.cpp
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<string>
+	"DataLoggingThread.h"
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\dataloggingthread.h
+	<fstream>
+	<vector>
+	<boost/thread/mutex.hpp>
+	"utils.h"
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<exception>
+	<map>
+	<boost/property_tree/ptree.hpp>
+	<boost/property_tree/xml_parser.hpp>
+	<boost/foreach.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	"utils.h"
+	"AnalogInput.h"
+	"ADC.h"
+	"DataLoggingThread.h"
+	"server.hpp"
+
+1439215842 c:\users\sstratter\documents\github\rfr-daq\server.hpp
+	<boost/asio.hpp>
+	<string>
+	<vector>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	"connection.hpp"
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\server.cpp
+	"server.hpp"
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<boost/shared_ptr.hpp>
+	<vector>
+	<iostream>
+
+1439215842 source:c:\users\sstratter\documents\github\rfr-daq\utils.cpp
+	"utils.h"
+

@@ -11,14 +11,9 @@ void AnalogInput::setName(std::string name)
     this->name = name;
 }
 
-void AnalogInput::setBank(unsigned char bank)
+void AnalogInput::setPinPath(std::string pinPath)
 {
-    this->bank = bank;
-}
-
-void AnalogInput::setChannel(unsigned char channel)
-{
-    this->channel = channel;
+    this->pinPath = pinPath;
 }
 
 void AnalogInput::setMapFrom(std::pair<float, float> mapFrom)
@@ -36,14 +31,9 @@ std::string AnalogInput::getName()
     return this->name;
 }
 
-unsigned char AnalogInput::getBank()
+std::string AnalogInput::getPinPath()
 {
-    return this->bank;
-}
-
-unsigned char AnalogInput::getChannel()
-{
-    return this->channel;
+    return this->pinPath;
 }
 
 std::pair<float, float> AnalogInput::getMapFrom()

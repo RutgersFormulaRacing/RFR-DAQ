@@ -22,15 +22,21 @@
 #include <boost/bind.hpp>
 
 #include "utils.h"
-#include "AnalogInput.h"
+
 #include "ADC.h"
+#include "AnalogInput.h"
+
+#include "IOMultiplexer.h"
 
 #include "DataLoggingThread.h"
 #include "server.hpp"
 
 int main()
 {
+    std::map<int, ADC*> ADCs;
     std::map<std::string, AnalogInput*> analogInputsMap;
+
+    std::map<int, IOMultiplexer*> IOMultiplexers;
 
     std::cout << "RFR DAQ" << std::endl;
     std::cout << "Hardware Ver.\t" << HARDWARE_VER << std::endl;
@@ -52,18 +58,6 @@ int main()
 
         BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
         {
-            if(v.first.compare("AnalogInput") == 0)
-            {
-                AnalogInput *temp = new AnalogInput();
-
-                temp->setName(v.second.get<std::string>("Name"));
-                temp->setBank(v.second.get<unsigned char>("Bank"));
-                temp->setChannel(v.second.get<unsigned char>("Channel"));
-                temp->setMapFrom(std::pair<float, float>(v.second.get<float>("MapFromMin"), v.second.get<float>("MapFromMax")));
-                temp->setMapTo(std::pair<float, float>(v.second.get<float>("MapToMin"), v.second.get<float>("MapToMax")));
-
-                analogInputsMap.insert(std::pair<std::string, AnalogInput*>(temp->getName(), temp));
-            }
         }
     }
     catch(std::exception& e)
@@ -88,12 +82,12 @@ int main()
     DataLoggingThread dataLogger(10);
     boost::thread dataLoggingThread(boost::bind(&DataLoggingThread::start, &dataLogger));*/
 
-    http::server3::server Server(4660, 5);
+    http::server3::server Server(4660, 5); //Check for smallest number of threads
     Server.run();
 
     while(1)
     {
-
+        //Add console commands
     }
 
     return 0;

@@ -11,13 +11,13 @@ typedef unsigned char byte;
 class ADC
 {
     public:
-        ADC(unsigned char piCE, unsigned char CE);
+        ADC(unsigned char CE);
         ~ADC();
 
         uint16_t read(unsigned char channel);
 
     private:
-        unsigned char piCE, CE;
+        unsigned char CE;
 };
 
 #endif

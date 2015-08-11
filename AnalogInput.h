@@ -11,20 +11,19 @@ class AnalogInput
         ~AnalogInput();
 
         void setName(std::string name);
-        void setBank(unsigned char bank);
-        void setChannel(unsigned char channel);
+        void setPinPath(std::string pinPath);
         void setMapFrom(std::pair<float, float> mapFrom);
         void setMapTo(std::pair<float, float> mapTo);
 
         std::string getName();
-        unsigned char getBank();
-        unsigned char getChannel();
+        std::string getPinPath();
         std::pair<float, float> getMapFrom();
         std::pair<float, float> getMapTo();
 
     private:
         std::string name;
-        unsigned char bank, channel;
+        std::string pinPath;
+
         std::pair<float, float> mapFrom;
         std::pair<float, float> mapTo;
 };

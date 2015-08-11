@@ -1,5 +1,7 @@
 #include "utils.h"
 
+#include <boost/lexical_cast.hpp>
+
 /**
  * C++ version 0.4 char* style "itoa":
  * Written by Lukás Chmela

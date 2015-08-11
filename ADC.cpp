@@ -6,9 +6,8 @@
 #include "ADC.h"
 #include "utils.h"
 
-ADC::ADC(unsigned char piCE, unsigned char CE)
+ADC::ADC(unsigned char CE)
 {
-    this->piCE = piCE;
     this->CE = CE;
 }
 
