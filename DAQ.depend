@@ -18,12 +18,16 @@
 	"ADC.h"
 	"DataLoggingThread.h"
 
+1439215842 ngThread.h"
+
 1438732609 source:/home/pi/Code/DAQ/ADC.cpp
 	<string.h>
 	<cstdlib>
 	<wiringPiSPI.h>
 	"ADC.h"
 	"utils.h"
+
+1439215842 
 
 1438732442 /home/pi/Code/DAQ/ADC.h
 	<stdint.h>
@@ -35,6 +39,8 @@
 
 1438727544 source:/home/pi/Code/DAQ/AnalogInput.cpp
 	"AnalogInput.h"
+
+1439215842 ut.h"
 
 1438726048 /home/pi/Code/DAQ/AnalogInput.h
 	<utility>
@@ -98,6 +104,8 @@
 	"DataLoggingThread.h"
 	"server.hpp"
 
+1439215842 p"
+
 1438989225 source:/home/pi/Code/DAQ/RFR-DAQ/utils.cpp
 	"utils.h"
 
@@ -105,6 +113,8 @@
 	"connection.hpp"
 	<vector>
 	<boost/bind.hpp>
+
+1439215842 d.hpp>
 
 1439154183 /home/pi/Code/DAQ/RFR-DAQ/connection.h
 
@@ -115,6 +125,8 @@
 	<boost/shared_ptr.hpp>
 	<boost/enable_shared_from_this.hpp>
 	<boost/logic/tribool.hpp>
+
+1439215842 ic/tribool.hpp>
 
 1428448720 /home/pi/Code/DAQ/RFR-DAQ/reply.hpp
 	<string>
@@ -134,12 +146,18 @@
 	<string>
 	<boost/noncopyable.hpp>
 
+1439159584 copyable.hpp>
+
 1428448720 /home/pi/Code/DAQ/RFR-DAQ/request_parser.hpp
 	<boost/logic/tribool.hpp>
 	<boost/tuple/tuple.hpp>
 
+1428448720 le/tuple.hpp>
+
 1428448720 source:/home/pi/Code/DAQ/RFR-DAQ/mime_types.cpp
 	"mime_types.hpp"
+
+1428448720 s.hpp"
 
 1428448720 /home/pi/Code/DAQ/RFR-DAQ/mime_types.hpp
 	<string>
@@ -148,6 +166,8 @@
 	"reply.hpp"
 	<string>
 	<boost/lexical_cast.hpp>
+
+1428448720 ical_cast.hpp>
 
 1428448720 source:/home/pi/Code/DAQ/RFR-DAQ/request_handler.cpp
 	"request_handler.hpp"
@@ -158,6 +178,8 @@
 	"mime_types.hpp"
 	"reply.hpp"
 	"request.hpp"
+
+1428448720 pp"
 
 1428448720 source:/home/pi/Code/DAQ/RFR-DAQ/request_parser.cpp
 	"request_parser.hpp"
@@ -178,6 +200,8 @@
 	<boost/noncopyable.hpp>
 	<boost/shared_ptr.hpp>
 	"connection.hpp"
+
+1439215842 n.hpp"
 
 1439215842 source:c:\users\sstratter\documents\github\rfr-daq\adc.cpp
 	<string.h>
@@ -261,4 +285,105 @@
 
 1439215842 source:c:\users\sstratter\documents\github\rfr-daq\utils.cpp
 	"utils.h"
+
+1440128720 source:/home/pi/Code/RFR-DAQ/AnalogInput.cpp
+	"AnalogInput.h"
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"utils.h"
+
+1440108046 /home/pi/Code/RFR-DAQ/AnalogInput.h
+	<string>
+	<utility>
+
+1440142916 /home/pi/Code/RFR-DAQ/utils.h
+	<string>
+
+1440143267 source:/home/pi/Code/RFR-DAQ/main.cpp
+	<iostream>
+	<cstdlib>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<exception>
+	<signal.h>
+	<unistd.h>
+	<map>
+	<vector>
+	<boost/property_tree/ptree.hpp>
+	<boost/property_tree/xml_parser.hpp>
+	<boost/foreach.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	<wiringPiI2C.h>
+	"DataLoggingThread.h"
+	"server.hpp"
+
+1440142916 source:/home/pi/Code/RFR-DAQ/utils.cpp
+	"utils.h"
+	<wiringPi.h>
+	<mcp23s17.h>
+
+1440137206 source:/home/pi/Code/RFR-DAQ/DataLoggingThread.cpp
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/posix_time/posix_time_io.hpp>
+	<iostream>
+	<fstream>
+	"DataLoggingThread.h"
+
+1440137072 /home/pi/Code/RFR-DAQ/DataLoggingThread.h
+	<map>
+	<vector>
+	<boost/thread/mutex.hpp>
+	<utility>
+	<string>
+	"DigitalInput.h"
+	"AnalogInput.h"
+	"utils.h"
+
+1440100652 /home/pi/Code/RFR-DAQ/DigitalInput.h
+	<string>
+
+1440126894 source:/home/pi/Code/RFR-DAQ/DigitalInput.cpp
+	"DigitalInput.h"
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"utils.h"
+
+1440141352 source:/home/pi/Code/RFR-DAQ/connection.cpp
+	"connection.hpp"
+	<vector>
+	<boost/bind.hpp>
+	<boost/lexical_cast.hpp>
+	<sstream>
+
+1440132190 /home/pi/Code/RFR-DAQ/connection.hpp
+	<boost/asio.hpp>
+	<boost/array.hpp>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/enable_shared_from_this.hpp>
+	<boost/logic/tribool.hpp>
+	"DataLoggingThread.h"
+
+1440132388 /home/pi/Code/RFR-DAQ/server.hpp
+	<boost/asio.hpp>
+	<string>
+	<vector>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	"connection.hpp"
+
+1440132345 source:/home/pi/Code/RFR-DAQ/server.cpp
+	"server.hpp"
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<boost/shared_ptr.hpp>
+	<vector>
+	<iostream>
 

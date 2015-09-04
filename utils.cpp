@@ -1,6 +1,9 @@
 #include "utils.h"
 
-#include <boost/lexical_cast.hpp>
+#include <wiringPi.h>
+#include <mcp23s17.h>
+
+int lastChipSelect;
 
 /**
  * C++ version 0.4 char* style "itoa":
@@ -30,4 +33,50 @@ char* itoa(int value, char* result, int base)
         *ptr1++ = tmp_char;
     }
     return result;
+}
+
+void findAndReplace(std::string* str, char replace, char with)
+{
+    for(unsigned int i = 0; i < str->length(); i++)
+    {
+        if(str->at(i) == replace)
+            str->at(i) = with;
+    }
+}
+
+void setupChipSelect()
+{
+    mcp23s17Setup(CS_BASE, 0, 0);
+
+    for(int i = 0; i < 16; i++)
+    {
+        pinMode(CS_BASE + i, OUTPUT);
+
+        #ifdef DEBUG
+            if(i & 0x01)
+                digitalWrite(CS_BASE + i, 1);
+            else
+                digitalWrite(CS_BASE + i, 0);
+        #endif
+
+        digitalWrite(CS_BASE + i, 1);
+    }
+}
+
+void setupDigitalInputs()
+{
+    mcp23s17Setup(CS_BASE + 16, 0, 1);
+    //mcp23s17Setup(CS_BASE + 32, 0, 2);
+
+    for(int i = 0; i < 16; i++)
+    {
+        pinMode(CS_BASE + 16 + i, INPUT);
+        pullUpDnControl(CS_BASE + 16 + i, PUD_UP);
+    }
+
+    /*for(int i = 0; i < 16; i++)
+    {
+        pinMode(CS_BASE + 32 + i, INPUT);
+        pullUpDnControl(CS_BASE + 32 + i, PUD_UP);
+    }*/
 }

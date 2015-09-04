@@ -1,5 +1,10 @@
 #include "AnalogInput.h"
 
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
+
+#include "utils.h"
+
 AnalogInput::AnalogInput()
 {}
 
@@ -11,9 +16,14 @@ void AnalogInput::setName(std::string name)
     this->name = name;
 }
 
-void AnalogInput::setPinPath(std::string pinPath)
+void AnalogInput::setBank(unsigned char bank)
 {
-    this->pinPath = pinPath;
+    this->bank = bank;
+}
+
+void AnalogInput::setChannel(unsigned char channel)
+{
+    this->channel = channel;
 }
 
 void AnalogInput::setMapFrom(std::pair<float, float> mapFrom)
@@ -31,9 +41,14 @@ std::string AnalogInput::getName()
     return this->name;
 }
 
-std::string AnalogInput::getPinPath()
+unsigned char AnalogInput::getBank()
 {
-    return this->pinPath;
+    return this->bank;
+}
+
+unsigned char AnalogInput::getChannel()
+{
+    return this->channel;
 }
 
 std::pair<float, float> AnalogInput::getMapFrom()
@@ -44,4 +59,31 @@ std::pair<float, float> AnalogInput::getMapFrom()
 std::pair<float, float> AnalogInput::getMapTo()
 {
     return this->mapTo;
+}
+
+float AnalogInput::read()
+{
+    unsigned char buf[3] = {0};
+    int result;
+    float fResult;
+
+    buf[0] = (1 << 1) | (1 << 2) | ((channel & 0x07) >> 2);
+    buf[1] = (channel & 0x03) << 7;
+
+    if(lastChipSelect != -1)
+        digitalWrite(lastChipSelect, 1); //Disable last chip select
+
+    //Enable new chip select
+    lastChipSelect = ADC_BANK_0 + bank;
+    digitalWrite(lastChipSelect, 0);
+
+    //Change to chip select 1 so that accidental commands aren't sent to the expander
+    wiringPiSPIDataRW(1, buf, 3);
+
+    result = buf[1] & 0x0F;
+    result = (result << 8) | buf[2];
+
+    fResult = (result - mapFrom.first)*(mapTo.second - mapTo.first)/(mapFrom.second - mapFrom.first) + mapTo.first;
+
+    return fResult;
 }

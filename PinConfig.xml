@@ -1,63 +1,41 @@
 <?xml version="1.0"?>
-<Bus>
-    <SPI>
-        <Buffer></Buffer>
-        <Speed></Speed>
-    </SPI>
-    <UART>
-        <Buffer></Buffer>
-        <Speed></Speed>
-    </UART>
-    <I2C>
-        <Buffer></Buffer>
-        <Speed></Speed>
-    </I2C>
-</Bus>
-<IOExpanders>
-    <IOExpander>
-        <Comm>SPI</Comm>
-        <Select>(Pins.Name[ChipSelectorSelect])</Select>
-        <Bank>-1</Bank>
-    </IOExpander>
-    <IOExpander>
-        <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[-1].Channel[8]</Select>
-        <Bank>0</Bank>
-    </IOExpander>
-    <IOExpander>
-        <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[-1].Channel[9]</Select>
-        <Bank>1</Bank>
-    </IOExpander>
-    <IOExpander>
-        <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[-1].Channel[10]</Select>
-        <Bank>1</Bank>
-    </IOExpander>
-</IOExpanders>
-<SPICAN>
-    <Comm>SPI</Comm>
-    <Select>(IOExpanders.Bank[0].Channel[0])</Select>
-</SPICAN>
+<SPI>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</SPI>
+<UART>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</UART>
+<I2C>
+    <Buffer></Buffer>
+    <Speed></Speed>
+</I2C>
 <ADCs>
     <ADC>
         <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[0].Channel[1])</Select>
+        <Select>0</Select>
         <Bank>0</Bank>
+        <Channels>8</Channels>
     </ADC>
     <ADC>
         <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[0].Channel[2])</Select>
+        <Select>0</Select>
         <Bank>1</Bank>
+        <Channels>8</Channels>
     </ADC>
     <ADC>
         <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[0].Channel[3])</Select>
+        <Select>0</Select>
         <Bank>2</Bank>
+        <Channels>8</Channels>
     </ADC>
     <ADC>
         <Comm>SPI</Comm>
-        <Select>(IOExpanders.Bank[0].Channel[4])</Select>
-        <Bank>3</Bank>
+        <Select>0</Select>
+        <Bank>3custom </Bank>
+        <Channels>8</Channels>
     </ADC>
 </ADCs>
+<Digitals>
+</Digital>

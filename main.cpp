@@ -1,8 +1,6 @@
 #define HARDWARE_VER    0
 #define SOFTWARE_VER    0.1
 
-#define BOOST_SYSTEM_NO_DEPRECATED
-
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
@@ -10,33 +8,35 @@
 #include <stdlib.h>
 #include <string>
 #include <exception>
+#include <signal.h>
+#include <unistd.h>
 
 #include <map>
+#include <vector>
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/foreach.hpp>
 
 #include <boost/thread/thread.hpp>
-
 #include <boost/bind.hpp>
 
-#include "utils.h"
-
-#include "ADC.h"
-#include "AnalogInput.h"
-
-#include "IOMultiplexer.h"
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
+#include <wiringPiI2C.h>
 
 #include "DataLoggingThread.h"
 #include "server.hpp"
 
 int main()
 {
-    std::map<int, ADC*> ADCs;
     std::map<std::string, AnalogInput*> analogInputsMap;
+    std::map<std::string, DigitalInput*> digitalInputsMap;
+    std::vector<dataFrameEntry*> dataFrameFields;
 
-    std::map<int, IOMultiplexer*> IOMultiplexers;
+    int i2cFDTable[128];
+    for(int i = 0; i < 128; i++)
+        i2cFDTable[i] = -1;
 
     std::cout << "RFR DAQ" << std::endl;
     std::cout << "Hardware Ver.\t" << HARDWARE_VER << std::endl;
@@ -50,7 +50,6 @@ int main()
     std::cout << "Reading in pin configurations" << std::endl;
     //Todo: Read in the pin configurations
 
-
     boost::property_tree::ptree config; //Read in device connections
     try
     {
@@ -58,6 +57,46 @@ int main()
 
         BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
         {
+            if(v.first.compare("AnalogInput") == 0)
+            {
+                AnalogInput *temp = new AnalogInput();
+
+                temp->setName(v.second.get<std::string>("Name"));
+                temp->setBank(v.second.get<unsigned char>("Bank"));
+                temp->setChannel(v.second.get<unsigned char>("Channel"));
+                temp->setMapFrom(std::pair<float, float>(v.second.get<float>("MapFromMin"), v.second.get<float>("MapFromMax")));
+                temp->setMapTo(std::pair<float, float>(v.second.get<float>("MapToMin"), v.second.get<float>("MapToMax")));
+
+                analogInputsMap.insert(std::pair<std::string, AnalogInput*>(temp->getName(), temp));
+            }
+        }
+
+        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("DigitalInputs"))
+        {
+            if(v.first.compare("DigitalInput") == 0)
+            {
+                DigitalInput *temp = new DigitalInput();
+
+                temp->setName(v.second.get<std::string>("Name"));
+                temp->setBank(v.second.get<unsigned char>("Bank"));
+                temp->setChannel(v.second.get<unsigned char>("Channel"));
+                temp->setPolarity(v.second.get<int>("Polarity"));
+
+                digitalInputsMap.insert(std::pair<std::string, DigitalInput*>(temp->getName(), temp));
+            }
+        }
+
+        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("DataFrame"))
+        {
+            if(v.first.compare("Entry") == 0)
+            {
+                dataFrameEntry *dfe = new dataFrameEntry;
+
+                dfe->name = v.second.get<std::string>("Name");
+                dfe->filter = v.second.get<float>("Filter");
+
+                dataFrameFields.push_back(dfe);
+            }
         }
     }
     catch(std::exception& e)
@@ -70,7 +109,7 @@ int main()
     std::cout << "Success" << std::endl;
     std::cout << std::endl;
 
-    /*std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
+    std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
     system("gpio load spi 1");
 
     std::cout << "Loading I2C Kernel: 100 Kbps" << std::endl;
@@ -79,16 +118,44 @@ int main()
     std::cout << "Searching for I2C devices..." << std::endl;
     system("gpio i2cdetect");
 
-    DataLoggingThread dataLogger(10);
-    boost::thread dataLoggingThread(boost::bind(&DataLoggingThread::start, &dataLogger));*/
+    wiringPiSetup();
+    wiringPiSPISetup(0, 1000000);
+    wiringPiSPISetup(1, 1000000);
 
-    http::server3::server Server(4660, 5); //Check for smallest number of threads
-    Server.run();
+    lastChipSelect = -1;
 
-    while(1)
+    setupChipSelect();
+    setupDigitalInputs();
+
+    //Starting logging thread
+    DataLoggingThread dataLoggingThread(10);
+    dataLoggingThread.passDataFrameEntries(&dataFrameFields);
+    dataLoggingThread.passAnalogInputsMap(&analogInputsMap);
+    dataLoggingThread.passDigitalInputsMap(&digitalInputsMap);
+
+    boost::thread t(boost::bind(&DataLoggingThread::start, &dataLoggingThread));
+
+    http::server3::server server(4660, 5, &dataLoggingThread); //5 for now
+    boost::thread s(boost::bind(&http::server3::server::run, &server));
+
+    bool exit = false;
+    while(!exit)
     {
-        //Add console commands
+        char c;
+        std::cin >> c;
+
+        switch(c)
+        {
+            case 'x':
+
+            case 'X':
+            exit = true;
+            break;
+        }
     }
+
+    dataLoggingThread.stop();
+    t.join();
 
     return 0;
 }

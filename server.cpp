@@ -19,7 +19,7 @@
 namespace http {
 namespace server3 {
 
-server::server(int port, std::size_t thread_pool_size)
+server::server(int port, std::size_t thread_pool_size, DataLoggingThread *dataLoggingThread)
   : thread_pool_size_(thread_pool_size),
     signals_(io_service_),
     acceptor_(io_service_, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port)),
@@ -28,6 +28,8 @@ server::server(int port, std::size_t thread_pool_size)
   // Register to handle the signals that indicate when the server should exit.
   // It is safe to register for the same signal multiple times in a program,
   // provided all registration for the specified signal is made through Asio.
+  this->dataLoggingThread = dataLoggingThread;
+
   signals_.add(SIGINT);
   signals_.add(SIGTERM);
 #if defined(SIGQUIT)
@@ -56,7 +58,7 @@ void server::run()
 
 void server::start_accept()
 {
-  new_connection_.reset(new connection(io_service_));
+  new_connection_.reset(new connection(io_service_, dataLoggingThread));
   acceptor_.async_accept(new_connection_->socket(),
       boost::bind(&server::handle_accept, this,
         boost::asio::placeholders::error));

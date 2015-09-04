@@ -1,10 +1,17 @@
 #ifndef _DATA_LOGGING_THREAD_H_
 #define _DATA_LOGGING_THREAD_H_
 
-#include <fstream>
+#include <map>
 #include <vector>
 
 #include <boost/thread/mutex.hpp>
+
+#include <utility>
+#include <string>
+
+#include "DigitalInput.h"
+#include "AnalogInput.h"
+#include "I2CRequest.h"
 
 #include "utils.h"
 
@@ -17,8 +24,11 @@ class DataLoggingThread
         void start();
         void stop();
 
-        void newLogFile();
+        void passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries);
+        void passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap);
+        void passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap);
 
+        std::vector<std::pair<std::string, float> > getRecentDataFrame();
 
     private:
         int sampleRate;
@@ -26,9 +36,13 @@ class DataLoggingThread
 
         bool isRunning;
 
-        boost::mutex mutex;
+        std::vector<std::pair<std::string, float> > recentDataFrame;
 
-        std::ofstream logFile;
+        std::vector<dataFrameEntry*>* dataFrameEntries;
+        std::map<std::string, DigitalInput*>* digitalInputsMap;
+        std::map<std::string, AnalogInput*>* analogInputsMap;
+
+        boost::mutex mtx;
 
         void run();
 };

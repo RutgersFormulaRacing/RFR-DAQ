@@ -28,12 +28,14 @@ class server
 public:
   /// Construct the server to listen on the specified TCP address and port, and
   /// serve up files from the given directory.
-  explicit server(int port, std::size_t thread_pool_size);
+  explicit server(int port, std::size_t thread_pool_size, DataLoggingThread* dataLoggingThread);
 
   /// Run the server's io_service loop.
   void run();
 
 private:
+    DataLoggingThread* dataLoggingThread;
+
   /// Initiate an asynchronous accept operation.
   void start_accept();
 

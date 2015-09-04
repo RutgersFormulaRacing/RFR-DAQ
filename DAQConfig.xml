@@ -1,25 +1,53 @@
 <?xml version="1.0"?>
 <AnalogInputs>
 	<AnalogInput>
-		<Name>Shock Pot 1</Name>
-		<Pin>(ADCs.Bank[0].Channel[0])<Pin>
-		<MapFrom>0,4096</MapFrom>
-		<MapTo>-5,5</MapTo>
+		<Name>ShockPot1</Name>
+		<Bank>0</Bank>
+		<Channel>0</Channel>
+		<MapFromMin>0</MapFromMin>
+		<MapFromMax>4096</MapFromMax>
+		<MapToMin>0</MapToMin>
+		<MapToMax>5</MapToMax>
 	</AnalogInput>
 	<AnalogInput>
-        <Name>Shock Pot 2</Name>
-		<Pin>(ADCs.Bank[0].Channel[1])</Pin>
-        <MapFrom>0,4096</MapFrom>
-		<MapTo>-5,5</MapTo>
+        <Name>ShockPot2</Name>
+		<Bank>0</Bank>
+		<Channel>1</Channel>
+		<MapFromMin>0</MapFromMin>
+		<MapFromMax>4096</MapFromMax>
+		<MapToMin>0</MapToMin>
+		<MapToMax>5</MapToMax>
 	</AnalogInput>
 </AnalogInputs>
 <DigitalInputs>
-    <DigitalInput>
-        <Name></Name>
-        <Pin>(IOExpanders.Bank[0].Channel[0])</Pin>
-    </DigitalInput>
-    <DigitalInput>
-        <Name></Name>
-        <Pin>(IOExpanders.Bank[0].Channel[1])</Pin>
-    </DigitalInput>
+	<DigitalInput>
+		<Name>FlowTrigger</Name>
+		<Bank>0</Bank>
+		<Channel>0</Channel>
+		<Polarity>1</Polarity>
+	</DigitalInput>
 </DigitalInputs>
+<SPISensors>
+</SPISensors>
+<I2CRequests>
+	<I2CRequest>
+        <Name>Accel X</Name>
+        <Address>105</Address>
+        <Send>59,60<Send>
+        <NumBytesToReceive>2</NumBytesToReceive>
+	</I2CRequest>
+</I2CRequests>
+<DataFrame>
+	<Entry>
+		<Name>ShockPot1</Name>
+		<Filter>1</Filter>
+	</Entry>
+	<Entry>
+		<Name>ShockPot2</Name>
+		<Filter>1</Filter>
+	</Entry>
+	<Entry>
+        <Name>FlowTrigger</Name>
+        <Filter>1</Filter>
+	</Entry>
+</DataFrame>

@@ -1,8 +1,10 @@
-#include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/thread/thread.hpp>
-#include <boost/bind.hpp>
+#include <boost/thread/xtime.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/date_time/posix_time/posix_time_io.hpp>
 
-#include <string>
+#include <iostream>
+#include <fstream>
 
 #include "DataLoggingThread.h"
 
@@ -15,13 +17,15 @@ DataLoggingThread::DataLoggingThread(int sampleRate)
 }
 
 DataLoggingThread::~DataLoggingThread()
-{}
+{
+    isRunning = false;
+}
 
 void DataLoggingThread::start()
 {
     this->isRunning = true;
 
-    boost::thread t(boost::bind(&DataLoggingThread::run, this));
+    run();
 }
 
 void DataLoggingThread::stop()
@@ -29,29 +33,74 @@ void DataLoggingThread::stop()
     this->isRunning = false;
 }
 
-void DataLoggingThread::newLogFile()
+void DataLoggingThread::passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries)
 {
-    mutex.lock();
-    if(isRunning)
-        logFile.close();
+    this->dataFrameEntries = dataFrameEntries;
+}
 
-    char outputPath[1024];
-    memset(outputPath, 0, 1024);
+void DataLoggingThread::passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap)
+{
+    this->analogInputsMap = analogInputsMap;
+}
 
-    boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();
-    sprintf(outputPath, "/Logs/%d-%d-%d_%d:%d.txt", now.date().month(), now.date().day(), now.date().year(), now.time_of_day().hours(), now.time_of_day().minutes());
+void DataLoggingThread::passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap)
+{
+    this->digitalInputsMap = digitalInputsMap;
+}
 
-    logFile.open(outputPath);
-    mutex.unlock();
+std::vector<std::pair<std::string, float> > DataLoggingThread::getRecentDataFrame()
+{
+    mtx.lock();
+
+    std::vector<std::pair<std::string, float> > ret = recentDataFrame;
+
+    mtx.unlock();
+
+    return ret;
 }
 
 void DataLoggingThread::run()
 {
+    std::ofstream file;
+    boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();
+
+    std::string path = "Log " + boost::posix_time::to_simple_string(now) + ".csv";
+
+    file.open(path.c_str());
+
     while(isRunning)
     {
-        mutex.lock();
-        mutex.unlock();
+        mtx.lock();
+        recentDataFrame.clear();
+        //std::cout << "UPDATE" << std::endl;
 
-        boost::this_thread::sleep(boost::posix_time::milliseconds(100));
+        for(unsigned int i = 0; i < dataFrameEntries->size(); i++)
+        {
+            std::map<std::string, AnalogInput*>::iterator AnalogInputIt = analogInputsMap->find(dataFrameEntries->at(i)->name);
+            if(AnalogInputIt != analogInputsMap->end())
+            {
+                float reading = AnalogInputIt->second->read();
+                file << reading << ",";
+                recentDataFrame.push_back(std::pair<std::string, float>(dataFrameEntries->at(i)->name, reading));
+
+                continue;
+            }
+
+            std::map<std::string, DigitalInput*>::iterator DigitalInputIt = digitalInputsMap->find(dataFrameEntries->at(i)->name);
+            if(DigitalInputIt != digitalInputsMap->end())
+            {
+                int reading = (int)DigitalInputIt->second->read();
+                file << reading << ",";
+                recentDataFrame.push_back(std::pair<std::string, float>(dataFrameEntries->at(i)->name, reading));
+
+                continue;
+            }
+        }
+        file << '\n';
+
+        mtx.unlock();
+
+        boost::this_thread::sleep(boost::posix_time::milliseconds(sampleRate));
     }
+    file.close();
 }

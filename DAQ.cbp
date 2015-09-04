@@ -14,9 +14,10 @@
 				<Compiler>
 					<Add option="-O3" />
 					<Add option="-g" />
+					<Add option="-DDEBUG" />
 				</Compiler>
 				<Linker>
-					<Add option="-lboost_system -lboost_thread -lpthread" />
+					<Add option="-lboost_date_time -lboost_system -lboost_thread -lpthread" />
 					<Add directory="/usr/lib" />
 					<Add directory="/usr/include/boost" />
 				</Linker>
@@ -28,9 +29,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O3" />
+					<Add option="-DRELEASE" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lboost_date_time -lboost_system -lboost_thread -lpthread" />
 				</Linker>
 			</Target>
 		</Build>
@@ -38,8 +41,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ADC.cpp" />
-		<Unit filename="ADC.h" />
 		<Unit filename="AnalogInput.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -49,8 +50,8 @@
 		<Unit filename="DataLoggingThread.h" />
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
-		<Unit filename="IOMultiplexer.cpp" />
-		<Unit filename="IOMultiplexer.h" />
+		<Unit filename="I2CRequest.cpp" />
+		<Unit filename="I2CRequest.h" />
 		<Unit filename="PinConfig.xml" />
 		<Unit filename="connection.cpp" />
 		<Unit filename="connection.hpp" />
