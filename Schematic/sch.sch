@@ -11391,6 +11391,7 @@ W = angled&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<text x="231.14" y="312.42" size="2.54" layer="94" align="center">Bad alignment of component</text>
 </plain>
 <instances>
 <instance part="U$1" gate="A" x="231.14" y="246.38"/>
