@@ -13052,12 +13052,6 @@ W = angled&lt;p&gt;
 <wire x1="330.2" y1="114.3" x2="345.44" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$59" class="0">
-<segment>
-<pinref part="U$5" gate="A" pin="CH0"/>
-<wire x1="213.36" y1="43.18" x2="185.42" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$60" class="0">
 <segment>
 <pinref part="ANALOG_BANK3" gate="1" pin="7"/>
@@ -13254,12 +13248,6 @@ W = angled&lt;p&gt;
 <wire x1="187.96" y1="238.76" x2="213.36" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$88" class="0">
-<segment>
-<pinref part="U$1" gate="A" pin="CH2"/>
-<wire x1="213.36" y1="241.3" x2="185.42" y2="241.3" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$89" class="0">
 <segment>
 <pinref part="ANALOG_BANK0" gate="1" pin="7"/>
@@ -13356,6 +13344,20 @@ W = angled&lt;p&gt;
 <pinref part="CAN_BUS" gate="1" pin="1"/>
 <wire x1="149.86" y1="302.26" x2="139.7" y2="302.26" width="0.1524" layer="91"/>
 <label x="139.7" y="302.26" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="ANALOG_BANK3" gate="1" pin="8"/>
+<pinref part="U$5" gate="A" pin="CH0"/>
+<wire x1="187.96" y1="43.18" x2="213.36" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="ANALOG_BANK0" gate="1" pin="6"/>
+<pinref part="U$1" gate="A" pin="CH2"/>
+<wire x1="187.96" y1="241.3" x2="213.36" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
