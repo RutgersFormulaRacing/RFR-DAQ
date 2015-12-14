@@ -11712,7 +11712,6 @@ D = Direct mounting &lt;p&gt;
 <part name="R3" library="rcl" deviceset="R-US_" device="0204/5"/>
 <part name="S2" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="PR_SW" library="switch" deviceset="255SB" device=""/>
-<part name="AUTO_SW" library="switch" deviceset="255SB" device=""/>
 <part name="RPI_HEADER" library="con-lstb" deviceset="MA20-2" device=""/>
 <part name="SHIFT_CONT_SW" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="GPIO_BANK0" library="con-lstb" deviceset="MA08-1" device=""/>
@@ -11723,10 +11722,7 @@ D = Direct mounting &lt;p&gt;
 <part name="ANALOG_BANK1" library="con-lstb" deviceset="MA08-1" device=""/>
 <part name="ANALOG_BANK2" library="con-lstb" deviceset="MA08-1" device=""/>
 <part name="ANALOG_BANK3" library="con-lstb" deviceset="MA08-1" device=""/>
-<part name="POWER_IN" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="SHIFT_OUT" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="CAN_BUS" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="SHIFT_CON" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="RTC_CON" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="EXT_SPI" library="con-subd" deviceset="F09" device="VB"/>
 <part name="EXT_I2C" library="con-subd" deviceset="F09" device="VB"/>
@@ -11734,6 +11730,10 @@ D = Direct mounting &lt;p&gt;
 <part name="SV1" library="con-lstb" deviceset="MA06-1" device=""/>
 <part name="C3" library="rcl" deviceset="C-US" device="025-025X050"/>
 <part name="C4" library="rcl" deviceset="C-US" device="025-025X050"/>
+<part name="5V_IN" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="EXT_SHIFT" library="con-subd" deviceset="F09" device="VB"/>
+<part name="SV2" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV3" library="con-lstb" deviceset="MA04-1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11765,7 +11765,6 @@ D = Direct mounting &lt;p&gt;
 <instance part="R3" gate="G$1" x="337.82" y="276.86"/>
 <instance part="S2" gate="1" x="406.4" y="248.92" rot="R270"/>
 <instance part="PR_SW" gate="1" x="345.44" y="304.8"/>
-<instance part="AUTO_SW" gate="1" x="416.56" y="271.78" rot="R270"/>
 <instance part="RPI_HEADER" gate="G$1" x="88.9" y="276.86" rot="R180"/>
 <instance part="SHIFT_CONT_SW" gate="1" x="444.5" y="248.92" rot="R270"/>
 <instance part="GPIO_BANK0" gate="1" x="355.6" y="106.68" rot="R180"/>
@@ -11776,10 +11775,7 @@ D = Direct mounting &lt;p&gt;
 <instance part="ANALOG_BANK1" gate="1" x="182.88" y="167.64"/>
 <instance part="ANALOG_BANK2" gate="1" x="182.88" y="99.06"/>
 <instance part="ANALOG_BANK3" gate="1" x="182.88" y="33.02"/>
-<instance part="POWER_IN" gate="G$1" x="452.12" y="208.28" rot="R180"/>
-<instance part="SHIFT_OUT" gate="G$1" x="490.22" y="208.28" rot="R180"/>
 <instance part="CAN_BUS" gate="1" x="157.48" y="297.18" rot="R180"/>
-<instance part="SHIFT_CON" gate="G$1" x="482.6" y="271.78" rot="R180"/>
 <instance part="RTC_CON" gate="G$1" x="157.48" y="276.86" rot="R180"/>
 <instance part="EXT_SPI" gate="G$1" x="419.1" y="152.4"/>
 <instance part="EXT_I2C" gate="G$1" x="419.1" y="129.54"/>
@@ -11787,6 +11783,10 @@ D = Direct mounting &lt;p&gt;
 <instance part="SV1" gate="1" x="426.72" y="322.58" rot="R180"/>
 <instance part="C3" gate="G$1" x="292.1" y="322.58"/>
 <instance part="C4" gate="G$1" x="304.8" y="322.58"/>
+<instance part="5V_IN" gate="G$1" x="452.12" y="185.42" rot="R180"/>
+<instance part="EXT_SHIFT" gate="G$1" x="419.1" y="81.28"/>
+<instance part="SV2" gate="1" x="101.6" y="231.14" rot="R180"/>
+<instance part="SV3" gate="1" x="101.6" y="210.82" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -11835,12 +11835,30 @@ D = Direct mounting &lt;p&gt;
 <label x="99.06" y="302.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="POWER_IN" gate="G$1" pin="1"/>
-<pinref part="POWER_IN" gate="G$1" pin="2"/>
-<wire x1="444.5" y1="210.82" x2="444.5" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="210.82" x2="436.88" y2="210.82" width="0.1524" layer="91"/>
-<junction x="444.5" y="210.82"/>
-<label x="436.88" y="210.82" size="1.778" layer="95"/>
+<pinref part="5V_IN" gate="G$1" pin="2"/>
+<pinref part="5V_IN" gate="G$1" pin="1"/>
+<wire x1="444.5" y1="185.42" x2="444.5" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="444.5" y1="187.96" x2="436.88" y2="187.96" width="0.1524" layer="91"/>
+<junction x="444.5" y="187.96"/>
+<label x="436.88" y="187.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="EXT_SER" gate="G$1" pin="1"/>
+<wire x1="411.48" y1="111.76" x2="406.4" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="406.4" y1="111.76" x2="406.4" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="EXT_SPI" gate="G$1" pin="1"/>
+<wire x1="406.4" y1="134.62" x2="406.4" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="406.4" y1="157.48" x2="411.48" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="EXT_I2C" gate="G$1" pin="1"/>
+<wire x1="411.48" y1="134.62" x2="406.4" y2="134.62" width="0.1524" layer="91"/>
+<junction x="406.4" y="134.62"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="1"/>
+<wire x1="411.48" y1="86.36" x2="406.4" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="406.4" y1="86.36" x2="406.4" y2="111.76" width="0.1524" layer="91"/>
+<junction x="406.4" y="111.76"/>
+<wire x1="406.4" y1="157.48" x2="393.7" y2="157.48" width="0.1524" layer="91"/>
+<junction x="406.4" y="157.48"/>
+<label x="393.7" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -12174,11 +12192,6 @@ D = Direct mounting &lt;p&gt;
 <label x="299.72" y="261.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AUTO_SW" gate="1" pin="S"/>
-<wire x1="421.64" y1="266.7" x2="429.26" y2="266.7" width="0.1524" layer="91"/>
-<label x="424.18" y="266.7" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U1" gate="A" pin="GND_2"/>
 <pinref part="U1" gate="A" pin="GND"/>
 <wire x1="350.52" y1="259.08" x2="350.52" y2="256.54" width="0.1524" layer="91"/>
@@ -12235,11 +12248,6 @@ D = Direct mounting &lt;p&gt;
 <label x="454.66" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="POWER_IN" gate="G$1" pin="3"/>
-<wire x1="444.5" y1="205.74" x2="436.88" y2="205.74" width="0.1524" layer="91"/>
-<label x="436.88" y="205.74" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="RTC_CON" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="279.4" x2="139.7" y2="279.4" width="0.1524" layer="91"/>
 <label x="139.7" y="279.4" size="1.778" layer="95"/>
@@ -12278,6 +12286,29 @@ D = Direct mounting &lt;p&gt;
 <wire x1="292.1" y1="317.5" x2="281.94" y2="317.5" width="0.1524" layer="91"/>
 <junction x="292.1" y="317.5"/>
 <label x="281.94" y="317.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="5V_IN" gate="G$1" pin="3"/>
+<wire x1="444.5" y1="182.88" x2="436.88" y2="182.88" width="0.1524" layer="91"/>
+<label x="436.88" y="182.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="EXT_SPI" gate="G$1" pin="5"/>
+<wire x1="411.48" y1="147.32" x2="408.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="408.94" y1="147.32" x2="408.94" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="EXT_I2C" gate="G$1" pin="5"/>
+<wire x1="408.94" y1="124.46" x2="411.48" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="408.94" y1="124.46" x2="408.94" y2="101.6" width="0.1524" layer="91"/>
+<junction x="408.94" y="124.46"/>
+<pinref part="EXT_SER" gate="G$1" pin="5"/>
+<wire x1="408.94" y1="101.6" x2="411.48" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="408.94" y1="101.6" x2="408.94" y2="76.2" width="0.1524" layer="91"/>
+<junction x="408.94" y="101.6"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="5"/>
+<wire x1="408.94" y1="76.2" x2="411.48" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="408.94" y1="147.32" x2="393.7" y2="147.32" width="0.1524" layer="91"/>
+<junction x="408.94" y="147.32"/>
+<label x="393.7" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -12437,11 +12468,6 @@ D = Direct mounting &lt;p&gt;
 <wire x1="347.98" y1="287.02" x2="347.98" y2="294.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="AUTO_SW" gate="1" pin="O"/>
-<wire x1="421.64" y1="271.78" x2="429.26" y2="271.78" width="0.1524" layer="91"/>
-<label x="424.18" y="271.78" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="292.1" y1="325.12" x2="304.8" y2="325.12" width="0.1524" layer="91"/>
@@ -12501,9 +12527,9 @@ D = Direct mounting &lt;p&gt;
 <label x="391.16" y="289.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SHIFT_CON" gate="G$1" pin="1"/>
-<wire x1="474.98" y1="274.32" x2="467.36" y2="274.32" width="0.1524" layer="91"/>
-<label x="464.82" y="274.32" size="1.778" layer="95"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="2"/>
+<wire x1="411.48" y1="83.82" x2="396.24" y2="83.82" width="0.1524" layer="91"/>
+<label x="396.24" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_SHDN" class="0">
@@ -12513,9 +12539,9 @@ D = Direct mounting &lt;p&gt;
 <label x="391.16" y="287.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SHIFT_CON" gate="G$1" pin="3"/>
-<wire x1="474.98" y1="269.24" x2="467.36" y2="269.24" width="0.1524" layer="91"/>
-<label x="464.82" y="269.24" size="1.778" layer="95"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="3"/>
+<wire x1="411.48" y1="81.28" x2="396.24" y2="81.28" width="0.1524" layer="91"/>
+<label x="396.24" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PR_VCC" class="0">
@@ -12727,14 +12753,14 @@ D = Direct mounting &lt;p&gt;
 </net>
 <net name="SH_EN" class="0">
 <segment>
-<pinref part="AUTO_SW" gate="1" pin="P"/>
-<wire x1="411.48" y1="269.24" x2="403.86" y2="269.24" width="0.1524" layer="91"/>
-<label x="403.86" y="269.24" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U1" gate="A" pin="PD5"/>
 <wire x1="386.08" y1="281.94" x2="396.24" y2="281.94" width="0.1524" layer="91"/>
 <label x="391.16" y="281.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="EXT_SHIFT" gate="G$1" pin="4"/>
+<wire x1="411.48" y1="78.74" x2="396.24" y2="78.74" width="0.1524" layer="91"/>
+<label x="396.24" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -12811,6 +12837,11 @@ D = Direct mounting &lt;p&gt;
 <wire x1="96.52" y1="264.16" x2="104.14" y2="264.16" width="0.1524" layer="91"/>
 <label x="99.06" y="264.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="SV2" gate="1" pin="4"/>
+<wire x1="93.98" y1="228.6" x2="81.28" y2="228.6" width="0.1524" layer="91"/>
+<label x="81.28" y="228.6" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO_16" class="0">
 <segment>
@@ -12818,12 +12849,22 @@ D = Direct mounting &lt;p&gt;
 <wire x1="96.52" y1="259.08" x2="104.14" y2="259.08" width="0.1524" layer="91"/>
 <label x="99.06" y="259.08" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="SV3" gate="1" pin="2"/>
+<wire x1="93.98" y1="213.36" x2="81.28" y2="213.36" width="0.1524" layer="91"/>
+<label x="81.28" y="213.36" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO_20" class="0">
 <segment>
 <pinref part="RPI_HEADER" gate="G$1" pin="38"/>
 <wire x1="96.52" y1="256.54" x2="104.14" y2="256.54" width="0.1524" layer="91"/>
 <label x="99.06" y="256.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SV3" gate="1" pin="4"/>
+<wire x1="93.98" y1="208.28" x2="81.28" y2="208.28" width="0.1524" layer="91"/>
+<label x="81.28" y="208.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_21" class="0">
@@ -12873,12 +12914,22 @@ D = Direct mounting &lt;p&gt;
 <wire x1="81.28" y1="294.64" x2="73.66" y2="294.64" width="0.1524" layer="91"/>
 <label x="68.58" y="294.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="SV2" gate="1" pin="1"/>
+<wire x1="93.98" y1="236.22" x2="81.28" y2="236.22" width="0.1524" layer="91"/>
+<label x="81.28" y="236.22" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO_17" class="0">
 <segment>
 <pinref part="RPI_HEADER" gate="G$1" pin="11"/>
 <wire x1="81.28" y1="289.56" x2="73.66" y2="289.56" width="0.1524" layer="91"/>
 <label x="68.58" y="289.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SV3" gate="1" pin="3"/>
+<wire x1="93.98" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
+<label x="81.28" y="210.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_27" class="0">
@@ -12908,6 +12959,11 @@ D = Direct mounting &lt;p&gt;
 <wire x1="81.28" y1="266.7" x2="73.66" y2="266.7" width="0.1524" layer="91"/>
 <label x="68.58" y="266.7" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="SV2" gate="1" pin="2"/>
+<wire x1="93.98" y1="233.68" x2="81.28" y2="233.68" width="0.1524" layer="91"/>
+<label x="81.28" y="233.68" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO_6" class="0">
 <segment>
@@ -12915,12 +12971,22 @@ D = Direct mounting &lt;p&gt;
 <wire x1="81.28" y1="264.16" x2="73.66" y2="264.16" width="0.1524" layer="91"/>
 <label x="68.58" y="264.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="SV2" gate="1" pin="3"/>
+<wire x1="93.98" y1="231.14" x2="81.28" y2="231.14" width="0.1524" layer="91"/>
+<label x="81.28" y="231.14" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="GPIO_13" class="0">
 <segment>
 <pinref part="RPI_HEADER" gate="G$1" pin="33"/>
 <wire x1="81.28" y1="261.62" x2="73.66" y2="261.62" width="0.1524" layer="91"/>
 <label x="68.58" y="261.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SV3" gate="1" pin="1"/>
+<wire x1="93.98" y1="215.9" x2="81.28" y2="215.9" width="0.1524" layer="91"/>
+<label x="81.28" y="215.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_19" class="0">
@@ -12944,9 +13010,9 @@ D = Direct mounting &lt;p&gt;
 <label x="391.16" y="261.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SHIFT_OUT" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="210.82" x2="474.98" y2="210.82" width="0.1524" layer="91"/>
-<label x="472.44" y="210.82" size="1.778" layer="95"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="6"/>
+<wire x1="426.72" y1="83.82" x2="439.42" y2="83.82" width="0.1524" layer="91"/>
+<label x="431.8" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDN_OUT" class="0">
@@ -12956,9 +13022,9 @@ D = Direct mounting &lt;p&gt;
 <label x="391.16" y="259.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SHIFT_OUT" gate="G$1" pin="3"/>
-<wire x1="482.6" y1="205.74" x2="474.98" y2="205.74" width="0.1524" layer="91"/>
-<label x="472.44" y="205.74" size="1.778" layer="95"/>
+<pinref part="EXT_SHIFT" gate="G$1" pin="7"/>
+<wire x1="426.72" y1="81.28" x2="439.42" y2="81.28" width="0.1524" layer="91"/>
+<label x="431.8" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_SW" class="0">
@@ -13484,32 +13550,6 @@ D = Direct mounting &lt;p&gt;
 <label x="139.7" y="302.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="EXT_SPI" gate="G$1" pin="5"/>
-<wire x1="411.48" y1="147.32" x2="408.94" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="408.94" y1="147.32" x2="408.94" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C" gate="G$1" pin="5"/>
-<wire x1="408.94" y1="124.46" x2="411.48" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="408.94" y1="124.46" x2="408.94" y2="101.6" width="0.1524" layer="91"/>
-<junction x="408.94" y="124.46"/>
-<pinref part="EXT_SER" gate="G$1" pin="5"/>
-<wire x1="408.94" y1="101.6" x2="411.48" y2="101.6" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="EXT_SER" gate="G$1" pin="1"/>
-<wire x1="411.48" y1="111.76" x2="406.4" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="406.4" y1="111.76" x2="406.4" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI" gate="G$1" pin="1"/>
-<wire x1="406.4" y1="134.62" x2="406.4" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="406.4" y1="157.48" x2="411.48" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C" gate="G$1" pin="1"/>
-<wire x1="411.48" y1="134.62" x2="406.4" y2="134.62" width="0.1524" layer="91"/>
-<junction x="406.4" y="134.62"/>
-</segment>
-</net>
 <net name="CTS" class="0">
 <segment>
 <pinref part="SV1" gate="1" pin="2"/>
@@ -13531,6 +13571,20 @@ D = Direct mounting &lt;p&gt;
 <wire x1="190.5" y1="40.64" x2="213.36" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$59" class="0">
+<segment>
+<pinref part="EXT_SHIFT" gate="G$1" pin="8"/>
+<wire x1="426.72" y1="78.74" x2="439.42" y2="78.74" width="0.1524" layer="91"/>
+<label x="431.8" y="78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$60" class="0">
+<segment>
+<pinref part="EXT_SHIFT" gate="G$1" pin="9"/>
+<wire x1="426.72" y1="76.2" x2="439.42" y2="76.2" width="0.1524" layer="91"/>
+<label x="431.8" y="76.2" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -13538,18 +13592,10 @@ D = Direct mounting &lt;p&gt;
 <approved hash="206,1,137.16,233.68,DAQ_MISO,,,,,"/>
 <approved hash="206,1,304.8,30.48,DAQ_MISO,,,,,"/>
 <approved hash="206,1,304.8,88.9,DAQ_MISO,,,,,"/>
-<approved hash="209,1,304.8,20.32,N$6,,,,,"/>
-<approved hash="209,1,304.8,22.86,N$6,,,,,"/>
-<approved hash="209,1,304.8,25.4,N$6,,,,,"/>
-<approved hash="209,1,304.8,78.74,N$6,,,,,"/>
-<approved hash="209,1,304.8,81.28,N$6,,,,,"/>
-<approved hash="209,1,304.8,83.82,N$6,,,,,"/>
 <approved hash="206,1,248.92,264.16,N$30,,,,,"/>
 <approved hash="206,1,248.92,195.58,N$30,,,,,"/>
 <approved hash="206,1,248.92,127,N$30,,,,,"/>
 <approved hash="206,1,248.92,60.96,N$30,,,,,"/>
-<approved hash="209,1,213.36,43.18,N$59,,,,,"/>
-<approved hash="209,1,213.36,241.3,N$88,,,,,"/>
 </errors>
 </schematic>
 </drawing>
