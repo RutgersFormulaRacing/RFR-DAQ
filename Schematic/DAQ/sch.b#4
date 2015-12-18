@@ -162,8 +162,9 @@
 <hole x="111.76" y="3.81" drill="0.6"/>
 <hole x="111.76" y="143.51" drill="0.6"/>
 <hole x="5.08" y="143.51" drill="0.6"/>
-<text x="67.31" y="142.24" size="1.778" layer="22">Board: John Eng</text>
-<text x="67.31" y="138.43" size="1.778" layer="21">Schematic: Samuel Stratter</text>
+<text x="66.04" y="139.7" size="2.1844" layer="22">Board: John Eng</text>
+<text x="66.04" y="135.89" size="2.1844" layer="21">Schematic: Samuel Stratter</text>
+<text x="66.04" y="132.08" size="2.1844" layer="21">RFR 2015-2016</text>
 </plain>
 <libraries>
 <library name="con-lstb">

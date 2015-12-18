@@ -2884,7 +2884,6 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="31K2951" x="40.64" y="104.14" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="MCP23S17-E/SP" x="40.64" y="104.14" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="22.733" y="101.6" size="1.778" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="24.892" y="103.2002" size="1.778" layer="27" ratio="10"/>
 </element>
 <element name="IC3" library="microchip" package="DIL28-3" value="MCP23S17SP" x="46.99" y="19.05" smashed="yes">
 <attribute name="MF" value="MICROCHIP" x="46.99" y="19.05" size="1.778" layer="27" display="off"/>
@@ -3043,7 +3042,7 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="15R0268" x="72.39" y="88.9" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="PDIP-28" x="72.39" y="88.9" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="ATMEGA328P-PU" x="72.39" y="88.9" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="63.6524" y="83.0834" size="2.0828" layer="25" ratio="10" rot="SR0"/>
+<attribute name="NAME" x="67.4624" y="85.6234" size="2.0828" layer="25" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="57.5056" y="125.095" size="2.0828" layer="27" ratio="10" rot="SR0"/>
 </element>
 </elements>
