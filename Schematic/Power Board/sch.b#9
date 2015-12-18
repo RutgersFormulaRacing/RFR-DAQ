@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -18,27 +18,27 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -62,10 +62,6 @@
 <wire x1="33.96" y1="0" x2="33.96" y2="36.82" width="0" layer="20"/>
 <wire x1="33.96" y1="36.82" x2="0" y2="36.82" width="0" layer="20"/>
 <wire x1="0" y1="36.82" x2="0" y2="0" width="0" layer="20"/>
-<hole x="1.5875" y="2.2225" drill="0.5"/>
-<hole x="31.115" y="3.175" drill="0.5"/>
-<hole x="31.115" y="33.9725" drill="0.5"/>
-<hole x="2.8575" y="33.9725" drill="0.5"/>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -1482,77 +1478,42 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="12V" library="pinhead" package="1X02" value="" x="29.21" y="27.94" smashed="yes" rot="R90">
-<attribute name="NAME" x="29.9212" y="31.8262" size="0.8128" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="32.385" y="25.4" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="BAT" library="pinhead" package="1X02" value="" x="22.86" y="31.75" smashed="yes" rot="R180">
-<attribute name="NAME" x="18.9738" y="32.4612" size="0.8128" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="25.4" y="34.925" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="100U" library="rcl" package="C025-030X050" value="100u" x="5.08" y="29.21" smashed="yes" rot="R270">
-<attribute name="NAME" x="2.54" y="30.226" size="0.8128" layer="25" ratio="10" rot="R270"/>
-</element>
-<element name="C2" library="rcl" package="C025-030X050" value="1000u" x="29.21" y="10.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="26.67" y="8.001" size="0.8128" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="27.178" y="9.144" size="0.8128" layer="27" ratio="10" rot="R90"/>
-</element>
-<element name="C3" library="rcl" package="C025-030X050" value="100u" x="15.24" y="24.13" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.335" y="21.844" size="0.8128" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="13.208" y="23.749" size="0.8128" layer="27" ratio="10" rot="R90"/>
-</element>
-<element name="C4" library="rcl" package="C025-030X050" value="1000u" x="15.24" y="17.78" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.335" y="15.494" size="0.8128" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="13.208" y="17.399" size="0.8128" layer="27" ratio="10" rot="R90"/>
-</element>
-<element name="D1" library="diode" package="DO41-7.6" value="1N5817-B" x="22.86" y="24.13" smashed="yes"/>
-<element name="D2" library="diode" package="DO41-7.6" value="1N5817-B" x="6.35" y="24.13" smashed="yes"/>
-<element name="FAN1" library="con-lstb" package="MA03-1" value="" x="13.97" y="33.02" smashed="yes">
+<element name="12V_HEADER" library="pinhead" package="1X02" value="" x="29.21" y="27.94" rot="R90"/>
+<element name="BAT_HEADER" library="pinhead" package="1X02" value="" x="22.86" y="31.75" rot="R180"/>
+<element name="C1" library="rcl" package="C025-030X050" value="100u" x="5.08" y="29.21" rot="R270"/>
+<element name="C2" library="rcl" package="C025-030X050" value="1000u" x="29.21" y="10.16" rot="R90"/>
+<element name="C3" library="rcl" package="C025-030X050" value="100u" x="15.24" y="24.13" rot="R90"/>
+<element name="C4" library="rcl" package="C025-030X050" value="1000u" x="15.24" y="17.78" rot="R90"/>
+<element name="D1" library="diode" package="DO41-7.6" value="1N5817-B" x="22.86" y="24.13"/>
+<element name="D2" library="diode" package="DO41-7.6" value="1N5817-B" x="6.35" y="24.13"/>
+<element name="FAN1" library="con-lstb" package="MA03-1" value="" x="13.97" y="33.02">
 <attribute name="OC_NEWARK" value="unknown" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="10.16" y="34.671" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="10.16" y="30.099" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="FAN2" library="con-lstb" package="MA03-1" value="" x="13.97" y="29.21" smashed="yes">
+<element name="FAN2" library="con-lstb" package="MA03-1" value="" x="13.97" y="29.21">
 <attribute name="OC_NEWARK" value="unknown" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="10.16" y="30.861" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="10.16" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="IC1" library="national-semiconductor" package="T05D" value="LM2596T" x="20.32" y="8.89" smashed="yes">
+<element name="IC1" library="national-semiconductor" package="T05D" value="LM2596T" x="20.32" y="8.89">
 <attribute name="OC_NEWARK" value="65K5910" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9494162" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="22.225" y="1.905" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="IC2" library="national-semiconductor" package="T05D" value="LM2596T" x="7.62" y="8.89" smashed="yes">
+<element name="IC2" library="national-semiconductor" package="T05D" value="LM2596T" x="7.62" y="8.89">
 <attribute name="OC_NEWARK" value="65K5910" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9494162" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="8.255" y="1.905" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="L1" library="rcl" package="6000-XXXX-RC" value="" x="22.86" y="17.78" smashed="yes">
-<attribute name="NAME" x="22.1644" y="18.6026" size="0.8128" layer="25"/>
-<attribute name="VALUE" x="18.3544" y="11.3694" size="1.27" layer="27"/>
-</element>
-<element name="L2" library="rcl" package="6000-XXXX-RC" value="" x="6.35" y="17.78" smashed="yes">
-<attribute name="NAME" x="5.6544" y="18.6026" size="0.8128" layer="25"/>
-<attribute name="VALUE" x="1.8444" y="11.3694" size="1.27" layer="27"/>
-</element>
-<element name="OUT1" library="pinhead" package="1X02" value="" x="30.48" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="28.6512" y="17.7038" size="0.8128" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="33.655" y="17.78" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="OUT2" library="pinhead" package="1X02" value="" x="22.86" y="27.94" smashed="yes">
-<attribute name="NAME" x="19.7612" y="26.5938" size="0.8128" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="20.32" y="24.765" size="1.27" layer="27"/>
-</element>
+<element name="L1" library="rcl" package="6000-XXXX-RC" value="" x="22.86" y="17.78"/>
+<element name="L2" library="rcl" package="6000-XXXX-RC" value="" x="6.35" y="17.78"/>
+<element name="OUT1_HEADER" library="pinhead" package="1X02" value="" x="30.48" y="20.32" rot="R90"/>
+<element name="OUT2_HEADER" library="pinhead" package="1X02" value="" x="22.86" y="27.94"/>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1572,7 +1533,7 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="4"/>
 <contactref element="L1" pad="2"/>
 <contactref element="C2" pad="1"/>
-<contactref element="OUT1" pad="1"/>
+<contactref element="OUT1_HEADER" pad="1"/>
 <wire x1="29.2608" y1="17.8308" x2="25.3746" y2="17.8308" width="0.254" layer="1"/>
 <wire x1="30.48" y1="19.05" x2="29.2608" y2="17.8308" width="0.254" layer="1"/>
 <wire x1="25.3746" y1="17.8308" x2="25.36" y2="17.78" width="0.254" layer="1"/>
@@ -1589,9 +1550,9 @@ design rules under a new name.</description>
 <contactref element="D1" pad="A"/>
 <contactref element="IC1" pad="5"/>
 <contactref element="C2" pad="2"/>
-<contactref element="100U" pad="2"/>
-<contactref element="OUT1" pad="2"/>
-<contactref element="12V" pad="2"/>
+<contactref element="C1" pad="2"/>
+<contactref element="OUT1_HEADER" pad="2"/>
+<contactref element="12V_HEADER" pad="2"/>
 <contactref element="FAN2" pad="3"/>
 <contactref element="FAN1" pad="3"/>
 <wire x1="10.287" y1="27.8892" x2="5.2578" y2="27.8892" width="0.254" layer="1"/>
@@ -1631,9 +1592,9 @@ design rules under a new name.</description>
 <wire x1="29.0322" y1="29.2608" x2="29.21" y2="29.21" width="0.254" layer="16"/>
 </signal>
 <signal name="12V">
-<contactref element="100U" pad="1"/>
+<contactref element="C1" pad="1"/>
 <contactref element="IC1" pad="1"/>
-<contactref element="12V" pad="1"/>
+<contactref element="12V_HEADER" pad="1"/>
 <contactref element="FAN2" pad="2"/>
 <contactref element="FAN1" pad="2"/>
 <wire x1="10.5156" y1="30.6324" x2="5.2578" y2="30.6324" width="0.254" layer="1"/>
@@ -1675,7 +1636,7 @@ design rules under a new name.</description>
 <contactref element="IC2" pad="4"/>
 <contactref element="L2" pad="2"/>
 <contactref element="C4" pad="1"/>
-<contactref element="OUT2" pad="1"/>
+<contactref element="OUT2_HEADER" pad="1"/>
 <wire x1="9.8298" y1="16.6878" x2="15.0876" y2="16.6878" width="0.254" layer="1"/>
 <wire x1="8.9154" y1="17.6022" x2="9.8298" y2="16.6878" width="0.254" layer="1"/>
 <wire x1="15.0876" y1="16.6878" x2="15.24" y2="16.51" width="0.254" layer="1"/>
@@ -1694,8 +1655,8 @@ design rules under a new name.</description>
 <contactref element="IC2" pad="5"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C3" pad="2"/>
-<contactref element="BAT" pad="2"/>
-<contactref element="OUT2" pad="2"/>
+<contactref element="BAT_HEADER" pad="2"/>
+<contactref element="OUT2_HEADER" pad="2"/>
 <wire x1="21.717" y1="30.4038" x2="21.717" y2="31.5468" width="0.254" layer="1"/>
 <wire x1="24.003" y1="28.1178" x2="21.717" y2="30.4038" width="0.254" layer="1"/>
 <wire x1="21.717" y1="31.5468" x2="21.59" y2="31.75" width="0.254" layer="1"/>
@@ -1720,7 +1681,7 @@ design rules under a new name.</description>
 <signal name="BAT_STACK">
 <contactref element="C3" pad="1"/>
 <contactref element="IC2" pad="1"/>
-<contactref element="BAT" pad="1"/>
+<contactref element="BAT_HEADER" pad="1"/>
 <wire x1="16.002" y1="22.86" x2="15.5448" y2="22.86" width="0.254" layer="16"/>
 <wire x1="15.5448" y1="22.86" x2="15.24" y2="22.86" width="0.254" layer="16"/>
 <wire x1="19.2024" y1="26.0604" x2="16.002" y2="22.86" width="0.254" layer="16"/>
@@ -1733,20 +1694,6 @@ design rules under a new name.</description>
 <wire x1="15.5448" y1="22.86" x2="4.3434" y2="11.6586" width="0.254" layer="16"/>
 <wire x1="4.3434" y1="3.8862" x2="4.2164" y2="3.81" width="0.254" layer="16"/>
 <wire x1="15.3162" y1="22.86" x2="15.24" y2="22.86" width="0.254" layer="16"/>
-</signal>
-<signal name="GND">
-<polygon width="0.4064" layer="16">
-<vertex x="0" y="36.83"/>
-<vertex x="0" y="0"/>
-<vertex x="34.29" y="0"/>
-<vertex x="34.29" y="36.83"/>
-</polygon>
-<polygon width="0.4064" layer="1">
-<vertex x="0" y="36.83"/>
-<vertex x="34.29" y="36.83"/>
-<vertex x="34.29" y="0"/>
-<vertex x="0" y="0"/>
-</polygon>
 </signal>
 </signals>
 </board>
