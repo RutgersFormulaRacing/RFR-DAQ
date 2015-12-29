@@ -5580,12 +5580,12 @@ W = angled&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="IC1" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
+<part name="VREG_0" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
 <part name="L1" library="rcl" deviceset="L-US" device="6000-XXX-RC"/>
 <part name="D1" library="diode" deviceset="1N581*" device="" technology="7-B"/>
 <part name="100U" library="rcl" deviceset="C-US" device="025-030X050" value="100u"/>
 <part name="C2" library="rcl" deviceset="C-US" device="025-030X050" value="1000u"/>
-<part name="IC2" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
+<part name="VREG_1" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
 <part name="L2" library="rcl" deviceset="L-US" device="6000-XXX-RC"/>
 <part name="D2" library="diode" deviceset="1N581*" device="" technology="7-B"/>
 <part name="C3" library="rcl" deviceset="C-US" device="025-030X050" value="100u"/>
@@ -5602,12 +5602,12 @@ W = angled&lt;p&gt;
 <plain>
 </plain>
 <instances>
-<instance part="IC1" gate="G$1" x="53.34" y="71.12"/>
+<instance part="VREG_0" gate="G$1" x="53.34" y="71.12"/>
 <instance part="L1" gate="G$1" x="88.9" y="73.66" rot="R90"/>
 <instance part="D1" gate="G$1" x="81.28" y="58.42" rot="R90"/>
 <instance part="100U" gate="G$1" x="22.86" y="73.66"/>
 <instance part="C2" gate="G$1" x="106.68" y="71.12"/>
-<instance part="IC2" gate="G$1" x="53.34" y="38.1"/>
+<instance part="VREG_1" gate="G$1" x="53.34" y="38.1"/>
 <instance part="L2" gate="G$1" x="88.9" y="40.64" rot="R90"/>
 <instance part="D2" gate="G$1" x="81.28" y="25.4" rot="R90"/>
 <instance part="C3" gate="G$1" x="22.86" y="40.64"/>
@@ -5627,14 +5627,14 @@ W = angled&lt;p&gt;
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="60.96" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="OUT"/>
+<pinref part="VREG_0" gate="G$1" pin="OUT"/>
 <wire x1="66.04" y1="73.66" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
 <junction x="81.28" y="73.66"/>
 </segment>
 </net>
 <net name="5V_1" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="FB"/>
+<pinref part="VREG_0" gate="G$1" pin="FB"/>
 <pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="68.58" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
@@ -5649,12 +5649,12 @@ W = angled&lt;p&gt;
 </net>
 <net name="GND1" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GND"/>
+<pinref part="VREG_0" gate="G$1" pin="GND"/>
 <wire x1="40.64" y1="66.04" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="40.64" y1="53.34" x2="81.28" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="53.34" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="!ON!/OFF"/>
+<pinref part="VREG_0" gate="G$1" pin="!ON!/OFF"/>
 <wire x1="40.64" y1="71.12" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <junction x="40.64" y="66.04"/>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -5687,7 +5687,7 @@ W = angled&lt;p&gt;
 <net name="12V" class="0">
 <segment>
 <pinref part="100U" gate="G$1" pin="1"/>
-<pinref part="IC1" gate="G$1" pin="VIN"/>
+<pinref part="VREG_0" gate="G$1" pin="VIN"/>
 <wire x1="22.86" y1="76.2" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
 <junction x="22.86" y="76.2"/>
 <label x="7.62" y="76.2" size="1.778" layer="95"/>
@@ -5708,14 +5708,14 @@ W = angled&lt;p&gt;
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="27.94" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="OUT"/>
+<pinref part="VREG_1" gate="G$1" pin="OUT"/>
 <wire x1="66.04" y1="40.64" x2="81.28" y2="40.64" width="0.1524" layer="91"/>
 <junction x="81.28" y="40.64"/>
 </segment>
 </net>
 <net name="5V_2" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="FB"/>
+<pinref part="VREG_1" gate="G$1" pin="FB"/>
 <pinref part="L2" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="35.56" x2="96.52" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="35.56" x2="96.52" y2="40.64" width="0.1524" layer="91"/>
@@ -5730,12 +5730,12 @@ W = angled&lt;p&gt;
 </net>
 <net name="GND2" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GND"/>
+<pinref part="VREG_1" gate="G$1" pin="GND"/>
 <wire x1="40.64" y1="33.02" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="40.64" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="20.32" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="!ON!/OFF"/>
+<pinref part="VREG_1" gate="G$1" pin="!ON!/OFF"/>
 <wire x1="40.64" y1="38.1" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
 <junction x="40.64" y="33.02"/>
 <pinref part="C4" gate="G$1" pin="2"/>
@@ -5760,7 +5760,7 @@ W = angled&lt;p&gt;
 <net name="BAT_STACK" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
-<pinref part="IC2" gate="G$1" pin="VIN"/>
+<pinref part="VREG_1" gate="G$1" pin="VIN"/>
 <wire x1="22.86" y1="43.18" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
 <junction x="22.86" y="43.18"/>
 <label x="7.62" y="43.18" size="1.778" layer="95"/>

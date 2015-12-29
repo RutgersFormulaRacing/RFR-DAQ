@@ -1523,14 +1523,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="10.16" y="30.861" size="0.8128" layer="25" ratio="10"/>
 <attribute name="VALUE" x="10.16" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="IC1" library="national-semiconductor" package="T05D" value="LM2596T" x="20.32" y="8.89" smashed="yes">
+<element name="VREG_0" library="national-semiconductor" package="T05D" value="LM2596T" x="20.32" y="8.89" smashed="yes">
 <attribute name="OC_NEWARK" value="65K5910" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9494162" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="22.225" y="1.905" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="IC2" library="national-semiconductor" package="T05D" value="LM2596T" x="7.62" y="8.89" smashed="yes">
+<element name="VREG_1" library="national-semiconductor" package="T05D" value="LM2596T" x="7.62" y="8.89" smashed="yes">
 <attribute name="OC_NEWARK" value="65K5910" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
@@ -1558,7 +1558,7 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="D1" pad="C"/>
 <contactref element="L1" pad="1"/>
-<contactref element="IC1" pad="2"/>
+<contactref element="VREG_0" pad="2"/>
 <wire x1="20.3454" y1="22.86" x2="20.3454" y2="17.8308" width="0.254" layer="16"/>
 <wire x1="19.2024" y1="24.003" x2="20.3454" y2="22.86" width="0.254" layer="16"/>
 <wire x1="20.3454" y1="17.8308" x2="20.36" y2="17.78" width="0.254" layer="16"/>
@@ -1569,7 +1569,7 @@ design rules under a new name.</description>
 <wire x1="20.3454" y1="17.6022" x2="20.36" y2="17.78" width="0.254" layer="1"/>
 </signal>
 <signal name="5V_1">
-<contactref element="IC1" pad="4"/>
+<contactref element="VREG_0" pad="4"/>
 <contactref element="L1" pad="2"/>
 <contactref element="C2" pad="1"/>
 <contactref element="OUT1" pad="1"/>
@@ -1585,9 +1585,9 @@ design rules under a new name.</description>
 <wire x1="25.3746" y1="17.6022" x2="25.36" y2="17.78" width="0.254" layer="1"/>
 </signal>
 <signal name="GND1">
-<contactref element="IC1" pad="3"/>
+<contactref element="VREG_0" pad="3"/>
 <contactref element="D1" pad="A"/>
-<contactref element="IC1" pad="5"/>
+<contactref element="VREG_0" pad="5"/>
 <contactref element="C2" pad="2"/>
 <contactref element="100U" pad="2"/>
 <contactref element="OUT1" pad="2"/>
@@ -1632,7 +1632,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="12V">
 <contactref element="100U" pad="1"/>
-<contactref element="IC1" pad="1"/>
+<contactref element="VREG_0" pad="1"/>
 <contactref element="12V" pad="1"/>
 <contactref element="FAN2" pad="2"/>
 <contactref element="FAN1" pad="2"/>
@@ -1661,7 +1661,7 @@ design rules under a new name.</description>
 <signal name="N$7">
 <contactref element="D2" pad="C"/>
 <contactref element="L2" pad="1"/>
-<contactref element="IC2" pad="2"/>
+<contactref element="VREG_1" pad="2"/>
 <wire x1="3.6576" y1="23.0886" x2="3.6576" y2="17.8308" width="0.254" layer="1"/>
 <wire x1="2.7432" y1="24.003" x2="3.6576" y2="23.0886" width="0.254" layer="1"/>
 <wire x1="3.6576" y1="17.8308" x2="3.85" y2="17.78" width="0.254" layer="1"/>
@@ -1672,7 +1672,7 @@ design rules under a new name.</description>
 <wire x1="3.8862" y1="17.6022" x2="3.85" y2="17.78" width="0.254" layer="1"/>
 </signal>
 <signal name="5V_2">
-<contactref element="IC2" pad="4"/>
+<contactref element="VREG_1" pad="4"/>
 <contactref element="L2" pad="2"/>
 <contactref element="C4" pad="1"/>
 <contactref element="OUT2" pad="1"/>
@@ -1689,9 +1689,9 @@ design rules under a new name.</description>
 <wire x1="15.3162" y1="16.6878" x2="15.24" y2="16.51" width="0.254" layer="1"/>
 </signal>
 <signal name="GND2">
-<contactref element="IC2" pad="3"/>
+<contactref element="VREG_1" pad="3"/>
 <contactref element="D2" pad="A"/>
-<contactref element="IC2" pad="5"/>
+<contactref element="VREG_1" pad="5"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C3" pad="2"/>
 <contactref element="BAT" pad="2"/>
@@ -1719,7 +1719,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="BAT_STACK">
 <contactref element="C3" pad="1"/>
-<contactref element="IC2" pad="1"/>
+<contactref element="VREG_1" pad="1"/>
 <contactref element="BAT" pad="1"/>
 <wire x1="16.002" y1="22.86" x2="15.5448" y2="22.86" width="0.254" layer="16"/>
 <wire x1="15.5448" y1="22.86" x2="15.24" y2="22.86" width="0.254" layer="16"/>

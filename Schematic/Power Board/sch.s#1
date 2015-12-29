@@ -5590,10 +5590,10 @@ W = angled&lt;p&gt;
 <part name="D2" library="diode" deviceset="1N581*" device="" technology="7-B"/>
 <part name="C3" library="rcl" deviceset="C-US" device="025-030X050" value="100u"/>
 <part name="C4" library="rcl" deviceset="C-US" device="025-030X050" value="1000u"/>
-<part name="OUT1_HEADER" library="pinhead" deviceset="PINHD-1X2" device=""/>
-<part name="OUT2_HEADER" library="pinhead" deviceset="PINHD-1X2" device=""/>
-<part name="BAT_HEADER" library="pinhead" deviceset="PINHD-1X2" device=""/>
-<part name="12V_HEADER" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="OUT1" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="OUT2" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="BAT" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="12V" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="FAN1" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="FAN2" library="con-lstb" deviceset="MA03-1" device=""/>
 </parts>
@@ -5612,10 +5612,10 @@ W = angled&lt;p&gt;
 <instance part="D2" gate="G$1" x="81.28" y="25.4" rot="R90"/>
 <instance part="C3" gate="G$1" x="22.86" y="40.64"/>
 <instance part="C4" gate="G$1" x="106.68" y="38.1"/>
-<instance part="OUT1_HEADER" gate="G$1" x="147.32" y="71.12"/>
-<instance part="OUT2_HEADER" gate="G$1" x="147.32" y="38.1"/>
-<instance part="BAT_HEADER" gate="G$1" x="-12.7" y="40.64" rot="MR0"/>
-<instance part="12V_HEADER" gate="G$1" x="-12.7" y="73.66" rot="MR0"/>
+<instance part="OUT1" gate="G$1" x="147.32" y="71.12"/>
+<instance part="OUT2" gate="G$1" x="147.32" y="38.1"/>
+<instance part="BAT" gate="G$1" x="-12.7" y="40.64" rot="MR0"/>
+<instance part="12V" gate="G$1" x="-12.7" y="73.66" rot="MR0"/>
 <instance part="FAN1" gate="G$1" x="25.4" y="101.6"/>
 <instance part="FAN2" gate="G$1" x="-7.62" y="101.6"/>
 </instances>
@@ -5643,7 +5643,7 @@ W = angled&lt;p&gt;
 <junction x="96.52" y="73.66"/>
 <junction x="106.68" y="73.66"/>
 <label x="116.84" y="73.66" size="1.778" layer="95"/>
-<pinref part="OUT1_HEADER" gate="G$1" pin="1"/>
+<pinref part="OUT1" gate="G$1" pin="1"/>
 <wire x1="106.68" y1="73.66" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -5667,11 +5667,11 @@ W = angled&lt;p&gt;
 <junction x="40.64" y="53.34"/>
 <junction x="22.86" y="53.34"/>
 <label x="7.62" y="53.34" size="1.778" layer="95"/>
-<pinref part="OUT1_HEADER" gate="G$1" pin="2"/>
+<pinref part="OUT1" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="53.34" x2="144.78" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="53.34" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
 <junction x="106.68" y="53.34"/>
-<pinref part="12V_HEADER" gate="G$1" pin="2"/>
+<pinref part="12V" gate="G$1" pin="2"/>
 <wire x1="-10.16" y1="73.66" x2="-10.16" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="53.34" x2="15.24" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="FAN2" gate="G$1" pin="3"/>
@@ -5691,7 +5691,7 @@ W = angled&lt;p&gt;
 <wire x1="22.86" y1="76.2" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
 <junction x="22.86" y="76.2"/>
 <label x="7.62" y="76.2" size="1.778" layer="95"/>
-<pinref part="12V_HEADER" gate="G$1" pin="1"/>
+<pinref part="12V" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="76.2" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="FAN2" gate="G$1" pin="2"/>
 <pinref part="FAN1" gate="G$1" pin="2"/>
@@ -5725,7 +5725,7 @@ W = angled&lt;p&gt;
 <junction x="106.68" y="40.64"/>
 <label x="119.38" y="40.64" size="1.778" layer="95"/>
 <wire x1="106.68" y1="40.64" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="OUT2_HEADER" gate="G$1" pin="1"/>
+<pinref part="OUT2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GND2" class="0">
@@ -5748,10 +5748,10 @@ W = angled&lt;p&gt;
 <junction x="40.64" y="20.32"/>
 <junction x="22.86" y="20.32"/>
 <label x="7.62" y="20.32" size="1.778" layer="95"/>
-<pinref part="BAT_HEADER" gate="G$1" pin="2"/>
+<pinref part="BAT" gate="G$1" pin="2"/>
 <wire x1="-10.16" y1="40.64" x2="-10.16" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="20.32" x2="22.86" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="OUT2_HEADER" gate="G$1" pin="2"/>
+<pinref part="OUT2" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="20.32" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="20.32" x2="144.78" y2="38.1" width="0.1524" layer="91"/>
 <junction x="106.68" y="20.32"/>
@@ -5764,7 +5764,7 @@ W = angled&lt;p&gt;
 <wire x1="22.86" y1="43.18" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
 <junction x="22.86" y="43.18"/>
 <label x="7.62" y="43.18" size="1.778" layer="95"/>
-<pinref part="BAT_HEADER" gate="G$1" pin="1"/>
+<pinref part="BAT" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>

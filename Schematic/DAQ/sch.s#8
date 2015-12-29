@@ -11723,21 +11723,6 @@ D = Direct mounting &lt;p&gt;
 <part name="ANALOG_BANK1" library="con-lstb" deviceset="MA08-1" device=""/>
 <part name="ANALOG_BANK2" library="con-lstb" deviceset="MA08-1" device=""/>
 <part name="ANALOG_BANK3" library="con-lstb" deviceset="MA08-1" device=""/>
-<part name="EXT_SPI5" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_SPI4" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_SPI3" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_SPI2" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_SPI1" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_SPI0" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="EXT_I2C5" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="EXT_I2C4" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="EXT_I2C3" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="EXT_I2C2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="EXT_I2C1" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="EXT_I2C0" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="5V_BUS" library="con-lstb" deviceset="MA06-1" device=""/>
-<part name="3V3_BUS" library="con-lstb" deviceset="MA06-1" device=""/>
-<part name="GND_BUS" library="con-lstb" deviceset="MA06-1" device=""/>
 <part name="POWER_IN" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="SHIFT_OUT" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="CAN_BUS" library="con-lstb" deviceset="MA04-1" device=""/>
@@ -11746,6 +11731,7 @@ D = Direct mounting &lt;p&gt;
 <part name="EXT_SPI" library="con-subd" deviceset="F09" device="VP"/>
 <part name="EXT_I2C" library="con-subd" deviceset="F09" device="VP"/>
 <part name="EXT_SER" library="con-subd" deviceset="F09" device="VP"/>
+<part name="SV1" library="con-lstb" deviceset="MA06-1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11788,21 +11774,6 @@ D = Direct mounting &lt;p&gt;
 <instance part="ANALOG_BANK1" gate="1" x="180.34" y="167.64"/>
 <instance part="ANALOG_BANK2" gate="1" x="180.34" y="99.06"/>
 <instance part="ANALOG_BANK3" gate="1" x="180.34" y="33.02"/>
-<instance part="EXT_SPI5" gate="1" x="454.66" y="167.64" rot="R180"/>
-<instance part="EXT_SPI4" gate="1" x="454.66" y="147.32" rot="R180"/>
-<instance part="EXT_SPI3" gate="1" x="454.66" y="127" rot="R180"/>
-<instance part="EXT_SPI2" gate="1" x="454.66" y="106.68" rot="R180"/>
-<instance part="EXT_SPI1" gate="1" x="454.66" y="83.82" rot="R180"/>
-<instance part="EXT_SPI0" gate="1" x="454.66" y="60.96" rot="R180"/>
-<instance part="EXT_I2C5" gate="G$1" x="497.84" y="170.18" rot="R180"/>
-<instance part="EXT_I2C4" gate="G$1" x="497.84" y="149.86" rot="R180"/>
-<instance part="EXT_I2C3" gate="G$1" x="497.84" y="129.54" rot="R180"/>
-<instance part="EXT_I2C2" gate="G$1" x="497.84" y="109.22" rot="R180"/>
-<instance part="EXT_I2C1" gate="G$1" x="497.84" y="86.36" rot="R180"/>
-<instance part="EXT_I2C0" gate="G$1" x="497.84" y="63.5" rot="R180"/>
-<instance part="5V_BUS" gate="1" x="454.66" y="27.94" rot="R180"/>
-<instance part="3V3_BUS" gate="1" x="477.52" y="27.94" rot="R180"/>
-<instance part="GND_BUS" gate="1" x="500.38" y="27.94" rot="R180"/>
 <instance part="POWER_IN" gate="G$1" x="454.66" y="208.28" rot="R180"/>
 <instance part="SHIFT_OUT" gate="G$1" x="490.22" y="208.28" rot="R180"/>
 <instance part="CAN_BUS" gate="1" x="157.48" y="297.18" rot="R180"/>
@@ -11811,6 +11782,7 @@ D = Direct mounting &lt;p&gt;
 <instance part="EXT_SPI" gate="G$1" x="543.56" y="167.64"/>
 <instance part="EXT_I2C" gate="G$1" x="543.56" y="144.78"/>
 <instance part="EXT_SER" gate="G$1" x="543.56" y="121.92"/>
+<instance part="SV1" gate="1" x="429.26" y="322.58" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -11857,26 +11829,6 @@ D = Direct mounting &lt;p&gt;
 <wire x1="96.52" y1="302.26" x2="104.14" y2="302.26" width="0.1524" layer="91"/>
 <junction x="96.52" y="302.26"/>
 <label x="99.06" y="302.26" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="5V_BUS" gate="1" pin="1"/>
-<pinref part="5V_BUS" gate="1" pin="2"/>
-<wire x1="447.04" y1="35.56" x2="447.04" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="5V_BUS" gate="1" pin="3"/>
-<wire x1="447.04" y1="33.02" x2="447.04" y2="30.48" width="0.1524" layer="91"/>
-<junction x="447.04" y="33.02"/>
-<pinref part="5V_BUS" gate="1" pin="4"/>
-<wire x1="447.04" y1="30.48" x2="447.04" y2="27.94" width="0.1524" layer="91"/>
-<junction x="447.04" y="30.48"/>
-<pinref part="5V_BUS" gate="1" pin="5"/>
-<wire x1="447.04" y1="27.94" x2="447.04" y2="25.4" width="0.1524" layer="91"/>
-<junction x="447.04" y="27.94"/>
-<pinref part="5V_BUS" gate="1" pin="6"/>
-<wire x1="447.04" y1="25.4" x2="447.04" y2="22.86" width="0.1524" layer="91"/>
-<junction x="447.04" y="25.4"/>
-<wire x1="447.04" y1="22.86" x2="439.42" y2="22.86" width="0.1524" layer="91"/>
-<junction x="447.04" y="22.86"/>
-<label x="439.42" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="POWER_IN" gate="G$1" pin="1"/>
@@ -12279,52 +12231,6 @@ D = Direct mounting &lt;p&gt;
 <label x="454.66" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="EXT_I2C5" gate="G$1" pin="1"/>
-<wire x1="490.22" y1="172.72" x2="482.6" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C4" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="172.72" x2="482.6" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="482.6" y1="152.4" x2="490.22" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C3" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="152.4" x2="482.6" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="482.6" y1="132.08" x2="490.22" y2="132.08" width="0.1524" layer="91"/>
-<junction x="482.6" y="152.4"/>
-<pinref part="EXT_I2C2" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="132.08" x2="482.6" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="482.6" y1="111.76" x2="490.22" y2="111.76" width="0.1524" layer="91"/>
-<junction x="482.6" y="132.08"/>
-<pinref part="EXT_I2C1" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="111.76" x2="482.6" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="482.6" y1="88.9" x2="490.22" y2="88.9" width="0.1524" layer="91"/>
-<junction x="482.6" y="111.76"/>
-<pinref part="EXT_I2C0" gate="G$1" pin="1"/>
-<wire x1="482.6" y1="88.9" x2="482.6" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="482.6" y1="66.04" x2="490.22" y2="66.04" width="0.1524" layer="91"/>
-<junction x="482.6" y="88.9"/>
-<wire x1="482.6" y1="172.72" x2="469.9" y2="172.72" width="0.1524" layer="91"/>
-<junction x="482.6" y="172.72"/>
-<label x="469.9" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="GND_BUS" gate="1" pin="1"/>
-<pinref part="GND_BUS" gate="1" pin="2"/>
-<wire x1="492.76" y1="35.56" x2="492.76" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="GND_BUS" gate="1" pin="3"/>
-<wire x1="492.76" y1="33.02" x2="492.76" y2="30.48" width="0.1524" layer="91"/>
-<junction x="492.76" y="33.02"/>
-<pinref part="GND_BUS" gate="1" pin="4"/>
-<wire x1="492.76" y1="30.48" x2="492.76" y2="27.94" width="0.1524" layer="91"/>
-<junction x="492.76" y="30.48"/>
-<pinref part="GND_BUS" gate="1" pin="5"/>
-<wire x1="492.76" y1="27.94" x2="492.76" y2="25.4" width="0.1524" layer="91"/>
-<junction x="492.76" y="27.94"/>
-<pinref part="GND_BUS" gate="1" pin="6"/>
-<wire x1="492.76" y1="25.4" x2="492.76" y2="22.86" width="0.1524" layer="91"/>
-<junction x="492.76" y="25.4"/>
-<wire x1="492.76" y1="22.86" x2="485.14" y2="22.86" width="0.1524" layer="91"/>
-<junction x="492.76" y="22.86"/>
-<label x="485.14" y="22.86" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="POWER_IN" gate="G$1" pin="3"/>
 <wire x1="447.04" y1="205.74" x2="436.88" y2="205.74" width="0.1524" layer="91"/>
 <label x="436.88" y="205.74" size="1.778" layer="95"/>
@@ -12419,26 +12325,6 @@ D = Direct mounting &lt;p&gt;
 <pinref part="RPI_HEADER" gate="G$1" pin="17"/>
 <wire x1="81.28" y1="281.94" x2="73.66" y2="281.94" width="0.1524" layer="91"/>
 <label x="68.58" y="281.94" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="3V3_BUS" gate="1" pin="1"/>
-<pinref part="3V3_BUS" gate="1" pin="2"/>
-<wire x1="469.9" y1="35.56" x2="469.9" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="3V3_BUS" gate="1" pin="3"/>
-<wire x1="469.9" y1="33.02" x2="469.9" y2="30.48" width="0.1524" layer="91"/>
-<junction x="469.9" y="33.02"/>
-<pinref part="3V3_BUS" gate="1" pin="4"/>
-<wire x1="469.9" y1="30.48" x2="469.9" y2="27.94" width="0.1524" layer="91"/>
-<junction x="469.9" y="30.48"/>
-<pinref part="3V3_BUS" gate="1" pin="5"/>
-<wire x1="469.9" y1="27.94" x2="469.9" y2="25.4" width="0.1524" layer="91"/>
-<junction x="469.9" y="27.94"/>
-<pinref part="3V3_BUS" gate="1" pin="6"/>
-<wire x1="469.9" y1="25.4" x2="469.9" y2="22.86" width="0.1524" layer="91"/>
-<junction x="469.9" y="25.4"/>
-<wire x1="469.9" y1="22.86" x2="462.28" y2="22.86" width="0.1524" layer="91"/>
-<junction x="469.9" y="22.86"/>
-<label x="462.28" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_SER" class="0">
@@ -12691,32 +12577,6 @@ D = Direct mounting &lt;p&gt;
 <label x="68.58" y="276.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="EXT_SPI5" gate="1" pin="4"/>
-<wire x1="447.04" y1="165.1" x2="444.5" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI4" gate="1" pin="4"/>
-<wire x1="444.5" y1="165.1" x2="444.5" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="144.78" x2="447.04" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI3" gate="1" pin="4"/>
-<wire x1="444.5" y1="144.78" x2="444.5" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="124.46" x2="447.04" y2="124.46" width="0.1524" layer="91"/>
-<junction x="444.5" y="144.78"/>
-<pinref part="EXT_SPI2" gate="1" pin="4"/>
-<wire x1="444.5" y1="124.46" x2="444.5" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="104.14" x2="447.04" y2="104.14" width="0.1524" layer="91"/>
-<junction x="444.5" y="124.46"/>
-<pinref part="EXT_SPI1" gate="1" pin="4"/>
-<wire x1="444.5" y1="104.14" x2="444.5" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="81.28" x2="447.04" y2="81.28" width="0.1524" layer="91"/>
-<junction x="444.5" y="104.14"/>
-<pinref part="EXT_SPI0" gate="1" pin="4"/>
-<wire x1="444.5" y1="81.28" x2="444.5" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="444.5" y1="58.42" x2="447.04" y2="58.42" width="0.1524" layer="91"/>
-<junction x="444.5" y="81.28"/>
-<wire x1="444.5" y1="58.42" x2="434.34" y2="58.42" width="0.1524" layer="91"/>
-<junction x="444.5" y="58.42"/>
-<label x="429.26" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="CAN_BUS" gate="1" pin="4"/>
 <wire x1="149.86" y1="294.64" x2="139.7" y2="294.64" width="0.1524" layer="91"/>
 <label x="139.7" y="294.64" size="1.778" layer="95"/>
@@ -12754,32 +12614,6 @@ D = Direct mounting &lt;p&gt;
 <label x="68.58" y="279.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="EXT_SPI0" gate="1" pin="3"/>
-<wire x1="447.04" y1="60.96" x2="441.96" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI1" gate="1" pin="3"/>
-<wire x1="441.96" y1="60.96" x2="441.96" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="83.82" x2="447.04" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI2" gate="1" pin="3"/>
-<wire x1="441.96" y1="83.82" x2="441.96" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="106.68" x2="447.04" y2="106.68" width="0.1524" layer="91"/>
-<junction x="441.96" y="83.82"/>
-<pinref part="EXT_SPI3" gate="1" pin="3"/>
-<wire x1="441.96" y1="106.68" x2="441.96" y2="127" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="127" x2="447.04" y2="127" width="0.1524" layer="91"/>
-<junction x="441.96" y="106.68"/>
-<pinref part="EXT_SPI4" gate="1" pin="3"/>
-<wire x1="441.96" y1="127" x2="441.96" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="147.32" x2="447.04" y2="147.32" width="0.1524" layer="91"/>
-<junction x="441.96" y="127"/>
-<pinref part="EXT_SPI5" gate="1" pin="3"/>
-<wire x1="441.96" y1="147.32" x2="441.96" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="167.64" x2="447.04" y2="167.64" width="0.1524" layer="91"/>
-<junction x="441.96" y="147.32"/>
-<wire x1="441.96" y1="60.96" x2="434.34" y2="60.96" width="0.1524" layer="91"/>
-<junction x="441.96" y="60.96"/>
-<label x="429.26" y="60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="CAN_BUS" gate="1" pin="3"/>
 <wire x1="149.86" y1="297.18" x2="139.7" y2="297.18" width="0.1524" layer="91"/>
 <label x="139.7" y="297.18" size="1.778" layer="95"/>
@@ -12815,32 +12649,6 @@ D = Direct mounting &lt;p&gt;
 <pinref part="RPI_HEADER" gate="G$1" pin="23"/>
 <wire x1="81.28" y1="274.32" x2="73.66" y2="274.32" width="0.1524" layer="91"/>
 <label x="68.58" y="274.32" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="EXT_SPI4" gate="1" pin="2"/>
-<wire x1="447.04" y1="149.86" x2="439.42" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI5" gate="1" pin="2"/>
-<wire x1="439.42" y1="149.86" x2="439.42" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="439.42" y1="170.18" x2="447.04" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="EXT_SPI3" gate="1" pin="2"/>
-<wire x1="439.42" y1="149.86" x2="439.42" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="439.42" y1="129.54" x2="447.04" y2="129.54" width="0.1524" layer="91"/>
-<junction x="439.42" y="149.86"/>
-<pinref part="EXT_SPI2" gate="1" pin="2"/>
-<wire x1="439.42" y1="129.54" x2="439.42" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="439.42" y1="109.22" x2="447.04" y2="109.22" width="0.1524" layer="91"/>
-<junction x="439.42" y="129.54"/>
-<pinref part="EXT_SPI1" gate="1" pin="2"/>
-<wire x1="439.42" y1="109.22" x2="439.42" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="439.42" y1="86.36" x2="447.04" y2="86.36" width="0.1524" layer="91"/>
-<junction x="439.42" y="109.22"/>
-<pinref part="EXT_SPI0" gate="1" pin="2"/>
-<wire x1="439.42" y1="86.36" x2="439.42" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="439.42" y1="63.5" x2="447.04" y2="63.5" width="0.1524" layer="91"/>
-<junction x="439.42" y="86.36"/>
-<wire x1="439.42" y1="63.5" x2="434.34" y2="63.5" width="0.1524" layer="91"/>
-<junction x="439.42" y="63.5"/>
-<label x="429.26" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CAN_BUS" gate="1" pin="2"/>
@@ -13001,32 +12809,6 @@ D = Direct mounting &lt;p&gt;
 <label x="68.58" y="299.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="EXT_I2C0" gate="G$1" pin="2"/>
-<wire x1="490.22" y1="63.5" x2="485.14" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C1" gate="G$1" pin="2"/>
-<wire x1="485.14" y1="63.5" x2="485.14" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="86.36" x2="490.22" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C2" gate="G$1" pin="2"/>
-<wire x1="485.14" y1="86.36" x2="485.14" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="109.22" x2="490.22" y2="109.22" width="0.1524" layer="91"/>
-<junction x="485.14" y="86.36"/>
-<pinref part="EXT_I2C3" gate="G$1" pin="2"/>
-<wire x1="485.14" y1="109.22" x2="485.14" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="129.54" x2="490.22" y2="129.54" width="0.1524" layer="91"/>
-<junction x="485.14" y="109.22"/>
-<pinref part="EXT_I2C4" gate="G$1" pin="2"/>
-<wire x1="485.14" y1="129.54" x2="485.14" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="149.86" x2="490.22" y2="149.86" width="0.1524" layer="91"/>
-<junction x="485.14" y="129.54"/>
-<pinref part="EXT_I2C5" gate="G$1" pin="2"/>
-<wire x1="485.14" y1="149.86" x2="485.14" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="485.14" y1="170.18" x2="490.22" y2="170.18" width="0.1524" layer="91"/>
-<junction x="485.14" y="149.86"/>
-<wire x1="485.14" y1="170.18" x2="469.9" y2="170.18" width="0.1524" layer="91"/>
-<junction x="485.14" y="170.18"/>
-<label x="469.9" y="170.18" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="RTC_CON" gate="G$1" pin="2"/>
 <wire x1="149.86" y1="276.86" x2="139.7" y2="276.86" width="0.1524" layer="91"/>
 <label x="139.7" y="276.86" size="1.778" layer="95"/>
@@ -13042,32 +12824,6 @@ D = Direct mounting &lt;p&gt;
 <pinref part="RPI_HEADER" gate="G$1" pin="5"/>
 <wire x1="81.28" y1="297.18" x2="73.66" y2="297.18" width="0.1524" layer="91"/>
 <label x="68.58" y="297.18" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="EXT_I2C5" gate="G$1" pin="3"/>
-<wire x1="490.22" y1="167.64" x2="487.68" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C4" gate="G$1" pin="3"/>
-<wire x1="487.68" y1="167.64" x2="487.68" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="147.32" x2="490.22" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="EXT_I2C3" gate="G$1" pin="3"/>
-<wire x1="487.68" y1="147.32" x2="487.68" y2="127" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="127" x2="490.22" y2="127" width="0.1524" layer="91"/>
-<junction x="487.68" y="147.32"/>
-<pinref part="EXT_I2C2" gate="G$1" pin="3"/>
-<wire x1="487.68" y1="127" x2="487.68" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="106.68" x2="490.22" y2="106.68" width="0.1524" layer="91"/>
-<junction x="487.68" y="127"/>
-<pinref part="EXT_I2C1" gate="G$1" pin="3"/>
-<wire x1="487.68" y1="106.68" x2="487.68" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="83.82" x2="490.22" y2="83.82" width="0.1524" layer="91"/>
-<junction x="487.68" y="106.68"/>
-<pinref part="EXT_I2C0" gate="G$1" pin="3"/>
-<wire x1="487.68" y1="83.82" x2="487.68" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="487.68" y1="60.96" x2="490.22" y2="60.96" width="0.1524" layer="91"/>
-<junction x="487.68" y="83.82"/>
-<wire x1="487.68" y1="167.64" x2="469.9" y2="167.64" width="0.1524" layer="91"/>
-<junction x="487.68" y="167.64"/>
-<label x="469.9" y="167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="RTC_CON" gate="G$1" pin="3"/>
@@ -13637,11 +13393,6 @@ D = Direct mounting &lt;p&gt;
 </net>
 <net name="EXT_CS5" class="0">
 <segment>
-<pinref part="EXT_SPI5" gate="1" pin="1"/>
-<wire x1="447.04" y1="172.72" x2="434.34" y2="172.72" width="0.1524" layer="91"/>
-<label x="429.26" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GPB4"/>
 <wire x1="162.56" y1="226.06" x2="172.72" y2="226.06" width="0.1524" layer="91"/>
 <label x="165.1" y="226.06" size="1.778" layer="95"/>
@@ -13649,22 +13400,12 @@ D = Direct mounting &lt;p&gt;
 </net>
 <net name="EXT_CS4" class="0">
 <segment>
-<pinref part="EXT_SPI4" gate="1" pin="1"/>
-<wire x1="447.04" y1="152.4" x2="434.34" y2="152.4" width="0.1524" layer="91"/>
-<label x="429.26" y="152.4" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GPB3"/>
 <wire x1="162.56" y1="228.6" x2="172.72" y2="228.6" width="0.1524" layer="91"/>
 <label x="165.1" y="228.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EXT_CS3" class="0">
-<segment>
-<pinref part="EXT_SPI3" gate="1" pin="1"/>
-<wire x1="447.04" y1="132.08" x2="434.34" y2="132.08" width="0.1524" layer="91"/>
-<label x="429.26" y="132.08" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="GPB2"/>
 <wire x1="162.56" y1="231.14" x2="172.72" y2="231.14" width="0.1524" layer="91"/>
@@ -13678,11 +13419,6 @@ D = Direct mounting &lt;p&gt;
 </net>
 <net name="EXT_CS2" class="0">
 <segment>
-<pinref part="EXT_SPI2" gate="1" pin="1"/>
-<wire x1="447.04" y1="111.76" x2="434.34" y2="111.76" width="0.1524" layer="91"/>
-<label x="429.26" y="111.76" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GPB1"/>
 <wire x1="162.56" y1="233.68" x2="172.72" y2="233.68" width="0.1524" layer="91"/>
 <label x="165.1" y="233.68" size="1.778" layer="95"/>
@@ -13695,11 +13431,6 @@ D = Direct mounting &lt;p&gt;
 </net>
 <net name="EXT_CS1" class="0">
 <segment>
-<pinref part="EXT_SPI1" gate="1" pin="1"/>
-<wire x1="447.04" y1="88.9" x2="434.34" y2="88.9" width="0.1524" layer="91"/>
-<label x="429.26" y="88.9" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GPB0"/>
 <wire x1="162.56" y1="236.22" x2="172.72" y2="236.22" width="0.1524" layer="91"/>
 <label x="165.1" y="236.22" size="1.778" layer="95"/>
@@ -13711,11 +13442,6 @@ D = Direct mounting &lt;p&gt;
 </segment>
 </net>
 <net name="EXT_CS0" class="0">
-<segment>
-<pinref part="EXT_SPI0" gate="1" pin="1"/>
-<wire x1="447.04" y1="66.04" x2="434.34" y2="66.04" width="0.1524" layer="91"/>
-<label x="429.26" y="66.04" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="GPA7"/>
 <wire x1="162.56" y1="241.3" x2="172.72" y2="241.3" width="0.1524" layer="91"/>
@@ -13763,6 +13489,42 @@ D = Direct mounting &lt;p&gt;
 <pinref part="EXT_I2C" gate="G$1" pin="1"/>
 <wire x1="535.94" y1="149.86" x2="530.86" y2="149.86" width="0.1524" layer="91"/>
 <junction x="530.86" y="149.86"/>
+</segment>
+</net>
+<net name="N$91" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="1"/>
+<wire x1="421.64" y1="330.2" x2="408.94" y2="330.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$92" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="2"/>
+<wire x1="421.64" y1="327.66" x2="408.94" y2="327.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$93" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="3"/>
+<wire x1="421.64" y1="325.12" x2="408.94" y2="325.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$94" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="4"/>
+<wire x1="421.64" y1="322.58" x2="408.94" y2="322.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$95" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="5"/>
+<wire x1="421.64" y1="320.04" x2="408.94" y2="320.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$96" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="6"/>
+<wire x1="421.64" y1="317.5" x2="408.94" y2="317.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

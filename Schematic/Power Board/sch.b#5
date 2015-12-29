@@ -1479,42 +1479,42 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="12V_HEADER" library="pinhead" package="1X02" value="" x="29.21" y="27.94" smashed="yes" rot="R90">
-<attribute name="NAME" x="27.3812" y="25.3238" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="27.3812" y="25.3238" size="0.8128" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="32.385" y="25.4" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="BAT_HEADER" library="pinhead" package="1X02" value="" x="22.86" y="31.75" smashed="yes" rot="R180">
-<attribute name="NAME" x="25.4762" y="29.9212" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="NAME" x="25.4762" y="29.9212" size="0.8128" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="25.4" y="34.925" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C1" library="rcl" package="C025-030X050" value="100u" x="5.08" y="29.21" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.985" y="31.496" size="1.27" layer="25" ratio="10" rot="R270"/>
+<element name="100U" library="rcl" package="C025-030X050" value="100u" x="5.08" y="29.21" smashed="yes" rot="R270">
+<attribute name="NAME" x="1.905" y="31.496" size="0.8128" layer="25" ratio="10" rot="R270"/>
 </element>
 <element name="C2" library="rcl" package="C025-030X050" value="1000u" x="29.21" y="10.16" smashed="yes" rot="R90">
-<attribute name="NAME" x="27.305" y="7.874" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="32.258" y="7.874" size="1.27" layer="27" ratio="10" rot="R90"/>
+<attribute name="NAME" x="30.226" y="6.985" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="32.258" y="7.874" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="C3" library="rcl" package="C025-030X050" value="100u" x="15.24" y="24.13" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.335" y="21.844" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="18.288" y="21.844" size="1.27" layer="27" ratio="10" rot="R90"/>
+<attribute name="NAME" x="13.335" y="21.844" size="0.8128" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="18.288" y="21.844" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="C4" library="rcl" package="C025-030X050" value="1000u" x="15.24" y="17.78" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.335" y="15.494" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="18.288" y="15.494" size="1.27" layer="27" ratio="10" rot="R90"/>
+<attribute name="NAME" x="13.335" y="15.494" size="0.8128" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="18.288" y="15.494" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="D1" library="diode" package="DO41-7.6" value="1N5817-B" x="22.86" y="24.13" smashed="yes">
-<attribute name="NAME" x="20.828" y="25.781" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="20.828" y="21.209" size="1.27" layer="27" ratio="10"/>
+<attribute name="NAME" x="20.828" y="25.781" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="20.828" y="21.209" size="0.8128" layer="27" ratio="10"/>
 </element>
 <element name="D2" library="diode" package="DO41-7.6" value="1N5817-B" x="6.35" y="24.13" smashed="yes">
-<attribute name="NAME" x="4.318" y="25.781" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="4.318" y="21.209" size="1.27" layer="27" ratio="10"/>
+<attribute name="NAME" x="4.318" y="25.781" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="4.318" y="21.209" size="0.8128" layer="27" ratio="10"/>
 </element>
 <element name="FAN1" library="con-lstb" package="MA03-1" value="" x="13.97" y="33.02" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="13.97" y="33.02" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="10.16" y="34.671" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="10.16" y="34.671" size="0.8128" layer="25" ratio="10"/>
 <attribute name="VALUE" x="10.16" y="30.099" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="FAN2" library="con-lstb" package="MA03-1" value="" x="13.97" y="29.21" smashed="yes">
@@ -1522,7 +1522,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="13.97" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="10.16" y="30.861" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="10.16" y="30.861" size="0.8128" layer="25" ratio="10"/>
 <attribute name="VALUE" x="10.16" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="IC1" library="national-semiconductor" package="T05D" value="LM2596T" x="20.32" y="8.89" smashed="yes">
@@ -1530,29 +1530,29 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9494162" x="20.32" y="8.89" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="14.605" y="3.175" size="1.778" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="22.225" y="1.905" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
 <element name="IC2" library="national-semiconductor" package="T05D" value="LM2596T" x="7.62" y="8.89" smashed="yes">
 <attribute name="OC_NEWARK" value="65K5910" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LM2596T-ADJ/LF02" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9494162" x="7.62" y="8.89" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="1.905" y="3.175" size="1.778" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="8.255" y="1.905" size="0.8128" layer="25" ratio="10" rot="R180"/>
 </element>
 <element name="L1" library="rcl" package="6000-XXXX-RC" value="" x="22.86" y="17.78" smashed="yes">
-<attribute name="NAME" x="18.3544" y="22.4126" size="1.27" layer="25"/>
+<attribute name="NAME" x="18.3544" y="22.4126" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="18.3544" y="11.3694" size="1.27" layer="27"/>
 </element>
 <element name="L2" library="rcl" package="6000-XXXX-RC" value="" x="6.35" y="17.78" smashed="yes">
-<attribute name="NAME" x="1.8444" y="22.4126" size="1.27" layer="25"/>
+<attribute name="NAME" x="1.8444" y="22.4126" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="1.8444" y="11.3694" size="1.27" layer="27"/>
 </element>
 <element name="OUT1_HEADER" library="pinhead" package="1X02" value="" x="30.48" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="28.6512" y="17.7038" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="28.6512" y="17.7038" size="0.8128" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="33.655" y="17.78" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="OUT2_HEADER" library="pinhead" package="1X02" value="" x="22.86" y="27.94" smashed="yes">
-<attribute name="NAME" x="20.2438" y="29.7688" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="20.2438" y="29.7688" size="0.8128" layer="25" ratio="10"/>
 <attribute name="VALUE" x="20.32" y="24.765" size="1.27" layer="27"/>
 </element>
 </elements>
@@ -1591,7 +1591,7 @@ design rules under a new name.</description>
 <contactref element="D1" pad="A"/>
 <contactref element="IC1" pad="5"/>
 <contactref element="C2" pad="2"/>
-<contactref element="C1" pad="2"/>
+<contactref element="100U" pad="2"/>
 <contactref element="OUT1_HEADER" pad="2"/>
 <contactref element="12V_HEADER" pad="2"/>
 <contactref element="FAN2" pad="3"/>
@@ -1633,7 +1633,7 @@ design rules under a new name.</description>
 <wire x1="29.0322" y1="29.2608" x2="29.21" y2="29.21" width="0.254" layer="16"/>
 </signal>
 <signal name="12V">
-<contactref element="C1" pad="1"/>
+<contactref element="100U" pad="1"/>
 <contactref element="IC1" pad="1"/>
 <contactref element="12V_HEADER" pad="1"/>
 <contactref element="FAN2" pad="2"/>

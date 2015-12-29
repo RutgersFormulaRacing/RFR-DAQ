@@ -5583,7 +5583,7 @@ W = angled&lt;p&gt;
 <part name="IC1" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
 <part name="L1" library="rcl" deviceset="L-US" device="6000-XXX-RC"/>
 <part name="D1" library="diode" deviceset="1N581*" device="" technology="7-B"/>
-<part name="C1" library="rcl" deviceset="C-US" device="025-030X050" value="100u"/>
+<part name="100U" library="rcl" deviceset="C-US" device="025-030X050" value="100u"/>
 <part name="C2" library="rcl" deviceset="C-US" device="025-030X050" value="1000u"/>
 <part name="IC2" library="national-semiconductor" deviceset="LM2596" device="T" value="LM2596T"/>
 <part name="L2" library="rcl" deviceset="L-US" device="6000-XXX-RC"/>
@@ -5605,7 +5605,7 @@ W = angled&lt;p&gt;
 <instance part="IC1" gate="G$1" x="53.34" y="71.12"/>
 <instance part="L1" gate="G$1" x="88.9" y="73.66" rot="R90"/>
 <instance part="D1" gate="G$1" x="81.28" y="58.42" rot="R90"/>
-<instance part="C1" gate="G$1" x="22.86" y="73.66"/>
+<instance part="100U" gate="G$1" x="22.86" y="73.66"/>
 <instance part="C2" gate="G$1" x="106.68" y="71.12"/>
 <instance part="IC2" gate="G$1" x="53.34" y="38.1"/>
 <instance part="L2" gate="G$1" x="88.9" y="40.64" rot="R90"/>
@@ -5661,7 +5661,7 @@ W = angled&lt;p&gt;
 <wire x1="106.68" y1="66.04" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="53.34" x2="81.28" y2="53.34" width="0.1524" layer="91"/>
 <junction x="81.28" y="53.34"/>
-<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="100U" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="68.58" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="53.34" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
 <junction x="40.64" y="53.34"/>
@@ -5686,7 +5686,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="12V" class="0">
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="100U" gate="G$1" pin="1"/>
 <pinref part="IC1" gate="G$1" pin="VIN"/>
 <wire x1="22.86" y1="76.2" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
 <junction x="22.86" y="76.2"/>

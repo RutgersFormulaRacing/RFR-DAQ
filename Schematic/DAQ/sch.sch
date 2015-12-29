@@ -11880,28 +11880,28 @@ Spark Fun Electronics SKU : COM-08034</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
-<part name="U$2" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
-<part name="U$3" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
-<part name="IC1" library="microchip" deviceset="MCP23S17" device="SP"/>
-<part name="IC2" library="microchip" deviceset="MCP23S17" device="SP"/>
-<part name="IC3" library="microchip" deviceset="MCP23S17" device="SP"/>
-<part name="U1" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA328P-PU" device=""/>
-<part name="IC4" library="74xx-us" deviceset="74*165" device="N" technology="LS"/>
+<part name="ADC_0" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
+<part name="ADC_1" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
+<part name="ADC_2" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
+<part name="CS_CONT" library="microchip" deviceset="MCP23S17" device="SP"/>
+<part name="GPIO_0" library="microchip" deviceset="MCP23S17" device="SP"/>
+<part name="GPIO_1" library="microchip" deviceset="MCP23S17" device="SP"/>
+<part name="SHIFT_CON" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA328P-PU" device=""/>
+<part name="SHIFT_IN" library="74xx-us" deviceset="74*165" device="N" technology="LS"/>
 <part name="RN1" library="resistor-net" deviceset="RN08" device=""/>
-<part name="U$4" library="SparkFun-Boards" deviceset="LOGIC_LEVEL_CONVERTER" device=""/>
+<part name="LOGIC_SHIFT" library="SparkFun-Boards" deviceset="LOGIC_LEVEL_CONVERTER" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
 <part name="LED2" library="led" deviceset="LED" device="3MM"/>
 <part name="LED3" library="led" deviceset="LED" device="3MM"/>
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49S"/>
 <part name="C1" library="rcl" deviceset="C-US" device="025-025X050"/>
 <part name="C2" library="rcl" deviceset="C-US" device="025-025X050"/>
-<part name="U$5" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
+<part name="ADC_3" library="Microchip_By_element14_Batch_1" deviceset="MCP3208-CI/P" device=""/>
 <part name="R4" library="rcl" deviceset="R-US_" device="0204/5"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="0204/5"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="0204/5"/>
 <part name="R3" library="rcl" deviceset="R-US_" device="0204/5"/>
-<part name="S2" library="switch-omron" deviceset="10-XX" device=""/>
+<part name="SHIFT_RST" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="PR_SW" library="switch" deviceset="255SB" device=""/>
 <part name="RPI_HEADER" library="con-lstb" deviceset="MA20-2" device=""/>
 <part name="SHIFT_CONT_SW" library="switch-omron" deviceset="10-XX" device=""/>
@@ -11918,51 +11918,51 @@ Spark Fun Electronics SKU : COM-08034</description>
 <part name="EXT_SPI" library="con-subd" deviceset="F09" device="VB"/>
 <part name="EXT_I2C" library="con-subd" deviceset="F09" device="VB"/>
 <part name="EXT_SER" library="con-subd" deviceset="F09" device="VB"/>
-<part name="SV1" library="con-lstb" deviceset="MA06-1" device=""/>
+<part name="FTDI" library="con-lstb" deviceset="MA06-1" device=""/>
 <part name="C3" library="rcl" deviceset="C-US" device="025-025X050"/>
 <part name="C4" library="rcl" deviceset="C-US" device="025-025X050"/>
 <part name="5V_IN" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="EXT_SHIFT" library="con-subd" deviceset="F09" device="VB"/>
-<part name="SV2" library="con-lstb" deviceset="MA04-1" device=""/>
-<part name="SV3" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="RPI_GPIO_0" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="RPI_GPIO_1" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="5V_IN1" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="5V_IN2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="SW1" library="SparkFun-Electromechanical" deviceset="SW_DIP-8" device=""/>
+<part name="DIP_ARRAY" library="SparkFun-Electromechanical" deviceset="SW_DIP-8" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="A" x="231.14" y="246.38" smashed="yes">
+<instance part="ADC_0" gate="A" x="231.14" y="246.38" smashed="yes">
 <attribute name="NAME" x="226.4156" y="273.2786" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="224.4344" y="210.5152" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="U$2" gate="A" x="231.14" y="177.8" smashed="yes">
+<instance part="ADC_1" gate="A" x="231.14" y="177.8" smashed="yes">
 <attribute name="NAME" x="226.4156" y="204.6986" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="224.4344" y="141.9352" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="U$3" gate="A" x="231.14" y="109.22" smashed="yes">
+<instance part="ADC_2" gate="A" x="231.14" y="109.22" smashed="yes">
 <attribute name="NAME" x="226.4156" y="136.1186" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="224.4344" y="73.3552" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="IC1" gate="G$1" x="149.86" y="238.76" smashed="yes">
+<instance part="CS_CONT" gate="G$1" x="149.86" y="238.76" smashed="yes">
 <attribute name="NAME" x="139.7" y="262.89" size="1.778" layer="95"/>
 <attribute name="VALUE" x="139.7" y="213.36" size="1.778" layer="96"/>
 </instance>
-<instance part="IC2" gate="G$1" x="317.5" y="93.98" smashed="yes">
+<instance part="GPIO_0" gate="G$1" x="317.5" y="93.98" smashed="yes">
 <attribute name="NAME" x="307.34" y="118.11" size="1.778" layer="95"/>
 <attribute name="VALUE" x="307.34" y="68.58" size="1.778" layer="96"/>
 </instance>
-<instance part="IC3" gate="G$1" x="317.5" y="35.56" smashed="yes">
+<instance part="GPIO_1" gate="G$1" x="317.5" y="35.56" smashed="yes">
 <attribute name="NAME" x="307.34" y="59.69" size="1.778" layer="95"/>
 <attribute name="VALUE" x="307.34" y="10.16" size="1.778" layer="96"/>
 </instance>
-<instance part="U1" gate="A" x="368.3" y="279.4" smashed="yes">
+<instance part="SHIFT_CON" gate="A" x="368.3" y="279.4" smashed="yes">
 <attribute name="NAME" x="362.7374" y="300.9138" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="363.3216" y="248.3612" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
-<instance part="IC4" gate="A" x="386.08" y="213.36" smashed="yes">
+<instance part="SHIFT_IN" gate="A" x="386.08" y="213.36" smashed="yes">
 <attribute name="NAME" x="378.46" y="231.775" size="1.778" layer="95"/>
 <attribute name="VALUE" x="378.46" y="193.04" size="1.778" layer="96"/>
 </instance>
@@ -11970,10 +11970,10 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="NAME" x="335.28" y="182.88" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="342.138" y="182.88" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="IC4" gate="P" x="358.14" y="180.34" smashed="yes" rot="R270">
+<instance part="SHIFT_IN" gate="P" x="358.14" y="180.34" smashed="yes" rot="R270">
 <attribute name="NAME" x="357.505" y="180.975" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="U$4" gate="G$1" x="220.98" y="274.32" smashed="yes" rot="MR0"/>
+<instance part="LOGIC_SHIFT" gate="G$1" x="220.98" y="274.32" smashed="yes" rot="MR0"/>
 <instance part="LED1" gate="G$1" x="312.42" y="269.24" smashed="yes">
 <attribute name="NAME" x="315.976" y="264.668" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="318.135" y="264.668" size="1.778" layer="96" rot="R90"/>
@@ -11998,7 +11998,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="NAME" x="315.595" y="240.284" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="310.769" y="240.284" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U$5" gate="A" x="231.14" y="43.18" smashed="yes">
+<instance part="ADC_3" gate="A" x="231.14" y="43.18" smashed="yes">
 <attribute name="NAME" x="226.4156" y="70.0786" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="224.4344" y="7.3152" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
@@ -12018,7 +12018,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="NAME" x="334.01" y="278.3586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="334.01" y="273.558" size="1.778" layer="96"/>
 </instance>
-<instance part="S2" gate="1" x="406.4" y="248.92" smashed="yes" rot="R270">
+<instance part="SHIFT_RST" gate="1" x="406.4" y="248.92" smashed="yes" rot="R270">
 <attribute name="NAME" x="403.86" y="255.27" size="1.778" layer="95"/>
 <attribute name="VALUE" x="409.575" y="252.73" size="1.778" layer="96"/>
 </instance>
@@ -12086,7 +12086,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="VALUE" x="415.29" y="95.885" size="1.778" layer="96"/>
 <attribute name="NAME" x="415.29" y="115.57" size="1.778" layer="95"/>
 </instance>
-<instance part="SV1" gate="1" x="426.72" y="322.58" smashed="yes" rot="R180">
+<instance part="FTDI" gate="1" x="426.72" y="322.58" smashed="yes" rot="R180">
 <attribute name="VALUE" x="427.99" y="335.28" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="427.99" y="314.198" size="1.778" layer="95" rot="R180"/>
 </instance>
@@ -12106,11 +12106,11 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="VALUE" x="415.29" y="70.485" size="1.778" layer="96"/>
 <attribute name="NAME" x="415.29" y="90.17" size="1.778" layer="95"/>
 </instance>
-<instance part="SV2" gate="1" x="101.6" y="231.14" smashed="yes" rot="R180">
+<instance part="RPI_GPIO_0" gate="1" x="101.6" y="231.14" smashed="yes" rot="R180">
 <attribute name="VALUE" x="102.87" y="241.3" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="102.87" y="225.298" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="SV3" gate="1" x="101.6" y="210.82" smashed="yes" rot="R180">
+<instance part="RPI_GPIO_1" gate="1" x="101.6" y="210.82" smashed="yes" rot="R180">
 <attribute name="VALUE" x="102.87" y="220.98" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="102.87" y="204.978" size="1.778" layer="95" rot="R180"/>
 </instance>
@@ -12122,7 +12122,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <attribute name="VALUE" x="453.39" y="228.6" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="453.39" y="215.138" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="SW1" gate="A" x="317.5" y="170.18" smashed="yes" rot="R90">
+<instance part="DIP_ARRAY" gate="A" x="317.5" y="170.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="306.705" y="165.1" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="332.74" y="165.1" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -12132,24 +12132,24 @@ Spark Fun Electronics SKU : COM-08034</description>
 <nets>
 <net name="5V" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="VREF"/>
-<pinref part="U$1" gate="A" pin="VDD"/>
+<pinref part="ADC_0" gate="A" pin="VREF"/>
+<pinref part="ADC_0" gate="A" pin="VDD"/>
 <wire x1="213.36" y1="261.62" x2="213.36" y2="264.16" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="264.16" x2="193.04" y2="264.16" width="0.1524" layer="91"/>
 <junction x="213.36" y="264.16"/>
-<pinref part="U$4" gate="G$1" pin="HV"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="HV"/>
 <wire x1="193.04" y1="264.16" x2="193.04" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="299.72" x2="213.36" y2="299.72" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="A" pin="VDD"/>
-<pinref part="U$3" gate="A" pin="VREF"/>
+<pinref part="ADC_2" gate="A" pin="VDD"/>
+<pinref part="ADC_2" gate="A" pin="VREF"/>
 <wire x1="213.36" y1="127" x2="213.36" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="264.16" x2="193.04" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="195.58" x2="193.04" y2="127" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="127" x2="213.36" y2="127" width="0.1524" layer="91"/>
 <junction x="193.04" y="264.16"/>
 <junction x="213.36" y="127"/>
-<pinref part="U$5" gate="A" pin="VDD"/>
-<pinref part="U$5" gate="A" pin="VREF"/>
+<pinref part="ADC_3" gate="A" pin="VDD"/>
+<pinref part="ADC_3" gate="A" pin="VREF"/>
 <wire x1="213.36" y1="60.96" x2="213.36" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="127" x2="193.04" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="60.96" x2="213.36" y2="60.96" width="0.1524" layer="91"/>
@@ -12158,8 +12158,8 @@ Spark Fun Electronics SKU : COM-08034</description>
 <wire x1="193.04" y1="299.72" x2="182.88" y2="299.72" width="0.1524" layer="91"/>
 <junction x="193.04" y="299.72"/>
 <label x="182.88" y="299.72" size="1.778" layer="95"/>
-<pinref part="U$2" gate="A" pin="VREF"/>
-<pinref part="U$2" gate="A" pin="VDD"/>
+<pinref part="ADC_1" gate="A" pin="VREF"/>
+<pinref part="ADC_1" gate="A" pin="VDD"/>
 <wire x1="213.36" y1="193.04" x2="213.36" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="195.58" x2="193.04" y2="195.58" width="0.1524" layer="91"/>
 <junction x="213.36" y="195.58"/>
@@ -12200,38 +12200,38 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA1"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA1"/>
 <wire x1="162.56" y1="256.54" x2="213.36" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="A" pin="~CS/SHDN"/>
+<pinref part="ADC_0" gate="A" pin="~CS/SHDN"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA2"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA2"/>
 <wire x1="162.56" y1="254" x2="208.28" y2="254" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="254" x2="208.28" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="A" pin="~CS/SHDN"/>
+<pinref part="ADC_1" gate="A" pin="~CS/SHDN"/>
 <wire x1="208.28" y1="187.96" x2="213.36" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA3"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA3"/>
 <wire x1="162.56" y1="251.46" x2="205.74" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="251.46" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="A" pin="~CS/SHDN"/>
+<pinref part="ADC_2" gate="A" pin="~CS/SHDN"/>
 <wire x1="205.74" y1="119.38" x2="213.36" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="RN1" gate="1" pin="9"/>
-<pinref part="IC4" gate="A" pin="A"/>
+<pinref part="SHIFT_IN" gate="A" pin="A"/>
 <wire x1="337.82" y1="226.06" x2="373.38" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="177.8" x2="309.88" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="226.06" x2="337.82" y2="226.06" width="0.1524" layer="91"/>
 <junction x="337.82" y="226.06"/>
-<pinref part="SW1" gate="A" pin="8"/>
+<pinref part="DIP_ARRAY" gate="A" pin="8"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -12239,12 +12239,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="8"/>
 <wire x1="337.82" y1="220.98" x2="340.36" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="340.36" y1="220.98" x2="340.36" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="B"/>
+<pinref part="SHIFT_IN" gate="A" pin="B"/>
 <wire x1="340.36" y1="223.52" x2="373.38" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="177.8" x2="312.42" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="220.98" x2="337.82" y2="220.98" width="0.1524" layer="91"/>
 <junction x="337.82" y="220.98"/>
-<pinref part="SW1" gate="A" pin="7"/>
+<pinref part="DIP_ARRAY" gate="A" pin="7"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -12252,12 +12252,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="7"/>
 <wire x1="337.82" y1="215.9" x2="342.9" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="215.9" x2="342.9" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="C"/>
+<pinref part="SHIFT_IN" gate="A" pin="C"/>
 <wire x1="342.9" y1="220.98" x2="373.38" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="177.8" x2="314.96" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="215.9" x2="337.82" y2="215.9" width="0.1524" layer="91"/>
 <junction x="337.82" y="215.9"/>
-<pinref part="SW1" gate="A" pin="6"/>
+<pinref part="DIP_ARRAY" gate="A" pin="6"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -12265,12 +12265,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="6"/>
 <wire x1="337.82" y1="210.82" x2="345.44" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="345.44" y1="210.82" x2="345.44" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="D"/>
+<pinref part="SHIFT_IN" gate="A" pin="D"/>
 <wire x1="345.44" y1="218.44" x2="373.38" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="210.82" x2="317.5" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="317.5" y1="210.82" x2="317.5" y2="177.8" width="0.1524" layer="91"/>
 <junction x="337.82" y="210.82"/>
-<pinref part="SW1" gate="A" pin="5"/>
+<pinref part="DIP_ARRAY" gate="A" pin="5"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -12278,12 +12278,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="5"/>
 <wire x1="337.82" y1="205.74" x2="347.98" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="205.74" x2="347.98" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="E"/>
+<pinref part="SHIFT_IN" gate="A" pin="E"/>
 <wire x1="347.98" y1="215.9" x2="373.38" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="205.74" x2="320.04" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="320.04" y1="205.74" x2="320.04" y2="177.8" width="0.1524" layer="91"/>
 <junction x="337.82" y="205.74"/>
-<pinref part="SW1" gate="A" pin="4"/>
+<pinref part="DIP_ARRAY" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -12291,12 +12291,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="4"/>
 <wire x1="337.82" y1="200.66" x2="350.52" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="200.66" x2="350.52" y2="213.36" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="F"/>
+<pinref part="SHIFT_IN" gate="A" pin="F"/>
 <wire x1="350.52" y1="213.36" x2="373.38" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="200.66" x2="322.58" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="200.66" x2="322.58" y2="177.8" width="0.1524" layer="91"/>
 <junction x="337.82" y="200.66"/>
-<pinref part="SW1" gate="A" pin="3"/>
+<pinref part="DIP_ARRAY" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -12304,12 +12304,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="3"/>
 <wire x1="337.82" y1="195.58" x2="353.06" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="353.06" y1="195.58" x2="353.06" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="G"/>
+<pinref part="SHIFT_IN" gate="A" pin="G"/>
 <wire x1="353.06" y1="210.82" x2="373.38" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="195.58" x2="325.12" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="325.12" y1="195.58" x2="325.12" y2="177.8" width="0.1524" layer="91"/>
 <junction x="337.82" y="195.58"/>
-<pinref part="SW1" gate="A" pin="2"/>
+<pinref part="DIP_ARRAY" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -12317,12 +12317,12 @@ Spark Fun Electronics SKU : COM-08034</description>
 <pinref part="RN1" gate="1" pin="2"/>
 <wire x1="337.82" y1="190.5" x2="355.6" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="355.6" y1="190.5" x2="355.6" y2="208.28" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="A" pin="H"/>
+<pinref part="SHIFT_IN" gate="A" pin="H"/>
 <wire x1="355.6" y1="208.28" x2="373.38" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="190.5" x2="327.66" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="190.5" x2="327.66" y2="177.8" width="0.1524" layer="91"/>
 <junction x="337.82" y="190.5"/>
-<pinref part="SW1" gate="A" pin="1"/>
+<pinref part="DIP_ARRAY" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -12349,59 +12349,59 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PB0"/>
+<pinref part="SHIFT_CON" gate="A" pin="PB0"/>
 <wire x1="342.9" y1="281.94" x2="350.52" y2="281.94" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PB1"/>
+<pinref part="SHIFT_CON" gate="A" pin="PB1"/>
 <wire x1="332.74" y1="279.4" x2="350.52" y2="279.4" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PB2"/>
+<pinref part="SHIFT_CON" gate="A" pin="PB2"/>
 <wire x1="342.9" y1="276.86" x2="350.52" y2="276.86" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="DOUT"/>
-<pinref part="U$2" gate="A" pin="DOUT"/>
+<pinref part="ADC_0" gate="A" pin="DOUT"/>
+<pinref part="ADC_1" gate="A" pin="DOUT"/>
 <wire x1="248.92" y1="264.16" x2="248.92" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="A" pin="DOUT"/>
+<pinref part="ADC_2" gate="A" pin="DOUT"/>
 <wire x1="248.92" y1="195.58" x2="248.92" y2="127" width="0.1524" layer="91"/>
 <junction x="248.92" y="195.58"/>
 <wire x1="248.92" y1="264.16" x2="248.92" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="287.02" x2="213.36" y2="287.02" width="0.1524" layer="91"/>
 <junction x="248.92" y="264.16"/>
-<pinref part="U$4" gate="G$1" pin="HV_TXO_2"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="HV_TXO_2"/>
 <wire x1="213.36" y1="287.02" x2="213.36" y2="292.1" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="A" pin="DOUT"/>
+<pinref part="ADC_3" gate="A" pin="DOUT"/>
 <wire x1="248.92" y1="60.96" x2="248.92" y2="127" width="0.1524" layer="91"/>
 <junction x="248.92" y="127"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="DIN"/>
+<pinref part="ADC_0" gate="A" pin="DIN"/>
 <wire x1="213.36" y1="254" x2="203.2" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="261.62" x2="203.2" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="A" pin="DIN"/>
+<pinref part="ADC_1" gate="A" pin="DIN"/>
 <wire x1="203.2" y1="185.42" x2="213.36" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="A" pin="DIN"/>
+<pinref part="ADC_2" gate="A" pin="DIN"/>
 <wire x1="203.2" y1="185.42" x2="203.2" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="116.84" x2="213.36" y2="116.84" width="0.1524" layer="91"/>
 <junction x="203.2" y="185.42"/>
-<pinref part="U$4" gate="G$1" pin="HV_RXI_2"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="HV_RXI_2"/>
 <wire x1="203.2" y1="261.62" x2="203.2" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="294.64" x2="213.36" y2="294.64" width="0.1524" layer="91"/>
 <junction x="203.2" y="261.62"/>
-<pinref part="U$5" gate="A" pin="DIN"/>
+<pinref part="ADC_3" gate="A" pin="DIN"/>
 <wire x1="203.2" y1="116.84" x2="203.2" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="50.8" x2="213.36" y2="50.8" width="0.1524" layer="91"/>
 <junction x="203.2" y="116.84"/>
@@ -12409,20 +12409,20 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="N$32" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="CLK"/>
+<pinref part="ADC_0" gate="A" pin="CLK"/>
 <wire x1="213.36" y1="251.46" x2="200.66" y2="261.62" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="A" pin="CLK"/>
+<pinref part="ADC_1" gate="A" pin="CLK"/>
 <wire x1="200.66" y1="261.62" x2="200.66" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="182.88" x2="213.36" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="A" pin="CLK"/>
+<pinref part="ADC_2" gate="A" pin="CLK"/>
 <wire x1="200.66" y1="182.88" x2="200.66" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="114.3" x2="213.36" y2="114.3" width="0.1524" layer="91"/>
 <junction x="200.66" y="182.88"/>
-<pinref part="U$4" gate="G$1" pin="HV_RXI_1"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="HV_RXI_1"/>
 <wire x1="200.66" y1="261.62" x2="200.66" y2="302.26" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="302.26" x2="213.36" y2="302.26" width="0.1524" layer="91"/>
 <junction x="200.66" y="261.62"/>
-<pinref part="U$5" gate="A" pin="CLK"/>
+<pinref part="ADC_3" gate="A" pin="CLK"/>
 <wire x1="200.66" y1="114.3" x2="200.66" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="48.26" x2="213.36" y2="48.26" width="0.1524" layer="91"/>
 <junction x="200.66" y="114.3"/>
@@ -12430,35 +12430,35 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="DGND"/>
-<pinref part="U$5" gate="A" pin="AGND"/>
+<pinref part="ADC_3" gate="A" pin="DGND"/>
+<pinref part="ADC_3" gate="A" pin="AGND"/>
 <wire x1="213.36" y1="20.32" x2="213.36" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="20.32" x2="195.58" y2="20.32" width="0.1524" layer="91"/>
 <junction x="213.36" y="20.32"/>
-<pinref part="U$1" gate="A" pin="DGND"/>
-<pinref part="U$1" gate="A" pin="AGND"/>
+<pinref part="ADC_0" gate="A" pin="DGND"/>
+<pinref part="ADC_0" gate="A" pin="AGND"/>
 <wire x1="213.36" y1="223.52" x2="213.36" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="223.52" x2="195.58" y2="223.52" width="0.1524" layer="91"/>
 <junction x="213.36" y="223.52"/>
-<pinref part="U$4" gate="G$1" pin="GND@2"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="GND@2"/>
 <wire x1="213.36" y1="297.18" x2="208.28" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="297.18" x2="208.28" y2="284.48" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="284.48" x2="256.54" y2="284.48" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="GND"/>
 <wire x1="256.54" y1="284.48" x2="256.54" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="297.18" x2="251.46" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="223.52" x2="195.58" y2="297.18" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="297.18" x2="208.28" y2="297.18" width="0.1524" layer="91"/>
 <junction x="208.28" y="297.18"/>
-<pinref part="U$2" gate="A" pin="DGND"/>
-<pinref part="U$2" gate="A" pin="AGND"/>
+<pinref part="ADC_1" gate="A" pin="DGND"/>
+<pinref part="ADC_1" gate="A" pin="AGND"/>
 <wire x1="213.36" y1="154.94" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="223.52" x2="195.58" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="154.94" x2="213.36" y2="154.94" width="0.1524" layer="91"/>
 <junction x="195.58" y="223.52"/>
 <junction x="213.36" y="154.94"/>
-<pinref part="U$3" gate="A" pin="DGND"/>
-<pinref part="U$3" gate="A" pin="AGND"/>
+<pinref part="ADC_2" gate="A" pin="DGND"/>
+<pinref part="ADC_2" gate="A" pin="AGND"/>
 <wire x1="213.36" y1="86.36" x2="213.36" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="154.94" x2="195.58" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
@@ -12471,13 +12471,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="261.62" y="284.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC4" gate="A" pin="SER"/>
+<pinref part="SHIFT_IN" gate="A" pin="SER"/>
 <wire x1="373.38" y1="228.6" x2="360.68" y2="228.6" width="0.1524" layer="91"/>
 <label x="360.68" y="228.6" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="RN1" gate="1" pin="1"/>
-<pinref part="IC4" gate="P" pin="GND"/>
+<pinref part="SHIFT_IN" gate="P" pin="GND"/>
 <wire x1="337.82" y1="180.34" x2="347.98" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="180.34" x2="337.82" y2="175.26" width="0.1524" layer="91"/>
 <junction x="337.82" y="180.34"/>
@@ -12485,21 +12485,21 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="342.9" y="175.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S2" gate="1" pin="S"/>
-<pinref part="S2" gate="1" pin="S1"/>
+<pinref part="SHIFT_RST" gate="1" pin="S"/>
+<pinref part="SHIFT_RST" gate="1" pin="S1"/>
 <wire x1="411.48" y1="248.92" x2="411.48" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="411.48" y1="246.38" x2="421.64" y2="246.38" width="0.1524" layer="91"/>
 <junction x="411.48" y="246.38"/>
 <label x="416.56" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="A0"/>
-<pinref part="IC1" gate="G$1" pin="A1"/>
+<pinref part="CS_CONT" gate="G$1" pin="A0"/>
+<pinref part="CS_CONT" gate="G$1" pin="A1"/>
 <wire x1="137.16" y1="228.6" x2="137.16" y2="226.06" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="A2"/>
+<pinref part="CS_CONT" gate="G$1" pin="A2"/>
 <wire x1="137.16" y1="226.06" x2="137.16" y2="223.52" width="0.1524" layer="91"/>
 <junction x="137.16" y="226.06"/>
-<pinref part="IC1" gate="G$1" pin="VSS"/>
+<pinref part="CS_CONT" gate="G$1" pin="VSS"/>
 <wire x1="137.16" y1="218.44" x2="132.08" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="223.52" x2="137.16" y2="218.44" width="0.1524" layer="91"/>
 <junction x="137.16" y="223.52"/>
@@ -12529,8 +12529,8 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="299.72" y="261.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="GND_2"/>
-<pinref part="U1" gate="A" pin="GND"/>
+<pinref part="SHIFT_CON" gate="A" pin="GND_2"/>
+<pinref part="SHIFT_CON" gate="A" pin="GND"/>
 <wire x1="350.52" y1="259.08" x2="350.52" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="256.54" x2="340.36" y2="256.54" width="0.1524" layer="91"/>
 <junction x="350.52" y="256.54"/>
@@ -12590,23 +12590,23 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="139.7" y="279.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="1"/>
+<pinref part="FTDI" gate="1" pin="1"/>
 <wire x1="419.1" y1="330.2" x2="408.94" y2="330.2" width="0.1524" layer="91"/>
 <label x="408.94" y="330.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="A2"/>
-<pinref part="IC3" gate="G$1" pin="A1"/>
+<pinref part="GPIO_1" gate="G$1" pin="A2"/>
+<pinref part="GPIO_1" gate="G$1" pin="A1"/>
 <wire x1="304.8" y1="20.32" x2="304.8" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="A0"/>
+<pinref part="GPIO_1" gate="G$1" pin="A0"/>
 <wire x1="304.8" y1="22.86" x2="304.8" y2="25.4" width="0.1524" layer="91"/>
 <junction x="304.8" y="22.86"/>
 <wire x1="304.8" y1="25.4" x2="297.18" y2="25.4" width="0.1524" layer="91"/>
 <junction x="304.8" y="25.4"/>
-<pinref part="IC2" gate="G$1" pin="A2"/>
-<pinref part="IC2" gate="G$1" pin="A1"/>
+<pinref part="GPIO_0" gate="G$1" pin="A2"/>
+<pinref part="GPIO_0" gate="G$1" pin="A1"/>
 <wire x1="304.8" y1="78.74" x2="304.8" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="A0"/>
+<pinref part="GPIO_0" gate="G$1" pin="A0"/>
 <wire x1="304.8" y1="81.28" x2="304.8" y2="83.82" width="0.1524" layer="91"/>
 <junction x="304.8" y="81.28"/>
 <wire x1="297.18" y1="25.4" x2="297.18" y2="83.82" width="0.1524" layer="91"/>
@@ -12660,43 +12660,43 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA4"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA4"/>
 <wire x1="162.56" y1="248.92" x2="198.12" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="A" pin="~CS/SHDN"/>
+<pinref part="ADC_3" gate="A" pin="~CS/SHDN"/>
 <wire x1="198.12" y1="248.92" x2="198.12" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="53.34" x2="213.36" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3V3" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="LV"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="LV"/>
 <wire x1="251.46" y1="299.72" x2="266.7" y2="299.72" width="0.1524" layer="91"/>
 <label x="261.62" y="299.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC4" gate="P" pin="VCC"/>
+<pinref part="SHIFT_IN" gate="P" pin="VCC"/>
 <wire x1="368.3" y1="165.1" x2="368.3" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="368.3" y1="165.1" x2="375.92" y2="165.1" width="0.1524" layer="91"/>
 <label x="370.84" y="165.1" size="1.778" layer="95"/>
-<pinref part="SW1" gate="A" pin="9"/>
-<pinref part="SW1" gate="A" pin="10"/>
+<pinref part="DIP_ARRAY" gate="A" pin="9"/>
+<pinref part="DIP_ARRAY" gate="A" pin="10"/>
 <wire x1="309.88" y1="162.56" x2="312.42" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="A" pin="11"/>
+<pinref part="DIP_ARRAY" gate="A" pin="11"/>
 <wire x1="312.42" y1="162.56" x2="314.96" y2="162.56" width="0.1524" layer="91"/>
 <junction x="312.42" y="162.56"/>
-<pinref part="SW1" gate="A" pin="12"/>
+<pinref part="DIP_ARRAY" gate="A" pin="12"/>
 <wire x1="314.96" y1="162.56" x2="317.5" y2="162.56" width="0.1524" layer="91"/>
 <junction x="314.96" y="162.56"/>
-<pinref part="SW1" gate="A" pin="13"/>
+<pinref part="DIP_ARRAY" gate="A" pin="13"/>
 <wire x1="317.5" y1="162.56" x2="320.04" y2="162.56" width="0.1524" layer="91"/>
 <junction x="317.5" y="162.56"/>
-<pinref part="SW1" gate="A" pin="14"/>
+<pinref part="DIP_ARRAY" gate="A" pin="14"/>
 <wire x1="320.04" y1="162.56" x2="322.58" y2="162.56" width="0.1524" layer="91"/>
 <junction x="320.04" y="162.56"/>
-<pinref part="SW1" gate="A" pin="15"/>
+<pinref part="DIP_ARRAY" gate="A" pin="15"/>
 <wire x1="322.58" y1="162.56" x2="325.12" y2="162.56" width="0.1524" layer="91"/>
 <junction x="322.58" y="162.56"/>
-<pinref part="SW1" gate="A" pin="16"/>
+<pinref part="DIP_ARRAY" gate="A" pin="16"/>
 <wire x1="325.12" y1="162.56" x2="327.66" y2="162.56" width="0.1524" layer="91"/>
 <junction x="325.12" y="162.56"/>
 <wire x1="327.66" y1="162.56" x2="368.3" y2="162.56" width="0.1524" layer="91"/>
@@ -12711,21 +12711,21 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="355.6" y="325.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="!RESET"/>
-<pinref part="IC1" gate="G$1" pin="VDD"/>
+<pinref part="CS_CONT" gate="G$1" pin="!RESET"/>
+<pinref part="CS_CONT" gate="G$1" pin="VDD"/>
 <wire x1="137.16" y1="254" x2="137.16" y2="259.08" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="259.08" x2="124.46" y2="259.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="259.08"/>
 <label x="124.46" y="259.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="VDD"/>
-<pinref part="IC3" gate="G$1" pin="!RESET"/>
+<pinref part="GPIO_1" gate="G$1" pin="VDD"/>
+<pinref part="GPIO_1" gate="G$1" pin="!RESET"/>
 <wire x1="304.8" y1="55.88" x2="304.8" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="304.8" y1="55.88" x2="302.26" y2="55.88" width="0.1524" layer="91"/>
 <junction x="304.8" y="55.88"/>
-<pinref part="IC2" gate="G$1" pin="VDD"/>
-<pinref part="IC2" gate="G$1" pin="!RESET"/>
+<pinref part="GPIO_0" gate="G$1" pin="VDD"/>
+<pinref part="GPIO_0" gate="G$1" pin="!RESET"/>
 <wire x1="304.8" y1="114.3" x2="304.8" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="55.88" x2="302.26" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="114.3" x2="304.8" y2="114.3" width="0.1524" layer="91"/>
@@ -12765,48 +12765,48 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="SH_SER" class="0">
 <segment>
-<pinref part="IC4" gate="A" pin="CLK"/>
+<pinref part="SHIFT_IN" gate="A" pin="CLK"/>
 <wire x1="373.38" y1="203.2" x2="358.14" y2="203.2" width="0.1524" layer="91"/>
 <label x="358.14" y="203.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC0"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC0"/>
 <wire x1="386.08" y1="271.78" x2="396.24" y2="271.78" width="0.1524" layer="91"/>
 <label x="391.16" y="271.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_INH" class="0">
 <segment>
-<pinref part="IC4" gate="A" pin="INH"/>
+<pinref part="SHIFT_IN" gate="A" pin="INH"/>
 <wire x1="373.38" y1="200.66" x2="358.14" y2="200.66" width="0.1524" layer="91"/>
 <label x="358.14" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC1"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC1"/>
 <wire x1="386.08" y1="269.24" x2="396.24" y2="269.24" width="0.1524" layer="91"/>
 <label x="391.16" y="269.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_HLD" class="0">
 <segment>
-<pinref part="IC4" gate="A" pin="SH/!LD"/>
+<pinref part="SHIFT_IN" gate="A" pin="SH/!LD"/>
 <wire x1="373.38" y1="198.12" x2="358.14" y2="198.12" width="0.1524" layer="91"/>
 <label x="358.14" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC2"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC2"/>
 <wire x1="386.08" y1="266.7" x2="396.24" y2="266.7" width="0.1524" layer="91"/>
 <label x="391.16" y="266.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_OUT" class="0">
 <segment>
-<pinref part="IC4" gate="A" pin="QH"/>
+<pinref part="SHIFT_IN" gate="A" pin="QH"/>
 <wire x1="398.78" y1="226.06" x2="403.86" y2="226.06" width="0.1524" layer="91"/>
 <label x="401.32" y="226.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC3"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC3"/>
 <wire x1="386.08" y1="264.16" x2="396.24" y2="264.16" width="0.1524" layer="91"/>
 <label x="391.16" y="264.16" size="1.778" layer="95"/>
 </segment>
@@ -12820,16 +12820,16 @@ Spark Fun Electronics SKU : COM-08034</description>
 </segment>
 <segment>
 <pinref part="PR_SW" gate="1" pin="P"/>
-<pinref part="U1" gate="A" pin="VCC"/>
+<pinref part="SHIFT_CON" gate="A" pin="VCC"/>
 <wire x1="347.98" y1="299.72" x2="347.98" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="294.64" x2="350.52" y2="294.64" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="294.64" x2="337.82" y2="294.64" width="0.1524" layer="91"/>
 <junction x="347.98" y="294.64"/>
 <label x="337.82" y="294.64" size="1.778" layer="95"/>
-<pinref part="U1" gate="A" pin="AVCC"/>
+<pinref part="SHIFT_CON" gate="A" pin="AVCC"/>
 <wire x1="350.52" y1="292.1" x2="350.52" y2="294.64" width="0.1524" layer="91"/>
 <junction x="350.52" y="294.64"/>
-<pinref part="U1" gate="A" pin="AREF"/>
+<pinref part="SHIFT_CON" gate="A" pin="AREF"/>
 <wire x1="350.52" y1="287.02" x2="347.98" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="347.98" y1="287.02" x2="347.98" y2="294.64" width="0.1524" layer="91"/>
 </segment>
@@ -12844,7 +12844,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_TX" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD0"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD0"/>
 <wire x1="386.08" y1="294.64" x2="396.24" y2="294.64" width="0.1524" layer="91"/>
 <label x="391.16" y="294.64" size="1.778" layer="95"/>
 </segment>
@@ -12859,14 +12859,14 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="396.24" y="109.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="4"/>
+<pinref part="FTDI" gate="1" pin="4"/>
 <wire x1="419.1" y1="322.58" x2="408.94" y2="322.58" width="0.1524" layer="91"/>
 <label x="408.94" y="322.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DAQ_RX" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD1"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD1"/>
 <wire x1="386.08" y1="292.1" x2="396.24" y2="292.1" width="0.1524" layer="91"/>
 <label x="391.16" y="292.1" size="1.778" layer="95"/>
 </segment>
@@ -12881,14 +12881,14 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="396.24" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="5"/>
+<pinref part="FTDI" gate="1" pin="5"/>
 <wire x1="419.1" y1="320.04" x2="408.94" y2="320.04" width="0.1524" layer="91"/>
 <label x="408.94" y="320.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SH_SHUP" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD2"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD2"/>
 <wire x1="386.08" y1="289.56" x2="396.24" y2="289.56" width="0.1524" layer="91"/>
 <label x="391.16" y="289.56" size="1.778" layer="95"/>
 </segment>
@@ -12900,7 +12900,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="SH_SHDN" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD3"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD3"/>
 <wire x1="386.08" y1="287.02" x2="396.24" y2="287.02" width="0.1524" layer="91"/>
 <label x="391.16" y="287.02" size="1.778" layer="95"/>
 </segment>
@@ -12917,21 +12917,21 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="350.52" y="309.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="3"/>
+<pinref part="FTDI" gate="1" pin="3"/>
 <wire x1="419.1" y1="325.12" x2="408.94" y2="325.12" width="0.1524" layer="91"/>
 <label x="408.94" y="325.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PR_RST" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PC6"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC6"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="386.08" y1="256.54" x2="393.7" y2="256.54" width="0.1524" layer="91"/>
-<pinref part="S2" gate="1" pin="P"/>
+<pinref part="SHIFT_RST" gate="1" pin="P"/>
 <wire x1="401.32" y1="248.92" x2="401.32" y2="256.54" width="0.1524" layer="91"/>
 <wire x1="401.32" y1="256.54" x2="393.7" y2="256.54" width="0.1524" layer="91"/>
 <junction x="393.7" y="256.54"/>
-<pinref part="S2" gate="1" pin="P1"/>
+<pinref part="SHIFT_RST" gate="1" pin="P1"/>
 <wire x1="401.32" y1="248.92" x2="401.32" y2="246.38" width="0.1524" layer="91"/>
 <junction x="401.32" y="248.92"/>
 <wire x1="401.32" y1="256.54" x2="401.32" y2="259.08" width="0.1524" layer="91"/>
@@ -12940,14 +12940,14 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="414.02" y="259.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="1" pin="6"/>
+<pinref part="FTDI" gate="1" pin="6"/>
 <wire x1="419.1" y1="317.5" x2="408.94" y2="317.5" width="0.1524" layer="91"/>
 <label x="408.94" y="317.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="XTAL1" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PB6"/>
+<pinref part="SHIFT_CON" gate="A" pin="PB6"/>
 <wire x1="350.52" y1="266.7" x2="337.82" y2="266.7" width="0.1524" layer="91"/>
 <label x="337.82" y="266.7" size="1.778" layer="95"/>
 </segment>
@@ -12963,7 +12963,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="XTAL2" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PB7"/>
+<pinref part="SHIFT_CON" gate="A" pin="PB7"/>
 <wire x1="350.52" y1="264.16" x2="337.82" y2="264.16" width="0.1524" layer="91"/>
 <label x="337.82" y="264.16" size="1.778" layer="95"/>
 </segment>
@@ -12979,7 +12979,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_SYNC" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD4"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD4"/>
 <wire x1="386.08" y1="284.48" x2="396.24" y2="284.48" width="0.1524" layer="91"/>
 <label x="391.16" y="284.48" size="1.778" layer="95"/>
 </segment>
@@ -12996,19 +12996,19 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_MISO" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="LV_RXO_2"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="LV_RXO_2"/>
 <wire x1="251.46" y1="294.64" x2="266.7" y2="294.64" width="0.1524" layer="91"/>
 <label x="261.62" y="294.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SO"/>
+<pinref part="CS_CONT" gate="G$1" pin="SO"/>
 <wire x1="137.16" y1="233.68" x2="121.92" y2="233.68" width="0.1524" layer="91"/>
 <label x="121.92" y="233.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="SO"/>
+<pinref part="GPIO_1" gate="G$1" pin="SO"/>
 <wire x1="304.8" y1="30.48" x2="289.56" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="SO"/>
+<pinref part="GPIO_0" gate="G$1" pin="SO"/>
 <wire x1="289.56" y1="30.48" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="88.9" x2="304.8" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="88.9" x2="264.16" y2="88.9" width="0.1524" layer="91"/>
@@ -13033,19 +13033,19 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_MOSI" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="LV_TXI_2"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="LV_TXI_2"/>
 <wire x1="251.46" y1="292.1" x2="266.7" y2="292.1" width="0.1524" layer="91"/>
 <label x="261.62" y="292.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SI"/>
+<pinref part="CS_CONT" gate="G$1" pin="SI"/>
 <wire x1="137.16" y1="236.22" x2="121.92" y2="236.22" width="0.1524" layer="91"/>
 <label x="121.92" y="236.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="SI"/>
+<pinref part="GPIO_1" gate="G$1" pin="SI"/>
 <wire x1="304.8" y1="33.02" x2="292.1" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="SI"/>
+<pinref part="GPIO_0" gate="G$1" pin="SI"/>
 <wire x1="292.1" y1="33.02" x2="292.1" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="91.44" x2="304.8" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="91.44" x2="264.16" y2="91.44" width="0.1524" layer="91"/>
@@ -13070,19 +13070,19 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_SCK" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="LV_TXI_1"/>
+<pinref part="LOGIC_SHIFT" gate="G$1" pin="LV_TXI_1"/>
 <wire x1="251.46" y1="304.8" x2="266.7" y2="304.8" width="0.1524" layer="91"/>
 <label x="261.62" y="304.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="SCK"/>
+<pinref part="CS_CONT" gate="G$1" pin="SCK"/>
 <wire x1="137.16" y1="238.76" x2="121.92" y2="238.76" width="0.1524" layer="91"/>
 <label x="121.92" y="238.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="SCK"/>
+<pinref part="GPIO_1" gate="G$1" pin="SCK"/>
 <wire x1="304.8" y1="35.56" x2="294.64" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="SCK"/>
+<pinref part="GPIO_0" gate="G$1" pin="SCK"/>
 <wire x1="294.64" y1="35.56" x2="294.64" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="294.64" y1="93.98" x2="304.8" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="294.64" y1="93.98" x2="264.16" y2="93.98" width="0.1524" layer="91"/>
@@ -13107,7 +13107,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="DAQ_CS0" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="!CS"/>
+<pinref part="CS_CONT" gate="G$1" pin="!CS"/>
 <wire x1="137.16" y1="241.3" x2="121.92" y2="241.3" width="0.1524" layer="91"/>
 <label x="121.92" y="241.3" size="1.778" layer="95"/>
 </segment>
@@ -13119,7 +13119,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="SH_EN" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PD5"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD5"/>
 <wire x1="386.08" y1="281.94" x2="396.24" y2="281.94" width="0.1524" layer="91"/>
 <label x="391.16" y="281.94" size="1.778" layer="95"/>
 </segment>
@@ -13131,33 +13131,33 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="VSS"/>
+<pinref part="GPIO_0" gate="G$1" pin="VSS"/>
 <wire x1="304.8" y1="73.66" x2="299.72" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="VSS"/>
+<pinref part="GPIO_1" gate="G$1" pin="VSS"/>
 <wire x1="299.72" y1="73.66" x2="299.72" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="15.24" x2="304.8" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO_CS1" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="!CS"/>
+<pinref part="GPIO_1" gate="G$1" pin="!CS"/>
 <wire x1="304.8" y1="38.1" x2="264.16" y2="38.1" width="0.1524" layer="91"/>
 <label x="264.16" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA6"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA6"/>
 <wire x1="162.56" y1="243.84" x2="172.72" y2="243.84" width="0.1524" layer="91"/>
 <label x="165.1" y="243.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_CS0" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="!CS"/>
+<pinref part="GPIO_0" gate="G$1" pin="!CS"/>
 <wire x1="304.8" y1="96.52" x2="264.16" y2="96.52" width="0.1524" layer="91"/>
 <label x="264.16" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA5"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA5"/>
 <wire x1="162.56" y1="246.38" x2="172.72" y2="246.38" width="0.1524" layer="91"/>
 <label x="165.1" y="246.38" size="1.778" layer="95"/>
 </segment>
@@ -13204,7 +13204,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="99.06" y="264.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV2" gate="1" pin="4"/>
+<pinref part="RPI_GPIO_0" gate="1" pin="4"/>
 <wire x1="93.98" y1="228.6" x2="81.28" y2="228.6" width="0.1524" layer="91"/>
 <label x="81.28" y="228.6" size="1.778" layer="95"/>
 </segment>
@@ -13216,7 +13216,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="99.06" y="259.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV3" gate="1" pin="2"/>
+<pinref part="RPI_GPIO_1" gate="1" pin="2"/>
 <wire x1="93.98" y1="213.36" x2="81.28" y2="213.36" width="0.1524" layer="91"/>
 <label x="81.28" y="213.36" size="1.778" layer="95"/>
 </segment>
@@ -13228,7 +13228,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="99.06" y="256.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV3" gate="1" pin="4"/>
+<pinref part="RPI_GPIO_1" gate="1" pin="4"/>
 <wire x1="93.98" y1="208.28" x2="81.28" y2="208.28" width="0.1524" layer="91"/>
 <label x="81.28" y="208.28" size="1.778" layer="95"/>
 </segment>
@@ -13281,7 +13281,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="68.58" y="294.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV2" gate="1" pin="1"/>
+<pinref part="RPI_GPIO_0" gate="1" pin="1"/>
 <wire x1="93.98" y1="236.22" x2="81.28" y2="236.22" width="0.1524" layer="91"/>
 <label x="81.28" y="236.22" size="1.778" layer="95"/>
 </segment>
@@ -13293,7 +13293,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="68.58" y="289.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV3" gate="1" pin="3"/>
+<pinref part="RPI_GPIO_1" gate="1" pin="3"/>
 <wire x1="93.98" y1="210.82" x2="81.28" y2="210.82" width="0.1524" layer="91"/>
 <label x="81.28" y="210.82" size="1.778" layer="95"/>
 </segment>
@@ -13326,7 +13326,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="68.58" y="266.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV2" gate="1" pin="2"/>
+<pinref part="RPI_GPIO_0" gate="1" pin="2"/>
 <wire x1="93.98" y1="233.68" x2="81.28" y2="233.68" width="0.1524" layer="91"/>
 <label x="81.28" y="233.68" size="1.778" layer="95"/>
 </segment>
@@ -13338,7 +13338,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="68.58" y="264.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV2" gate="1" pin="3"/>
+<pinref part="RPI_GPIO_0" gate="1" pin="3"/>
 <wire x1="93.98" y1="231.14" x2="81.28" y2="231.14" width="0.1524" layer="91"/>
 <label x="81.28" y="231.14" size="1.778" layer="95"/>
 </segment>
@@ -13350,7 +13350,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="68.58" y="261.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV3" gate="1" pin="1"/>
+<pinref part="RPI_GPIO_1" gate="1" pin="1"/>
 <wire x1="93.98" y1="215.9" x2="81.28" y2="215.9" width="0.1524" layer="91"/>
 <label x="81.28" y="215.9" size="1.778" layer="95"/>
 </segment>
@@ -13371,7 +13371,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="SU_OUT" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PC4"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC4"/>
 <wire x1="386.08" y1="261.62" x2="396.24" y2="261.62" width="0.1524" layer="91"/>
 <label x="391.16" y="261.62" size="1.778" layer="95"/>
 </segment>
@@ -13383,7 +13383,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="SDN_OUT" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="PC5"/>
+<pinref part="SHIFT_CON" gate="A" pin="PC5"/>
 <wire x1="386.08" y1="259.08" x2="396.24" y2="259.08" width="0.1524" layer="91"/>
 <label x="391.16" y="259.08" size="1.778" layer="95"/>
 </segment>
@@ -13403,168 +13403,168 @@ Spark Fun Electronics SKU : COM-08034</description>
 <label x="429.26" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD6"/>
+<pinref part="SHIFT_CON" gate="A" pin="PD6"/>
 <wire x1="386.08" y1="279.4" x2="396.24" y2="279.4" width="0.1524" layer="91"/>
 <label x="391.16" y="279.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA0"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA0"/>
 <pinref part="GPIO_BANK2" gate="1" pin="1"/>
 <wire x1="330.2" y1="55.88" x2="345.44" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA1"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA1"/>
 <pinref part="GPIO_BANK2" gate="1" pin="2"/>
 <wire x1="330.2" y1="53.34" x2="345.44" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA2"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA2"/>
 <pinref part="GPIO_BANK2" gate="1" pin="3"/>
 <wire x1="330.2" y1="50.8" x2="345.44" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA3"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA3"/>
 <pinref part="GPIO_BANK2" gate="1" pin="4"/>
 <wire x1="330.2" y1="48.26" x2="345.44" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA4"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA4"/>
 <pinref part="GPIO_BANK2" gate="1" pin="5"/>
 <wire x1="330.2" y1="45.72" x2="345.44" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA5"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA5"/>
 <pinref part="GPIO_BANK2" gate="1" pin="6"/>
 <wire x1="330.2" y1="43.18" x2="345.44" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA6"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA6"/>
 <pinref part="GPIO_BANK2" gate="1" pin="7"/>
 <wire x1="330.2" y1="40.64" x2="345.44" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPA7"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPA7"/>
 <pinref part="GPIO_BANK2" gate="1" pin="8"/>
 <wire x1="330.2" y1="38.1" x2="345.44" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$34" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB0"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB0"/>
 <pinref part="GPIO_BANK3" gate="1" pin="1"/>
 <wire x1="330.2" y1="33.02" x2="358.14" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB1"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB1"/>
 <pinref part="GPIO_BANK3" gate="1" pin="2"/>
 <wire x1="330.2" y1="30.48" x2="358.14" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$37" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB2"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB2"/>
 <pinref part="GPIO_BANK3" gate="1" pin="3"/>
 <wire x1="330.2" y1="27.94" x2="358.14" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$38" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB3"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB3"/>
 <pinref part="GPIO_BANK3" gate="1" pin="4"/>
 <wire x1="330.2" y1="25.4" x2="358.14" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$39" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB4"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB4"/>
 <pinref part="GPIO_BANK3" gate="1" pin="5"/>
 <wire x1="330.2" y1="22.86" x2="358.14" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$40" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB5"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB5"/>
 <pinref part="GPIO_BANK3" gate="1" pin="6"/>
 <wire x1="330.2" y1="20.32" x2="358.14" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$41" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB6"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB6"/>
 <pinref part="GPIO_BANK3" gate="1" pin="7"/>
 <wire x1="330.2" y1="17.78" x2="358.14" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$42" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GPB7"/>
+<pinref part="GPIO_1" gate="G$1" pin="GPB7"/>
 <pinref part="GPIO_BANK3" gate="1" pin="8"/>
 <wire x1="330.2" y1="15.24" x2="358.14" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$43" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB7"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB7"/>
 <pinref part="GPIO_BANK1" gate="1" pin="8"/>
 <wire x1="330.2" y1="73.66" x2="360.68" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$44" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB6"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB6"/>
 <pinref part="GPIO_BANK1" gate="1" pin="7"/>
 <wire x1="330.2" y1="76.2" x2="360.68" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$45" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB5"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB5"/>
 <pinref part="GPIO_BANK1" gate="1" pin="6"/>
 <wire x1="330.2" y1="78.74" x2="360.68" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$46" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB4"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB4"/>
 <pinref part="GPIO_BANK1" gate="1" pin="5"/>
 <wire x1="330.2" y1="81.28" x2="360.68" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$47" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB3"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB3"/>
 <pinref part="GPIO_BANK1" gate="1" pin="4"/>
 <wire x1="330.2" y1="83.82" x2="360.68" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$48" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB2"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB2"/>
 <pinref part="GPIO_BANK1" gate="1" pin="3"/>
 <wire x1="330.2" y1="86.36" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$49" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPB1"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB1"/>
 <pinref part="GPIO_BANK1" gate="1" pin="2"/>
 <wire x1="330.2" y1="88.9" x2="360.68" y2="88.9" width="0.1524" layer="91"/>
 </segment>
@@ -13572,69 +13572,69 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$50" class="0">
 <segment>
 <pinref part="GPIO_BANK1" gate="1" pin="1"/>
-<pinref part="IC2" gate="G$1" pin="GPB0"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPB0"/>
 <wire x1="360.68" y1="91.44" x2="330.2" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$51" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA7"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA7"/>
 <pinref part="GPIO_BANK0" gate="1" pin="8"/>
 <wire x1="330.2" y1="96.52" x2="347.98" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$52" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA6"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA6"/>
 <pinref part="GPIO_BANK0" gate="1" pin="7"/>
 <wire x1="330.2" y1="99.06" x2="347.98" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$53" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA5"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA5"/>
 <pinref part="GPIO_BANK0" gate="1" pin="6"/>
 <wire x1="330.2" y1="101.6" x2="347.98" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$54" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA4"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA4"/>
 <pinref part="GPIO_BANK0" gate="1" pin="5"/>
 <wire x1="330.2" y1="104.14" x2="347.98" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA3"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA3"/>
 <pinref part="GPIO_BANK0" gate="1" pin="4"/>
 <wire x1="330.2" y1="106.68" x2="347.98" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$56" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA2"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA2"/>
 <pinref part="GPIO_BANK0" gate="1" pin="3"/>
 <wire x1="330.2" y1="109.22" x2="347.98" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$57" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA1"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA1"/>
 <pinref part="GPIO_BANK0" gate="1" pin="2"/>
 <wire x1="330.2" y1="111.76" x2="347.98" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$58" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="GPA0"/>
+<pinref part="GPIO_0" gate="G$1" pin="GPA0"/>
 <pinref part="GPIO_BANK0" gate="1" pin="1"/>
 <wire x1="330.2" y1="114.3" x2="347.98" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$61" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="CH2"/>
+<pinref part="ADC_3" gate="A" pin="CH2"/>
 <pinref part="ANALOG_BANK3" gate="1" pin="6"/>
 <wire x1="213.36" y1="38.1" x2="190.5" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -13642,69 +13642,69 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$62" class="0">
 <segment>
 <pinref part="ANALOG_BANK3" gate="1" pin="5"/>
-<pinref part="U$5" gate="A" pin="CH3"/>
+<pinref part="ADC_3" gate="A" pin="CH3"/>
 <wire x1="190.5" y1="35.56" x2="213.36" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$63" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="CH4"/>
+<pinref part="ADC_3" gate="A" pin="CH4"/>
 <pinref part="ANALOG_BANK3" gate="1" pin="4"/>
 <wire x1="213.36" y1="33.02" x2="190.5" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$64" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="CH5"/>
+<pinref part="ADC_3" gate="A" pin="CH5"/>
 <pinref part="ANALOG_BANK3" gate="1" pin="3"/>
 <wire x1="213.36" y1="30.48" x2="190.5" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$65" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="CH6"/>
+<pinref part="ADC_3" gate="A" pin="CH6"/>
 <pinref part="ANALOG_BANK3" gate="1" pin="2"/>
 <wire x1="213.36" y1="27.94" x2="190.5" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$66" class="0">
 <segment>
-<pinref part="U$5" gate="A" pin="CH7"/>
+<pinref part="ADC_3" gate="A" pin="CH7"/>
 <pinref part="ANALOG_BANK3" gate="1" pin="1"/>
 <wire x1="213.36" y1="25.4" x2="190.5" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$67" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH7"/>
+<pinref part="ADC_2" gate="A" pin="CH7"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="1"/>
 <wire x1="213.36" y1="91.44" x2="190.5" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$68" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH6"/>
+<pinref part="ADC_2" gate="A" pin="CH6"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="2"/>
 <wire x1="213.36" y1="93.98" x2="190.5" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$69" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH5"/>
+<pinref part="ADC_2" gate="A" pin="CH5"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="3"/>
 <wire x1="213.36" y1="96.52" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$70" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH4"/>
+<pinref part="ADC_2" gate="A" pin="CH4"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="4"/>
 <wire x1="213.36" y1="99.06" x2="190.5" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$71" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH3"/>
+<pinref part="ADC_2" gate="A" pin="CH3"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="5"/>
 <wire x1="213.36" y1="101.6" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
 </segment>
@@ -13712,13 +13712,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$72" class="0">
 <segment>
 <pinref part="ANALOG_BANK2" gate="1" pin="6"/>
-<pinref part="U$3" gate="A" pin="CH2"/>
+<pinref part="ADC_2" gate="A" pin="CH2"/>
 <wire x1="190.5" y1="104.14" x2="213.36" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$73" class="0">
 <segment>
-<pinref part="U$3" gate="A" pin="CH1"/>
+<pinref part="ADC_2" gate="A" pin="CH1"/>
 <pinref part="ANALOG_BANK2" gate="1" pin="7"/>
 <wire x1="213.36" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
 </segment>
@@ -13726,27 +13726,27 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$74" class="0">
 <segment>
 <pinref part="ANALOG_BANK2" gate="1" pin="8"/>
-<pinref part="U$3" gate="A" pin="CH0"/>
+<pinref part="ADC_2" gate="A" pin="CH0"/>
 <wire x1="190.5" y1="109.22" x2="213.36" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$75" class="0">
 <segment>
 <pinref part="ANALOG_BANK1" gate="1" pin="1"/>
-<pinref part="U$2" gate="A" pin="CH7"/>
+<pinref part="ADC_1" gate="A" pin="CH7"/>
 <wire x1="190.5" y1="160.02" x2="213.36" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$76" class="0">
 <segment>
 <pinref part="ANALOG_BANK1" gate="1" pin="2"/>
-<pinref part="U$2" gate="A" pin="CH6"/>
+<pinref part="ADC_1" gate="A" pin="CH6"/>
 <wire x1="190.5" y1="162.56" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$77" class="0">
 <segment>
-<pinref part="U$2" gate="A" pin="CH5"/>
+<pinref part="ADC_1" gate="A" pin="CH5"/>
 <pinref part="ANALOG_BANK1" gate="1" pin="3"/>
 <wire x1="213.36" y1="165.1" x2="190.5" y2="165.1" width="0.1524" layer="91"/>
 </segment>
@@ -13754,13 +13754,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$78" class="0">
 <segment>
 <pinref part="ANALOG_BANK1" gate="1" pin="4"/>
-<pinref part="U$2" gate="A" pin="CH4"/>
+<pinref part="ADC_1" gate="A" pin="CH4"/>
 <wire x1="190.5" y1="167.64" x2="213.36" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$79" class="0">
 <segment>
-<pinref part="U$2" gate="A" pin="CH3"/>
+<pinref part="ADC_1" gate="A" pin="CH3"/>
 <pinref part="ANALOG_BANK1" gate="1" pin="5"/>
 <wire x1="213.36" y1="170.18" x2="190.5" y2="170.18" width="0.1524" layer="91"/>
 </segment>
@@ -13768,13 +13768,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$80" class="0">
 <segment>
 <pinref part="ANALOG_BANK1" gate="1" pin="6"/>
-<pinref part="U$2" gate="A" pin="CH2"/>
+<pinref part="ADC_1" gate="A" pin="CH2"/>
 <wire x1="190.5" y1="172.72" x2="213.36" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$81" class="0">
 <segment>
-<pinref part="U$2" gate="A" pin="CH1"/>
+<pinref part="ADC_1" gate="A" pin="CH1"/>
 <pinref part="ANALOG_BANK1" gate="1" pin="7"/>
 <wire x1="213.36" y1="175.26" x2="190.5" y2="175.26" width="0.1524" layer="91"/>
 </segment>
@@ -13782,20 +13782,20 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$82" class="0">
 <segment>
 <pinref part="ANALOG_BANK1" gate="1" pin="8"/>
-<pinref part="U$2" gate="A" pin="CH0"/>
+<pinref part="ADC_1" gate="A" pin="CH0"/>
 <wire x1="190.5" y1="177.8" x2="213.36" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$83" class="0">
 <segment>
 <pinref part="ANALOG_BANK0" gate="1" pin="1"/>
-<pinref part="U$1" gate="A" pin="CH7"/>
+<pinref part="ADC_0" gate="A" pin="CH7"/>
 <wire x1="187.96" y1="228.6" x2="213.36" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$84" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="CH6"/>
+<pinref part="ADC_0" gate="A" pin="CH6"/>
 <pinref part="ANALOG_BANK0" gate="1" pin="2"/>
 <wire x1="213.36" y1="231.14" x2="187.96" y2="231.14" width="0.1524" layer="91"/>
 </segment>
@@ -13803,13 +13803,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$85" class="0">
 <segment>
 <pinref part="ANALOG_BANK0" gate="1" pin="3"/>
-<pinref part="U$1" gate="A" pin="CH5"/>
+<pinref part="ADC_0" gate="A" pin="CH5"/>
 <wire x1="187.96" y1="233.68" x2="213.36" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$86" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="CH4"/>
+<pinref part="ADC_0" gate="A" pin="CH4"/>
 <pinref part="ANALOG_BANK0" gate="1" pin="4"/>
 <wire x1="213.36" y1="236.22" x2="187.96" y2="236.22" width="0.1524" layer="91"/>
 </segment>
@@ -13817,13 +13817,13 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$87" class="0">
 <segment>
 <pinref part="ANALOG_BANK0" gate="1" pin="5"/>
-<pinref part="U$1" gate="A" pin="CH3"/>
+<pinref part="ADC_0" gate="A" pin="CH3"/>
 <wire x1="187.96" y1="238.76" x2="213.36" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$88" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="CH2"/>
+<pinref part="ADC_0" gate="A" pin="CH2"/>
 <wire x1="213.36" y1="241.3" x2="187.96" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="ANALOG_BANK0" gate="1" pin="6"/>
 </segment>
@@ -13831,34 +13831,34 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$89" class="0">
 <segment>
 <pinref part="ANALOG_BANK0" gate="1" pin="7"/>
-<pinref part="U$1" gate="A" pin="CH1"/>
+<pinref part="ADC_0" gate="A" pin="CH1"/>
 <wire x1="187.96" y1="243.84" x2="213.36" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$90" class="0">
 <segment>
-<pinref part="U$1" gate="A" pin="CH0"/>
+<pinref part="ADC_0" gate="A" pin="CH0"/>
 <pinref part="ANALOG_BANK0" gate="1" pin="8"/>
 <wire x1="213.36" y1="246.38" x2="187.96" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EXT_CS5" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPB4"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPB4"/>
 <wire x1="162.56" y1="226.06" x2="172.72" y2="226.06" width="0.1524" layer="91"/>
 <label x="165.1" y="226.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EXT_CS4" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPB3"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPB3"/>
 <wire x1="162.56" y1="228.6" x2="172.72" y2="228.6" width="0.1524" layer="91"/>
 <label x="165.1" y="228.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EXT_CS3" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPB2"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPB2"/>
 <wire x1="162.56" y1="231.14" x2="172.72" y2="231.14" width="0.1524" layer="91"/>
 <label x="165.1" y="231.14" size="1.778" layer="95"/>
 </segment>
@@ -13870,7 +13870,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="EXT_CS2" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPB1"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPB1"/>
 <wire x1="162.56" y1="233.68" x2="172.72" y2="233.68" width="0.1524" layer="91"/>
 <label x="165.1" y="233.68" size="1.778" layer="95"/>
 </segment>
@@ -13882,7 +13882,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="EXT_CS1" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPB0"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPB0"/>
 <wire x1="162.56" y1="236.22" x2="172.72" y2="236.22" width="0.1524" layer="91"/>
 <label x="165.1" y="236.22" size="1.778" layer="95"/>
 </segment>
@@ -13894,7 +13894,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="EXT_CS0" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA7"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA7"/>
 <wire x1="162.56" y1="241.3" x2="172.72" y2="241.3" width="0.1524" layer="91"/>
 <label x="165.1" y="241.3" size="1.778" layer="95"/>
 </segment>
@@ -13906,7 +13906,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="CAN_CS" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPA0"/>
+<pinref part="CS_CONT" gate="G$1" pin="GPA0"/>
 <wire x1="162.56" y1="259.08" x2="175.26" y2="259.08" width="0.1524" layer="91"/>
 <label x="167.64" y="259.08" size="1.778" layer="95"/>
 </segment>
@@ -13918,7 +13918,7 @@ Spark Fun Electronics SKU : COM-08034</description>
 </net>
 <net name="CTS" class="0">
 <segment>
-<pinref part="SV1" gate="1" pin="2"/>
+<pinref part="FTDI" gate="1" pin="2"/>
 <wire x1="419.1" y1="327.66" x2="408.94" y2="327.66" width="0.1524" layer="91"/>
 <label x="408.94" y="327.66" size="1.778" layer="95"/>
 </segment>
@@ -13926,14 +13926,14 @@ Spark Fun Electronics SKU : COM-08034</description>
 <net name="N$5" class="0">
 <segment>
 <pinref part="ANALOG_BANK3" gate="1" pin="8"/>
-<pinref part="U$5" gate="A" pin="CH0"/>
+<pinref part="ADC_3" gate="A" pin="CH0"/>
 <wire x1="190.5" y1="43.18" x2="213.36" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="ANALOG_BANK3" gate="1" pin="7"/>
-<pinref part="U$5" gate="A" pin="CH1"/>
+<pinref part="ADC_3" gate="A" pin="CH1"/>
 <wire x1="190.5" y1="40.64" x2="213.36" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
