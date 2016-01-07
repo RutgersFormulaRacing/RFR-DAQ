@@ -296,10 +296,10 @@
 	<string>
 	<utility>
 
-1440142916 /home/pi/Code/RFR-DAQ/utils.h
+1440187593 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
 
-1440143267 source:/home/pi/Code/RFR-DAQ/main.cpp
+1451937254 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -319,7 +319,9 @@
 	<wiringPi.h>
 	<wiringPiSPI.h>
 	<wiringPiI2C.h>
+	<wiringSerial.h>
 	"DataLoggingThread.h"
+	"DataHubThread.h"
 	"server.hpp"
 
 1440142916 source:/home/pi/Code/RFR-DAQ/utils.cpp
@@ -327,7 +329,7 @@
 	<wiringPi.h>
 	<mcp23s17.h>
 
-1440137206 source:/home/pi/Code/RFR-DAQ/DataLoggingThread.cpp
+1440176369 source:/home/pi/Code/RFR-DAQ/DataLoggingThread.cpp
 	<boost/thread/thread.hpp>
 	<boost/thread/xtime.hpp>
 	<boost/date_time/posix_time/posix_time.hpp>
@@ -336,7 +338,7 @@
 	<fstream>
 	"DataLoggingThread.h"
 
-1440137072 /home/pi/Code/RFR-DAQ/DataLoggingThread.h
+1440145105 /home/pi/Code/RFR-DAQ/DataLoggingThread.h
 	<map>
 	<vector>
 	<boost/thread/mutex.hpp>
@@ -344,6 +346,7 @@
 	<string>
 	"DigitalInput.h"
 	"AnalogInput.h"
+	"I2CRequest.h"
 	"utils.h"
 
 1440100652 /home/pi/Code/RFR-DAQ/DigitalInput.h
@@ -386,4 +389,26 @@
 	<boost/shared_ptr.hpp>
 	<vector>
 	<iostream>
+
+1440145125 /home/pi/Code/RFR-DAQ/I2CRequest.h
+	<vector>
+
+1440145105 source:/home/pi/Code/RFR-DAQ/I2CRequest.cpp
+	"I2CRequest.h"
+	<wiringPi.h>
+	<wiringPiI2C.h>
+
+1440149035 /home/pi/Code/RFR-DAQ/DataHubThread.h
+	"utils.h"
+
+1440152092 source:/home/pi/Code/RFR-DAQ/DataHubThread.cpp
+	"DataHubThread.h"
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/posix_time/posix_time_io.hpp>
+	<iostream>
+	<fstream>
+	<wiringPi.h>
+	<wiringSerial.h>
 

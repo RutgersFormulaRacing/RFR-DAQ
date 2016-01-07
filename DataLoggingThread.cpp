@@ -68,6 +68,11 @@ void DataLoggingThread::run()
 
     file.open(path.c_str());
 
+    for(unsigned int i = 0; i < dataFrameEntries->size(); i++)
+    {
+        file << dataFrameEntries->at(i)->name << ',';
+    }
+
     while(isRunning)
     {
         mtx.lock();

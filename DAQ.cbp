@@ -46,16 +46,19 @@
 		</Unit>
 		<Unit filename="AnalogInput.h" />
 		<Unit filename="DAQConfig.xml" />
+		<Unit filename="DataHubThread.cpp" />
+		<Unit filename="DataHubThread.h" />
 		<Unit filename="DataLoggingThread.cpp" />
 		<Unit filename="DataLoggingThread.h" />
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
-		<Unit filename="I2CRequest.cpp" />
-		<Unit filename="I2CRequest.h" />
 		<Unit filename="PinConfig.xml" />
 		<Unit filename="connection.cpp" />
 		<Unit filename="connection.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mcp_can.cpp" />
+		<Unit filename="mcp_can.h" />
+		<Unit filename="mcp_can_dfs.h" />
 		<Unit filename="server.cpp" />
 		<Unit filename="server.hpp" />
 		<Unit filename="utils.cpp" />

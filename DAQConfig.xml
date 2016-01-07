@@ -27,16 +27,9 @@
 		<Polarity>1</Polarity>
 	</DigitalInput>
 </DigitalInputs>
-<SPISensors>
-</SPISensors>
-<I2CRequests>
-	<I2CRequest>
-        <Name>Accel X</Name>
-        <Address>105</Address>
-        <Send>59,60<Send>
-        <NumBytesToReceive>2</NumBytesToReceive>
-	</I2CRequest>
-</I2CRequests>
+<CANBus>
+
+<CANBus>
 <DataFrame>
 	<Entry>
 		<Name>ShockPot1</Name>

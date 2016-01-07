@@ -24,9 +24,14 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include <wiringPiI2C.h>
+#include <wiringSerial.h>
 
 #include "DataLoggingThread.h"
+#include "DataHubThread.h"
 #include "server.hpp"
+
+const i2cDevice i2cDevices[] = {i2cDevice(std::string("HELLO"), 2),
+                                i2cDevice(std::string("WORLD"), 2)};
 
 int main()
 {
@@ -37,6 +42,8 @@ int main()
     int i2cFDTable[128];
     for(int i = 0; i < 128; i++)
         i2cFDTable[i] = -1;
+
+    int serialFD = -1;
 
     std::cout << "RFR DAQ" << std::endl;
     std::cout << "Hardware Ver.\t" << HARDWARE_VER << std::endl;
@@ -86,6 +93,11 @@ int main()
             }
         }
 
+        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("I2CRequests"))
+        {
+
+        }
+
         BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("DataFrame"))
         {
             if(v.first.compare("Entry") == 0)
@@ -121,6 +133,8 @@ int main()
     wiringPiSetup();
     wiringPiSPISetup(0, 1000000);
     wiringPiSPISetup(1, 1000000);
+
+    serialFD = serialOpen("/dev/ttyAMA0", 115200);
 
     lastChipSelect = -1;
 
