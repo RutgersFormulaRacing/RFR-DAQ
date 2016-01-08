@@ -60,6 +60,8 @@
 		<Unit filename="mcp_can.cpp" />
 		<Unit filename="mcp_can.h" />
 		<Unit filename="mcp_can_dfs.h" />
+		<Unit filename="mlx90616.cpp" />
+		<Unit filename="mlx90616.h" />
 		<Unit filename="mpu6050.cpp" />
 		<Unit filename="mpu6050.h" />
 		<Unit filename="server.cpp" />

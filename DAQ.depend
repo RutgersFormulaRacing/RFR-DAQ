@@ -299,7 +299,7 @@
 1452212987 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
 
-1452229073 source:/home/pi/Code/RFR-DAQ/main.cpp
+1452281699 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -323,7 +323,8 @@
 	"DataLoggingThread.h"
 	"DataHubThread.h"
 	"server.hpp"
-	"accelgyro.h"
+	"mpu6050.h"
+	"mlx90616.h"
 
 1452225176 source:/home/pi/Code/RFR-DAQ/utils.cpp
 	"utils.h"
@@ -398,10 +399,11 @@
 	<wiringPi.h>
 	<wiringPiI2C.h>
 
-1440149035 /home/pi/Code/RFR-DAQ/DataHubThread.h
+1452230709 /home/pi/Code/RFR-DAQ/DataHubThread.h
 	"utils.h"
+	<vector>
 
-1440152092 source:/home/pi/Code/RFR-DAQ/DataHubThread.cpp
+1452230642 source:/home/pi/Code/RFR-DAQ/DataHubThread.cpp
 	"DataHubThread.h"
 	<boost/thread/thread.hpp>
 	<boost/thread/xtime.hpp>
@@ -434,4 +436,17 @@
 1452228888 /home/pi/Code/RFR-DAQ/accelgyro.h
 	"i2cDevice.h"
 	<iostream>
+
+1452279244 /home/pi/Code/RFR-DAQ/mpu6050.h
+	"i2cDevice.h"
+	<iostream>
+
+1452279244 source:/home/pi/Code/RFR-DAQ/mpu6050.cpp
+	"mpu6050.h"
+
+1452281652 source:/home/pi/Code/RFR-DAQ/mlx90616.cpp
+	"mlx90616.h"
+
+1452281652 /home/pi/Code/RFR-DAQ/mlx90616.h
+	"i2cDevice.h"
 

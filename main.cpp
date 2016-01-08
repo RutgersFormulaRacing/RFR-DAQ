@@ -29,7 +29,9 @@
 #include "DataLoggingThread.h"
 #include "DataHubThread.h"
 #include "server.hpp"
+
 #include "mpu6050.h"
+#include "mlx90616.h"
 
 int main()
 {

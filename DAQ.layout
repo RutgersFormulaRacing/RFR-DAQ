@@ -1,109 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="utils.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="AnalogInput.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="connection.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="AnalogInput.h" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="AnalogInput.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DAQConfig.xml" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DigitalInput.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DataHubThread.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="server.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DataHubThread.h" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="i2cDevice.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DataLoggingThread.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="27" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DataLoggingThread.h" open="0" top="0" tabpos="16">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DataLoggingThread.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DigitalInput.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="server.hpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="DigitalInput.h" open="0" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DAQConfig.xml" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="PinConfig.xml" open="0" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DataHubThread.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="connection.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DigitalInput.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="connection.hpp" open="0" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="connection.hpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="i2cDevice.h" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="DataHubThread.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="669" topLine="3" />
 	</File>
-	<File name="DataLoggingThread.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="mcp_can.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="mcp_can.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="mcp_can.h" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="PinConfig.xml" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="mcp_can_dfs.h" open="1" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="AnalogInput.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="mlx90616.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="102" topLine="0" />
 	</File>
-	<File name="utils.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="mlx90616.h" open="1" top="0" tabpos="12">
+		<Cursor position="305" topLine="0" />
 	</File>
-	<File name="mcp_can_dfs.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="server.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="mcp_can.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
+	<File name="server.hpp" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="utils.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="1057" topLine="26" />
+	</File>
+	<File name="utils.h" open="1" top="1" tabpos="15">
+		<Cursor position="524" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>
