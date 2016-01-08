@@ -299,7 +299,7 @@
 1452212987 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
 
-1452226725 source:/home/pi/Code/RFR-DAQ/main.cpp
+1452229073 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -323,6 +323,7 @@
 	"DataLoggingThread.h"
 	"DataHubThread.h"
 	"server.hpp"
+	"accelgyro.h"
 
 1452225176 source:/home/pi/Code/RFR-DAQ/utils.cpp
 	"utils.h"
@@ -338,7 +339,7 @@
 	<fstream>
 	"DataLoggingThread.h"
 
-1440145105 /home/pi/Code/RFR-DAQ/DataLoggingThread.h
+1452228373 /home/pi/Code/RFR-DAQ/DataLoggingThread.h
 	<map>
 	<vector>
 	<boost/thread/mutex.hpp>
@@ -346,7 +347,6 @@
 	<string>
 	"DigitalInput.h"
 	"AnalogInput.h"
-	"I2CRequest.h"
 	"utils.h"
 
 1440100652 /home/pi/Code/RFR-DAQ/DigitalInput.h
@@ -425,12 +425,13 @@
 	<inttypes.h>
 	"utils.h"
 
-1452226905 /home/pi/Code/RFR-DAQ/i2cDevice.h
+1452228012 /home/pi/Code/RFR-DAQ/i2cDevice.h
 	<string>
 
-1452226859 source:/home/pi/Code/RFR-DAQ/accelgyro.cpp
+1452228933 source:/home/pi/Code/RFR-DAQ/accelgyro.cpp
 	"accelgyro.h"
 
-1452226832 /home/pi/Code/RFR-DAQ/accelgyro.h
+1452228888 /home/pi/Code/RFR-DAQ/accelgyro.h
 	"i2cDevice.h"
+	<iostream>
 

@@ -29,12 +29,16 @@
 #include "DataLoggingThread.h"
 #include "DataHubThread.h"
 #include "server.hpp"
+#include "accelgyro.h"
 
 int main()
 {
     std::map<std::string, AnalogInput*> analogInputsMap;
     std::map<std::string, DigitalInput*> digitalInputsMap;
     std::vector<dataFrameEntry*> dataFrameFields;
+
+    std::vector<I2CDevice*> i2cDevices;
+    i2cDevices.push_back(new accelgyro("AccelGyro", 0));
 
     int i2cFDTable[128];
     for(int i = 0; i < 128; i++)

@@ -42,6 +42,8 @@ void DataHubThread::stop()
 
 void DataHubThread::run()
 {
+    int count = 0;
+
     while(isRunning)
     {
         boost::this_thread::sleep(boost::posix_time::milliseconds(100));

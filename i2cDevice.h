@@ -22,6 +22,7 @@ class I2CDevice
             return this->fd;
         }
 
+        virtual void init() = 0;
         virtual int read(std::string arg) = 0;
 
     protected:

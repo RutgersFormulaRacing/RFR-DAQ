@@ -11,7 +11,6 @@
 
 #include "DigitalInput.h"
 #include "AnalogInput.h"
-#include "I2CRequest.h"
 
 #include "utils.h"
 

@@ -1,6 +1,11 @@
 #include "accelgyro.h"
 
+void accelgyro::init()
+{
+   std::cout << "Init Accel Gyro" << std::endl;
+}
+
 int accelgyro::read(std::string arg)
 {
-    return 0;
+    std::cout << arg << std::endl;
 }

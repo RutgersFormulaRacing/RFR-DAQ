@@ -3,25 +3,32 @@
 
 #include "utils.h"
 
+#include <vector>
+
 class DataHubThread
 {
 
     public:
-    DataHubThread();
-    ~DataHubThread();
+        DataHubThread();
+        ~DataHubThread();
 
-    void setFD(int fd);
+        void setFD(int fd);
 
-    int getFD();
+        int getFD();
 
-    void start();
-    void stop();
+        void start();
+        void stop();
+
+        std::vector<float>* getDataFrame();
 
     private:
-    int serialFD;
-    bool isRunning;
+        int serialFD;
+        bool isRunning;
 
-    void run();
+        std::vector<float> dataFrame;
+        int fullSize;
+
+        void run();
 };
 
 #endif
