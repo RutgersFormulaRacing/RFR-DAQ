@@ -53,8 +53,11 @@
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
 		<Unit filename="PinConfig.xml" />
+		<Unit filename="accelgyro.cpp" />
+		<Unit filename="accelgyro.h" />
 		<Unit filename="connection.cpp" />
 		<Unit filename="connection.hpp" />
+		<Unit filename="i2cDevice.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mcp_can.cpp" />
 		<Unit filename="mcp_can.h" />

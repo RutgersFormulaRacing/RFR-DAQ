@@ -30,9 +30,6 @@
 #include "DataHubThread.h"
 #include "server.hpp"
 
-const i2cDevice i2cDevices[] = {i2cDevice(std::string("HELLO"), 2),
-                                i2cDevice(std::string("WORLD"), 2)};
-
 int main()
 {
     std::map<std::string, AnalogInput*> analogInputsMap;
@@ -93,22 +90,8 @@ int main()
             }
         }
 
-        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("I2CRequests"))
+        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("I2C"))
         {
-
-        }
-
-        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("DataFrame"))
-        {
-            if(v.first.compare("Entry") == 0)
-            {
-                dataFrameEntry *dfe = new dataFrameEntry;
-
-                dfe->name = v.second.get<std::string>("Name");
-                dfe->filter = v.second.get<float>("Filter");
-
-                dataFrameFields.push_back(dfe);
-            }
         }
     }
     catch(std::exception& e)

@@ -65,13 +65,28 @@ void setupChipSelect()
 
 void setupDigitalInputs()
 {
-    mcp23s17Setup(CS_BASE + 16, 0, 1);
-    //mcp23s17Setup(CS_BASE + 32, 0, 2);
+    mcp23s17Setup(GPIO_BASE, 1, 0);
+    //Each of the digital input banks are connected to the CS expander
+    //The included mcp23s17 library doesn't support this
+    //So, setup the mcp23s17 to be on RPI_CS1 (like the analog banks are setup)
+    //This will talk to both of the banks
+    //Change the CS expander to select the correct GPIO bank
+    //Then read, and all is good
+    //This means that these pins are recycled for each bank
 
-    for(int i = 0; i < 16; i++)
+    for(int bank = 0; bank < 2; bank++)
     {
-        pinMode(CS_BASE + 16 + i, INPUT);
-        pullUpDnControl(CS_BASE + 16 + i, PUD_UP);
+        //Select the correct GPIO bank with CS expander
+        digitalWrite(DIGITAL_BANK_0 + bank, 0);
+
+        for(int i = 0; i < 16; i++)
+        {
+            pinMode(GPIO_BASE + i, INPUT);
+            pullUpDnControl(GPIO_BASE + i, PUD_UP);
+        }
+
+        //Deselect the correct GPIO bank with CS expander
+        digitalWrite(DIGITAL_BANK_0 + bank, 1);
     }
 
     /*for(int i = 0; i < 16; i++)

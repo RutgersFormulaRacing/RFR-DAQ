@@ -8,6 +8,7 @@
 		<MapFromMax>4096</MapFromMax>
 		<MapToMin>0</MapToMin>
 		<MapToMax>5</MapToMax>
+		<DataFrames>1,2,3</DataFrame>
 	</AnalogInput>
 	<AnalogInput>
         <Name>ShockPot2</Name>
@@ -17,30 +18,37 @@
 		<MapFromMax>4096</MapFromMax>
 		<MapToMin>0</MapToMin>
 		<MapToMax>5</MapToMax>
+		<DataFrames>1,2,3</DataFrame>
 	</AnalogInput>
 </AnalogInputs>
+
 <DigitalInputs>
 	<DigitalInput>
 		<Name>FlowTrigger</Name>
 		<Bank>0</Bank>
 		<Channel>0</Channel>
 		<Polarity>1</Polarity>
+		<DataFrames>1,2,3</DataFrame>
 	</DigitalInput>
 </DigitalInputs>
-<CANBus>
+
+<I2C>
+    <I2CDevice>
+        <Name>AccelGryo</Name>
+        <Request>
+            <Comm>AccelX</Comm>
+            <DataFrames>1,2,3</DataFrames>
+        </Request>
+        <Request>
+            <Comm>AccelY</Comm>
+            <DataFrames>1,2</DataFrames>
+        </Request>
+    </I2CDevice>
+</I2C>
 
 <CANBus>
-<DataFrame>
-	<Entry>
-		<Name>ShockPot1</Name>
-		<Filter>1</Filter>
-	</Entry>
-	<Entry>
-		<Name>ShockPot2</Name>
-		<Filter>1</Filter>
-	</Entry>
-	<Entry>
-        <Name>FlowTrigger</Name>
-        <Filter>1</Filter>
-	</Entry>
-</DataFrame>
+    <CAN>
+        <Name></Name>
+        <Address></Address>
+    </CAN>
+<CANBus>

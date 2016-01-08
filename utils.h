@@ -6,8 +6,10 @@
 #define SERIAL_SYNC_PIN 7
 
 #define CS_BASE         100
+#define CAN_SPI         CS_BASE
 #define ADC_BANK_0      CS_BASE+1
-#define DIGITAL_BANK_0  CS_BASE+8
+#define DIGITAL_BANK_0  CS_BASE+5
+#define GPIO_BASE       CS_BASE + 16
 
 #include <string>
 
@@ -15,20 +17,6 @@ typedef struct dataFrameEntry
 {
     std::string name;
     float filter;
-};
-
-typedef struct i2cDevice
-{
-    std::string name;
-    unsigned char address;
-
-    i2cDevice(std::string n, unsigned char a) : name(n), address(a){}
-};
-
-typedef struct spiDevice
-{
-    std::string name;
-    unsigned char chipSelect;
 };
 
 extern int lastChipSelect;

@@ -70,15 +70,14 @@ float AnalogInput::read()
     buf[0] = (1 << 1) | (1 << 2) | ((channel & 0x07) >> 2);
     buf[1] = (channel & 0x03) << 7;
 
-    if(lastChipSelect != -1)
-        digitalWrite(lastChipSelect, 1); //Disable last chip select
-
     //Enable new chip select
-    lastChipSelect = ADC_BANK_0 + bank;
-    digitalWrite(lastChipSelect, 0);
+    digitalWrite(ADC_BANK_0 + bank, 0);
 
     //Change to chip select 1 so that accidental commands aren't sent to the expander
     wiringPiSPIDataRW(1, buf, 3);
+
+    //Disable chip select
+    digitalWrite(ADC_BANK_0 + bank, 1);
 
     result = buf[1] & 0x0F;
     result = (result << 8) | buf[2];

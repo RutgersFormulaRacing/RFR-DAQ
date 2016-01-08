@@ -24,6 +24,7 @@
 #define _MCP2515DFS_H_
 
 #include <inttypes.h>
+#include "utils.h"
 
 #ifndef INT32U
 #define INT32U unsigned int
@@ -306,8 +307,8 @@
 #define MCP_RXBUF_1 (MCP_RXB1SIDH)
 
 //#define SPICS 10
-#define MCP2515_SELECT()   digitalWrite(SPICS, LOW)
-#define MCP2515_UNSELECT() digitalWrite(SPICS, HIGH)
+#define MCP2515_SELECT()   digitalWrite(CAN_SPI, 0)
+#define MCP2515_UNSELECT() digitalWrite(CAN_SPI, 1)
 
 #define MCP2515_OK         (0)
 #define MCP2515_FAIL       (1)

@@ -286,7 +286,7 @@
 1439215842 source:c:\users\sstratter\documents\github\rfr-daq\utils.cpp
 	"utils.h"
 
-1440128720 source:/home/pi/Code/RFR-DAQ/AnalogInput.cpp
+1452200537 source:/home/pi/Code/RFR-DAQ/AnalogInput.cpp
 	"AnalogInput.h"
 	<wiringPi.h>
 	<wiringPiSPI.h>
@@ -296,10 +296,10 @@
 	<string>
 	<utility>
 
-1440187593 /home/pi/Code/RFR-DAQ/utils.h
+1452212987 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
 
-1451937254 source:/home/pi/Code/RFR-DAQ/main.cpp
+1452226725 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -324,7 +324,7 @@
 	"DataHubThread.h"
 	"server.hpp"
 
-1440142916 source:/home/pi/Code/RFR-DAQ/utils.cpp
+1452225176 source:/home/pi/Code/RFR-DAQ/utils.cpp
 	"utils.h"
 	<wiringPi.h>
 	<mcp23s17.h>
@@ -352,7 +352,7 @@
 1440100652 /home/pi/Code/RFR-DAQ/DigitalInput.h
 	<string>
 
-1440126894 source:/home/pi/Code/RFR-DAQ/DigitalInput.cpp
+1452206101 source:/home/pi/Code/RFR-DAQ/DigitalInput.cpp
 	"DigitalInput.h"
 	<wiringPi.h>
 	<wiringPiSPI.h>
@@ -411,4 +411,26 @@
 	<fstream>
 	<wiringPi.h>
 	<wiringSerial.h>
+
+1452206101 source:/home/pi/Code/RFR-DAQ/mcp_can.cpp
+	"utils.h"
+	"mcp_can.h"
+
+1452201752 /home/pi/Code/RFR-DAQ/mcp_can.h
+	"mcp_can_dfs.h"
+	<wiringPi.h>
+	<wiringPiSPI.h>
+
+1452200538 /home/pi/Code/RFR-DAQ/mcp_can_dfs.h
+	<inttypes.h>
+	"utils.h"
+
+1452226905 /home/pi/Code/RFR-DAQ/i2cDevice.h
+	<string>
+
+1452226859 source:/home/pi/Code/RFR-DAQ/accelgyro.cpp
+	"accelgyro.h"
+
+1452226832 /home/pi/Code/RFR-DAQ/accelgyro.h
+	"i2cDevice.h"
 

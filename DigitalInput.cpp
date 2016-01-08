@@ -53,10 +53,9 @@ unsigned char DigitalInput::read()
 {
     int ret = 0;
 
-    if(lastChipSelect != -1)
-        digitalWrite(lastChipSelect, 1); //Disable last chip select
-
-    ret = digitalRead(CS_BASE + 16*(bank + 1) + channel);
+    digitalWrite(DIGITAL_BANK_0 + bank, 0);
+    ret = digitalRead(GPIO_BASE + channel);
+    digitalWrite(DIGITAL_BANK_0 + bank, 1);
 
     ret = ret > 0 ? 1 : 0;
 

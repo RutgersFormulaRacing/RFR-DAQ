@@ -24,12 +24,16 @@
 #define _MCP2515_H_
 
 #include "mcp_can_dfs.h"
+
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
+
 #define MAX_CHAR_IN_MESSAGE 8
 
 class MCP_CAN
 {
     private:
-    
+
     INT8U   m_nExtFlg;                                                  /* identifier xxxID             */
                                                                         /* either extended (the 29 LSB) */
                                                                         /* or standard (the 11 LSB)     */
@@ -41,7 +45,7 @@ class MCP_CAN
     INT8U   SPICS;
 
 /*
-*  mcp2515 driver function 
+*  mcp2515 driver function
 */
    // private:
    private:
@@ -49,9 +53,9 @@ class MCP_CAN
     void mcp2515_reset(void);                                           /* reset mcp2515                */
 
     INT8U mcp2515_readRegister(const INT8U address);                    /* read mcp2515's register      */
-    
-    void mcp2515_readRegisterS(const INT8U address, 
-	                       INT8U values[], 
+
+    void mcp2515_readRegisterS(const INT8U address,
+	                       INT8U values[],
                                const INT8U n);
     void mcp2515_setRegister(const INT8U address,                       /* set mcp2515's register       */
                              const INT8U value);
@@ -59,9 +63,9 @@ class MCP_CAN
     void mcp2515_setRegisterS(const INT8U address,                      /* set mcp2515's registers      */
                               const INT8U values[],
                               const INT8U n);
-    
+
     void mcp2515_initCANBuffers(void);
-    
+
     void mcp2515_modifyRegister(const INT8U address,                    /* set bit of one register      */
                                 const INT8U mask,
                                 const INT8U data);
@@ -83,12 +87,13 @@ class MCP_CAN
     void mcp2515_read_canMsg( const INT8U buffer_sidh_addr);            /* read can msg                 */
     void mcp2515_start_transmit(const INT8U mcp_addr);                  /* start transmit               */
     INT8U mcp2515_getNextFreeTXBuf(INT8U *txbuf_n);                     /* get Next free txbuf          */
-
+    void spi_readwrite(unsigned char data);
+    unsigned char spi_read();
 /*
 *  can operator function
-*/    
+*/
 
-    INT8U setMsg(INT32U id, INT8U ext, INT8U len, INT8U *pData);    /* set message                  */  
+    INT8U setMsg(INT32U id, INT8U ext, INT8U len, INT8U *pData);    /* set message                  */
     INT8U clearMsg();                                               /* clear all message to zero    */
     INT8U readMsg();                                                /* read message                 */
     INT8U sendMsg();                                                /* send message                 */
