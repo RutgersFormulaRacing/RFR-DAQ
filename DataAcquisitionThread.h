@@ -14,11 +14,11 @@
 
 #include "utils.h"
 
-class DataLoggingThread
+class DataAcquisitionThread
 {
     public:
-        DataLoggingThread(int sampleRate);
-        ~DataLoggingThread();
+        DataAcquisitionThread(int sampleRate);
+        ~DataAcquisitionThread();
 
         void start();
         void stop();

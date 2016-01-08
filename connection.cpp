@@ -18,7 +18,7 @@
 namespace http {
 namespace server3 {
 
-connection::connection(boost::asio::io_service& io_service, DataLoggingThread *dataLoggingThread)
+connection::connection(boost::asio::io_service& io_service, DataAcquisitionThread *dataLoggingThread)
   : strand_(io_service),
     socket_(io_service)
 {

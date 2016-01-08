@@ -46,13 +46,13 @@
 		</Unit>
 		<Unit filename="AnalogInput.h" />
 		<Unit filename="DAQConfig.xml" />
-		<Unit filename="DataHubThread.cpp" />
-		<Unit filename="DataHubThread.h" />
-		<Unit filename="DataLoggingThread.cpp" />
-		<Unit filename="DataLoggingThread.h" />
+		<Unit filename="DataAcquisitionThread.cpp" />
+		<Unit filename="DataAcquisitionThread.h" />
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
 		<Unit filename="PinConfig.xml" />
+		<Unit filename="SerialHubThread.cpp" />
+		<Unit filename="SerialHubThread.h" />
 		<Unit filename="connection.cpp" />
 		<Unit filename="connection.hpp" />
 		<Unit filename="i2cDevice.h" />

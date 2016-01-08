@@ -18,7 +18,7 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/logic/tribool.hpp>
 
-#include "DataLoggingThread.h"
+#include "DataAcquisitionThread.h"
 
 namespace http {
 namespace server3 {
@@ -30,7 +30,7 @@ class connection
 {
 public:
   /// Construct a connection with the given io_service.
-  explicit connection(boost::asio::io_service& io_service, DataLoggingThread* DataLoggingThread);
+  explicit connection(boost::asio::io_service& io_service, DataAcquisitionThread* DataAcquisitionThread);
 
   /// Get the socket associated with the connection.
   boost::asio::ip::tcp::socket& socket();
@@ -39,7 +39,7 @@ public:
   void start();
 
 private:
-    DataLoggingThread *dataLoggingThread;
+    DataAcquisitionThread *dataLoggingThread;
 
   /// Handle completion of a write operation.
   void handle_write(const boost::system::error_code& e);

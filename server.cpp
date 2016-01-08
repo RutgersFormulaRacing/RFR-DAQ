@@ -19,7 +19,7 @@
 namespace http {
 namespace server3 {
 
-server::server(int port, std::size_t thread_pool_size, DataLoggingThread *dataLoggingThread)
+server::server(int port, std::size_t thread_pool_size, DataAcquisitionThread *dataLoggingThread)
   : thread_pool_size_(thread_pool_size),
     signals_(io_service_),
     acceptor_(io_service_, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port)),

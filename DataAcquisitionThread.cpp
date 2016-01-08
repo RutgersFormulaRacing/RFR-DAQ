@@ -6,9 +6,9 @@
 #include <iostream>
 #include <fstream>
 
-#include "DataLoggingThread.h"
+#include "DataAcquisitionThread.h"
 
-DataLoggingThread::DataLoggingThread(int sampleRate)
+DataAcquisitionThread::DataLoggingThread(int sampleRate)
 {
     this->sampleRate = sampleRate;
     this->sampleTime = (int)((1.0/sampleRate)*1000);
@@ -16,39 +16,39 @@ DataLoggingThread::DataLoggingThread(int sampleRate)
     this->isRunning = false;
 }
 
-DataLoggingThread::~DataLoggingThread()
+DataAcquisitionThread::~DataAcquisitionThread()
 {
     isRunning = false;
 }
 
-void DataLoggingThread::start()
+void DataAcquisitionThread::start()
 {
     this->isRunning = true;
 
     run();
 }
 
-void DataLoggingThread::stop()
+void DataAcquisitionThread::stop()
 {
     this->isRunning = false;
 }
 
-void DataLoggingThread::passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries)
+void DataAcquisitionThread::passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries)
 {
     this->dataFrameEntries = dataFrameEntries;
 }
 
-void DataLoggingThread::passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap)
+void DataAcquisitionThread::passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap)
 {
     this->analogInputsMap = analogInputsMap;
 }
 
-void DataLoggingThread::passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap)
+void DataAcquisitionThread::passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap)
 {
     this->digitalInputsMap = digitalInputsMap;
 }
 
-std::vector<std::pair<std::string, float> > DataLoggingThread::getRecentDataFrame()
+std::vector<std::pair<std::string, float> > DataAcquisitionThread::getRecentDataFrame()
 {
     mtx.lock();
 
@@ -59,7 +59,7 @@ std::vector<std::pair<std::string, float> > DataLoggingThread::getRecentDataFram
     return ret;
 }
 
-void DataLoggingThread::run()
+void DataAcquisitionThread::run()
 {
     std::ofstream file;
     boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();

@@ -1,4 +1,4 @@
-#include "DataHubThread.h"
+#include "SerialHubThread.h"
 
 #include <boost/thread/thread.hpp>
 #include <boost/thread/xtime.hpp>
@@ -11,36 +11,36 @@
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
-DataHubThread::DataHubThread()
+SerialHubThread::SerialHubThread()
 {
     pinMode(SERIAL_SYNC_PIN, OUTPUT);
 }
 
-DataHubThread::~DataHubThread()
+SerialHubThread::~SerialHubThread()
 {}
 
-void DataHubThread::setFD(int fd)
+void SerialHubThread::setFD(int fd)
 {
     this->serialFD = fd;
 }
 
-int DataHubThread::getFD()
+int SerialHubThread::getFD()
 {
     return serialFD;
 }
 
-void DataHubThread::start()
+void SerialHubThread::start()
 {
     isRunning = true;
     run();
 }
 
-void DataHubThread::stop()
+void SerialHubThread::stop()
 {
     isRunning = false;
 }
 
-void DataHubThread::run()
+void SerialHubThread::run()
 {
     int count = 0;
 

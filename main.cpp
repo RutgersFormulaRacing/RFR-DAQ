@@ -26,8 +26,8 @@
 #include <wiringPiI2C.h>
 #include <wiringSerial.h>
 
-#include "DataLoggingThread.h"
-#include "DataHubThread.h"
+#include "DataAcquisitionThread.h"
+#include "SerialHubThread.h"
 #include "server.hpp"
 
 #include "mpu6050.h"
@@ -131,12 +131,12 @@ int main()
     setupDigitalInputs();
 
     //Starting logging thread
-    DataLoggingThread dataLoggingThread(10);
+    DataAcquisitionThread dataLoggingThread(10);
     dataLoggingThread.passDataFrameEntries(&dataFrameFields);
     dataLoggingThread.passAnalogInputsMap(&analogInputsMap);
     dataLoggingThread.passDigitalInputsMap(&digitalInputsMap);
 
-    boost::thread t(boost::bind(&DataLoggingThread::start, &dataLoggingThread));
+    boost::thread t(boost::bind(&DataAcquisitionThread::start, &dataLoggingThread));
 
     http::server3::server server(4660, 5, &dataLoggingThread); //5 for now
     boost::thread s(boost::bind(&http::server3::server::run, &server));

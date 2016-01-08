@@ -5,12 +5,12 @@
 
 #include <vector>
 
-class DataHubThread
+class SerialHubThread
 {
 
     public:
-        DataHubThread();
-        ~DataHubThread();
+        SerialHubThread();
+        ~SerialHubThread();
 
         void setFD(int fd);
 
