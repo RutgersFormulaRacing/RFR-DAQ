@@ -9,10 +9,10 @@
 #define GYO_R   "GR"
 #define GYO_Y   "GY"
 
-class accelgyro : public I2CDevice
+class mpu6050 : public I2CDevice
 {
     public:
-        accelgyro(std::string name, int fd) : I2CDevice(name, fd){}
+        mpu6050(std::string name, int fd) : I2CDevice(name, fd){}
 
         void init();
         int read(std::string arg);

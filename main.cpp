@@ -29,7 +29,7 @@
 #include "DataLoggingThread.h"
 #include "DataHubThread.h"
 #include "server.hpp"
-#include "accelgyro.h"
+#include "mpu6050.h"
 
 int main()
 {
@@ -38,7 +38,7 @@ int main()
     std::vector<dataFrameEntry*> dataFrameFields;
 
     std::vector<I2CDevice*> i2cDevices;
-    i2cDevices.push_back(new accelgyro("AccelGyro", 0));
+    i2cDevices.push_back(new mpu6050("AccelGyro", 0));
 
     int i2cFDTable[128];
     for(int i = 0; i < 128; i++)

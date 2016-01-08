@@ -1,11 +1,11 @@
-#include "accelgyro.h"
+#include "mpu6050.h"
 
-void accelgyro::init()
+void mpu6050::init()
 {
    std::cout << "Init Accel Gyro" << std::endl;
 }
 
-int accelgyro::read(std::string arg)
+int mpu6050::read(std::string arg)
 {
     std::cout << arg << std::endl;
 }
