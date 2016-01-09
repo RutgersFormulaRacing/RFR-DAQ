@@ -27,20 +27,32 @@
 #include <wiringSerial.h>
 
 #include "DataAcquisitionThread.h"
+#include "CSVOutputThread.h"
+
 #include "SerialHubThread.h"
 #include "server.hpp"
 
 #include "mpu6050.h"
 #include "mlx90616.h"
 
+I2CDevice* InstI2CDevice(std::string driverName, std::string deviceName, int deviceAddress)
+{
+    if(driverName.compare("mpu6050") == 0)
+        return (new mpu6050(deviceName, deviceAddress));
+    if(driverName.compare("mlx90616") == 0)
+        return (new mlx90616(deviceName, deviceAddress));
+
+    return NULL;
+}
+
 int main()
 {
-    std::map<std::string, AnalogInput*> analogInputsMap;
-    std::map<std::string, DigitalInput*> digitalInputsMap;
-    std::vector<dataFrameEntry*> dataFrameFields;
+    std::vector<AnalogInput*> analogInputs;
+    std::vector<DigitalInput*> digitalInputs;
+    std::vector<I2CRequest> i2cRequests;
 
-    std::vector<I2CDevice*> i2cDevices;
-    i2cDevices.push_back(new mpu6050("AccelGyro", 0));
+    std::vector<dataPushThread*> dataPushThreads;
+    dataPushThreads.push_back(new CSVOutputThread());
 
     int i2cFDTable[128];
     for(int i = 0; i < 128; i++)
@@ -65,7 +77,7 @@ int main()
     {
         boost::property_tree::read_xml("DAQConfig.xml", config);
 
-        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
+        /*BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
         {
             if(v.first.compare("AnalogInput") == 0)
             {
@@ -94,10 +106,15 @@ int main()
 
                 digitalInputsMap.insert(std::pair<std::string, DigitalInput*>(temp->getName(), temp));
             }
-        }
+        }*/
 
         BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("I2C"))
         {
+            if(v.first.compare("I2CDevice") == 0)
+            {
+                std::cout << v.second.get<std::string>("Name") << std::endl;
+                std::cout << v.second.get<std::string>("Driver") << std::endl;
+            }
         }
     }
     catch(std::exception& e)
@@ -132,9 +149,6 @@ int main()
 
     //Starting logging thread
     DataAcquisitionThread dataLoggingThread(10);
-    dataLoggingThread.passDataFrameEntries(&dataFrameFields);
-    dataLoggingThread.passAnalogInputsMap(&analogInputsMap);
-    dataLoggingThread.passDigitalInputsMap(&digitalInputsMap);
 
     boost::thread t(boost::bind(&DataAcquisitionThread::start, &dataLoggingThread));
 

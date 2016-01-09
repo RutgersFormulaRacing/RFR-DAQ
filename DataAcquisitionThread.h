@@ -1,5 +1,5 @@
-#ifndef _DATA_LOGGING_THREAD_H_
-#define _DATA_LOGGING_THREAD_H_
+#ifndef _DATA_ACQUISITION_THREAD_H_
+#define _DATA_ACQUISITION_THREAD_H_
 
 #include <map>
 #include <vector>

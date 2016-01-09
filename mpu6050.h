@@ -12,7 +12,7 @@
 class mpu6050 : public I2CDevice
 {
     public:
-        mpu6050(std::string name, int fd) : I2CDevice(name, fd){}
+        mpu6050(std::string name, int address) : I2CDevice(name, address){}
 
         void init();
         int read(std::string arg);

@@ -44,10 +44,10 @@ void findAndReplace(std::string* str, char replace, char with)
     }
 }
 
-uint8_t crc8(const void *vptr, int len)
+unsigned char crc8(const void *vptr, int len)
 {
-	const uint8_t *data = vptr;
-	unsigned crc = 0;
+	const unsigned char *data = (const unsigned char*)vptr;
+	unsigned int crc = 0;
 	int i, j;
 	for (j = len; j; j--, data++) {
 		crc ^= (*data << 8);
@@ -57,7 +57,7 @@ uint8_t crc8(const void *vptr, int len)
 			crc <<= 1;
 		}
 	}
-	return (uint8_t)(crc >> 8);
+	return (unsigned char)(crc >> 8);
 }
 
 void setupChipSelect()

@@ -24,7 +24,7 @@ extern int lastChipSelect;
 char* itoa(int value, char* result, int base);
 void findAndReplace(std::string* str, char replace, char with);
 
-uint8_t crc8(const void *vptr, int len);
+unsigned char crc8(const void *vptr, int len);
 
 void setupChipSelect();
 void setupDigitalInputs();

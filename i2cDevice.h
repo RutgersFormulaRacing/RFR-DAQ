@@ -3,31 +3,32 @@
 
 #include <string>
 
+#include <wiringPi.h>
+#include <wiringPiI2C.h>
+
 class I2CDevice
 {
     public:
-        I2CDevice(std::string name, int fd)
+        I2CDevice(std::string name, int address)
         {
             this->name = name;
-            this->fd = fd;
-        }
+            this->address = address;
 
-        void setFD(int fd)
-        {
-            this->fd = fd;
-        }
-
-        int getFD()
-        {
-            return this->fd;
+            this->fd = wiringPiI2CSetup(address);
         }
 
         virtual void init() = 0;
         virtual int read(std::string arg) = 0;
 
     protected:
-        int fd;
+        int address, fd;
         std::string name;
+};
+
+typedef struct I2CRequest
+{
+    I2CDevice* device;
+    std::string arg;
 };
 
 #endif

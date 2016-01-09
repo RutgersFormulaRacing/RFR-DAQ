@@ -45,9 +45,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="AnalogInput.h" />
+		<Unit filename="CSVOutputThread.cpp" />
+		<Unit filename="CSVOutputThread.h" />
 		<Unit filename="DAQConfig.xml" />
 		<Unit filename="DataAcquisitionThread.cpp" />
 		<Unit filename="DataAcquisitionThread.h" />
+		<Unit filename="DataPushThread.cpp" />
+		<Unit filename="DataPushThread.h" />
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
 		<Unit filename="PinConfig.xml" />

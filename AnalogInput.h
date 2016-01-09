@@ -3,6 +3,7 @@
 
 #include <string>
 #include <utility>
+#include <vector>
 
 class AnalogInput
 {
@@ -29,6 +30,8 @@ class AnalogInput
         unsigned char bank, channel;
         std::pair<float, float> mapFrom;
         std::pair<float, float> mapTo;
+
+        std::vector<int> dataFrames;
 };
 
 #endif

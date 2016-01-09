@@ -292,14 +292,15 @@
 	<wiringPiSPI.h>
 	"utils.h"
 
-1440108046 /home/pi/Code/RFR-DAQ/AnalogInput.h
+1452297612 /home/pi/Code/RFR-DAQ/AnalogInput.h
 	<string>
 	<utility>
+	<vector>
 
-1452212987 /home/pi/Code/RFR-DAQ/utils.h
+1452294320 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
 
-1452281699 source:/home/pi/Code/RFR-DAQ/main.cpp
+1452301361 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -320,13 +321,14 @@
 	<wiringPiSPI.h>
 	<wiringPiI2C.h>
 	<wiringSerial.h>
-	"DataLoggingThread.h"
-	"DataHubThread.h"
+	"DataAcquisitionThread.h"
+	"CSVOutputThread.h"
+	"SerialHubThread.h"
 	"server.hpp"
 	"mpu6050.h"
 	"mlx90616.h"
 
-1452225176 source:/home/pi/Code/RFR-DAQ/utils.cpp
+1452285843 source:/home/pi/Code/RFR-DAQ/utils.cpp
 	"utils.h"
 	<wiringPi.h>
 	<mcp23s17.h>
@@ -359,23 +361,23 @@
 	<wiringPiSPI.h>
 	"utils.h"
 
-1440141352 source:/home/pi/Code/RFR-DAQ/connection.cpp
+1452285353 source:/home/pi/Code/RFR-DAQ/connection.cpp
 	"connection.hpp"
 	<vector>
 	<boost/bind.hpp>
 	<boost/lexical_cast.hpp>
 	<sstream>
 
-1440132190 /home/pi/Code/RFR-DAQ/connection.hpp
+1452285353 /home/pi/Code/RFR-DAQ/connection.hpp
 	<boost/asio.hpp>
 	<boost/array.hpp>
 	<boost/noncopyable.hpp>
 	<boost/shared_ptr.hpp>
 	<boost/enable_shared_from_this.hpp>
 	<boost/logic/tribool.hpp>
-	"DataLoggingThread.h"
+	"DataAcquisitionThread.h"
 
-1440132388 /home/pi/Code/RFR-DAQ/server.hpp
+1452285353 /home/pi/Code/RFR-DAQ/server.hpp
 	<boost/asio.hpp>
 	<string>
 	<vector>
@@ -383,7 +385,7 @@
 	<boost/shared_ptr.hpp>
 	"connection.hpp"
 
-1440132345 source:/home/pi/Code/RFR-DAQ/server.cpp
+1452285353 source:/home/pi/Code/RFR-DAQ/server.cpp
 	"server.hpp"
 	<boost/thread/thread.hpp>
 	<boost/bind.hpp>
@@ -427,8 +429,10 @@
 	<inttypes.h>
 	"utils.h"
 
-1452228012 /home/pi/Code/RFR-DAQ/i2cDevice.h
+1452296786 /home/pi/Code/RFR-DAQ/i2cDevice.h
 	<string>
+	<wiringPi.h>
+	<wiringPiI2C.h>
 
 1452228933 source:/home/pi/Code/RFR-DAQ/accelgyro.cpp
 	"accelgyro.h"
@@ -437,16 +441,73 @@
 	"i2cDevice.h"
 	<iostream>
 
-1452279244 /home/pi/Code/RFR-DAQ/mpu6050.h
+1452296786 /home/pi/Code/RFR-DAQ/mpu6050.h
 	"i2cDevice.h"
 	<iostream>
 
 1452279244 source:/home/pi/Code/RFR-DAQ/mpu6050.cpp
 	"mpu6050.h"
 
-1452281652 source:/home/pi/Code/RFR-DAQ/mlx90616.cpp
+1452281809 source:/home/pi/Code/RFR-DAQ/mlx90616.cpp
 	"mlx90616.h"
 
-1452281652 /home/pi/Code/RFR-DAQ/mlx90616.h
+1452297116 /home/pi/Code/RFR-DAQ/mlx90616.h
 	"i2cDevice.h"
+
+1452294320 source:/home/pi/Code/RFR-DAQ/DataAcquisitionThread.cpp
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/posix_time/posix_time_io.hpp>
+	<iostream>
+	<fstream>
+	"DataAcquisitionThread.h"
+
+1452287854 /home/pi/Code/RFR-DAQ/DataAcquisitionThread.h
+	<map>
+	<vector>
+	<boost/thread/mutex.hpp>
+	<utility>
+	<string>
+	"DigitalInput.h"
+	"AnalogInput.h"
+	"utils.h"
+
+1452285353 source:/home/pi/Code/RFR-DAQ/SerialHubThread.cpp
+	"SerialHubThread.h"
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/posix_time/posix_time_io.hpp>
+	<iostream>
+	<fstream>
+	<wiringPi.h>
+	<wiringSerial.h>
+
+1452285353 /home/pi/Code/RFR-DAQ/SerialHubThread.h
+	"utils.h"
+	<vector>
+
+1452294389 source:/home/pi/Code/RFR-DAQ/CSVOutputThread.cpp
+	"CSVOutputThread.h"
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/date_time/posix_time/posix_time_io.hpp>
+	<iostream>
+	<fstream>
+
+1452288198 source:/home/pi/Code/RFR-DAQ/DataPushThread.cpp
+	"DataPushThread.h"
+
+1452288198 /home/pi/Code/RFR-DAQ/DataPushThread.h
+	<map>
+	<vector>
+	<boost/thread/mutex.hpp>
+	<utility>
+	<string>
+	"utils.h"
+
+1452294320 /home/pi/Code/RFR-DAQ/CSVOutputThread.h
+	"DataPushThread.h"
 
