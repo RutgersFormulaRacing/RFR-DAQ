@@ -29,6 +29,8 @@
 #include "DataAcquisitionThread.h"
 #include "CSVOutputThread.h"
 
+#include "GPIOExpander.h"
+
 #include "SerialHubThread.h"
 #include "server.hpp"
 
@@ -51,6 +53,8 @@ int main()
     std::vector<DigitalInput*> digitalInputs;
     std::vector<I2CRequest> i2cRequests;
 
+    std::vector<GPIOExpander*> digitalInputBanks;
+
     std::vector<dataPushThread*> dataPushThreads;
     dataPushThreads.push_back(new CSVOutputThread());
 
@@ -65,9 +69,39 @@ int main()
     std::cout << "Software Ver.\t" << SOFTWARE_VER << std::endl;
     std::cout << "----------------------------" << std::endl;
     std::cout << "Designed and Coded by Sam Stratter" << std::endl;
-    std::cout << "He's just that good" << std::endl;
 
     std::cout << "\n\n\n";
+
+    std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
+    //system("gpio load spi 1");
+
+    std::cout << "Loading I2C Kernel: 100 Kbps" << std::endl;
+    //system("gpio load i2c 100");
+
+    std::cout << "Searching for I2C devices..." << std::endl;
+    system("gpio i2cdetect");
+
+    wiringPiSetup();
+    wiringPiSPISetup(0, 5000000);
+    wiringPiSPISetup(1, 5000000);
+
+    GPIOExpander csExpander = GPIOExpander(0);
+    for(int i = 0; i < 8; i++)
+    {
+        csExpander.setup(0, i, false);
+        csExpander.write(0, i, true);
+
+        csExpander.setup(1, i, false);
+        csExpander.write(1, i, true);
+    }
+
+    csExpander.write(0, GPIO_CS, false);
+    digitalInputBanks.push_back(new GPIOExpander(1));
+    csExpander.write(0, GPIO_CS, true);
+
+    csExpander.write(0, GPIO_CS + 1, false);
+    digitalInputBanks.push_back(new GPIOExpander(1));
+    csExpander.write(0, GPIO_CS + 1, true);
 
     std::cout << "Reading in pin configurations" << std::endl;
     //Todo: Read in the pin configurations
@@ -77,11 +111,11 @@ int main()
     {
         boost::property_tree::read_xml("DAQConfig.xml", config);
 
-        /*BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
+        BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("AnalogInputs"))
         {
             if(v.first.compare("AnalogInput") == 0)
             {
-                AnalogInput *temp = new AnalogInput();
+                AnalogInput *temp = new AnalogInput(&csExpander);
 
                 temp->setName(v.second.get<std::string>("Name"));
                 temp->setBank(v.second.get<unsigned char>("Bank"));
@@ -89,7 +123,7 @@ int main()
                 temp->setMapFrom(std::pair<float, float>(v.second.get<float>("MapFromMin"), v.second.get<float>("MapFromMax")));
                 temp->setMapTo(std::pair<float, float>(v.second.get<float>("MapToMin"), v.second.get<float>("MapToMax")));
 
-                analogInputsMap.insert(std::pair<std::string, AnalogInput*>(temp->getName(), temp));
+                analogInputs.push_back(temp);
             }
         }
 
@@ -97,16 +131,16 @@ int main()
         {
             if(v.first.compare("DigitalInput") == 0)
             {
-                DigitalInput *temp = new DigitalInput();
+                DigitalInput *temp = new DigitalInput(&csExpander, &digitalInputBanks);
 
                 temp->setName(v.second.get<std::string>("Name"));
                 temp->setBank(v.second.get<unsigned char>("Bank"));
                 temp->setChannel(v.second.get<unsigned char>("Channel"));
                 temp->setPolarity(v.second.get<int>("Polarity"));
 
-                digitalInputsMap.insert(std::pair<std::string, DigitalInput*>(temp->getName(), temp));
+                digitalInputs.push_back(temp);
             }
-        }*/
+        }
 
         BOOST_FOREACH(boost::property_tree::ptree::value_type &v, config.get_child("I2C"))
         {
@@ -127,25 +161,10 @@ int main()
     std::cout << "Success" << std::endl;
     std::cout << std::endl;
 
-    std::cout << "Loading SPI Kernel: 1KB Buffer" << std::endl;
-    system("gpio load spi 1");
-
-    std::cout << "Loading I2C Kernel: 100 Kbps" << std::endl;
-    system("gpio load i2c 100");
-
-    std::cout << "Searching for I2C devices..." << std::endl;
-    system("gpio i2cdetect");
-
-    wiringPiSetup();
-    wiringPiSPISetup(0, 1000000);
-    wiringPiSPISetup(1, 1000000);
-
     serialFD = serialOpen("/dev/ttyAMA0", 115200);
+    serialPuts(serialFD, "089");
 
     lastChipSelect = -1;
-
-    setupChipSelect();
-    setupDigitalInputs();
 
     //Starting logging thread
     DataAcquisitionThread dataLoggingThread(10);
@@ -164,14 +183,27 @@ int main()
         switch(c)
         {
             case 'x':
-
             case 'X':
+
             exit = true;
+            break;
+
+            case 's':
+            case 'S':
+
+            dataLoggingThread.play();
+            break;
+
+            case 'p':
+            case 'P':
+
+            dataLoggingThread.pause();
             break;
         }
     }
 
     dataLoggingThread.stop();
+
     t.join();
 
     return 0;

@@ -5,8 +5,10 @@
 
 #include "utils.h"
 
-AnalogInput::AnalogInput()
-{}
+AnalogInput::AnalogInput(GPIOExpander *csExpander)
+{
+    this->csExpander = csExpander;
+}
 
 AnalogInput::~AnalogInput()
 {}
@@ -67,17 +69,14 @@ float AnalogInput::read()
     int result;
     float fResult;
 
-    buf[0] = (1 << 1) | (1 << 2) | ((channel & 0x07) >> 2);
-    buf[1] = (channel & 0x03) << 7;
+    buf[0] = 0x06 | ((channel & 0x07) >> 2);
+    buf[1] = (channel & 0x03) << 6;
 
-    //Enable new chip select
-    digitalWrite(ADC_BANK_0 + bank, 0);
 
-    //Change to chip select 1 so that accidental commands aren't sent to the expander
+    csExpander->write(0, ADC_CS + bank, false);
     wiringPiSPIDataRW(1, buf, 3);
+    csExpander->write(0, ADC_CS + bank, true);
 
-    //Disable chip select
-    digitalWrite(ADC_BANK_0 + bank, 1);
 
     result = buf[1] & 0x0F;
     result = (result << 8) | buf[2];

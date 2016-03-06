@@ -5,7 +5,11 @@
 
 #include "utils.h"
 
-DigitalInput::DigitalInput(){}
+DigitalInput::DigitalInput(GPIOExpander *csExpander, std::vector<GPIOExpander*>* GPIOBanks)
+{
+    this->csExpander = csExpander;
+    this->GPIOBanks = GPIOBanks;
+}
 
 DigitalInput::~DigitalInput(){}
 
@@ -49,20 +53,24 @@ int DigitalInput::getPolarity()
     return polarity;
 }
 
-unsigned char DigitalInput::read()
+void DigitalInput::setup()
 {
-    int ret = 0;
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), false);
+    GPIOBanks->at((unsigned char)(bank/2))->setup(bank%2, channel, true);
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), true);
 
-    digitalWrite(DIGITAL_BANK_0 + bank, 0);
-    ret = digitalRead(GPIO_BASE + channel);
-    digitalWrite(DIGITAL_BANK_0 + bank, 1);
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), false);
+    GPIOBanks->at((unsigned char)(bank/2))->pullup(bank%2, channel, true);
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), true);
+}
 
-    ret = ret > 0 ? 1 : 0;
+bool DigitalInput::read()
+{
+    unsigned char message[] = {0x40 | 0x01, 0x12 + (unsigned char)(bank/2), 0x00};
 
-    if(polarity < 0)
-    {
-        ret = (ret*-1) + 1;
-    }
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), false);
+    wiringPiSPIDataRW(1, message, 3);
+    csExpander->write(0, GPIO_CS + (unsigned char)(bank/2), true);
 
-    return ret;
+    return ((message[2] & (1 << channel)) > 0);
 }

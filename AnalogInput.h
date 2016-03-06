@@ -5,10 +5,12 @@
 #include <utility>
 #include <vector>
 
+#include "GPIOExpander.h"
+
 class AnalogInput
 {
     public:
-        AnalogInput();
+        AnalogInput(GPIOExpander *csExpander);
         ~AnalogInput();
 
         void setName(std::string name);
@@ -32,6 +34,8 @@ class AnalogInput
         std::pair<float, float> mapTo;
 
         std::vector<int> dataFrames;
+
+        GPIOExpander *csExpander;
 };
 
 #endif

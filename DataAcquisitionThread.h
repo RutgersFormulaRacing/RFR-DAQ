@@ -5,6 +5,8 @@
 #include <vector>
 
 #include <boost/thread/mutex.hpp>
+#include <boost/thread/thread.hpp>
+#include <boost/bind.hpp>
 
 #include <utility>
 #include <string>
@@ -23,23 +25,44 @@ class DataAcquisitionThread
         void start();
         void stop();
 
+        void pause();
+        void play();
+
         void passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries);
-        void passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap);
-        void passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap);
+        void passDigitalInputs(std::vector<DigitalInput*>* digitalInputs);
+        void passAnalogInputs(std::vector<AnalogInput*>* analogInputs);
 
         std::vector<std::pair<std::string, float> > getRecentDataFrame();
+        std::vector<std::pair<std::string, float> >* getRecentSerialDataFrame();
+        std::vector<std::pair<std::string, float> >** getRecentWirelessDataFrame();
+        std::vector<std::pair<std::string, float> >* getRecentCSVDataFrame();
 
     private:
         int sampleRate;
         int sampleTime;
 
-        bool isRunning;
+        bool isRunning, isPaused;
 
         std::vector<std::pair<std::string, float> > recentDataFrame;
 
-        std::vector<dataFrameEntry*>* dataFrameEntries;
-        std::map<std::string, DigitalInput*>* digitalInputsMap;
-        std::map<std::string, AnalogInput*>* analogInputsMap;
+        std::vector<std::pair<std::string, float> > serialDataFrameSwap1;
+        std::vector<std::pair<std::string, float> > wirelessDataFrameSwap1;
+        std::vector<std::pair<std::string, float> > csvDataFrameSwap1;
+
+        std::vector<std::pair<std::string, float> > serialDataFrameSwap2;
+        std::vector<std::pair<std::string, float> > wirelessDataFrameSwap2;
+        std::vector<std::pair<std::string, float> > csvDataFrameSwap2;
+
+        std::vector<std::pair<std::string, float> >* serialDataFrameWritePtr;
+        std::vector<std::pair<std::string, float> >* wirelessDataFrameWritePtr;
+        std::vector<std::pair<std::string, float> >* csvDataFrameWritePtr;
+
+        std::vector<std::pair<std::string, float> >* serialDataFrameReadPtr;
+        std::vector<std::pair<std::string, float> >* wirelessDataFrameReadPtr;
+        std::vector<std::pair<std::string, float> >* csvDataFrameReadPtr;
+
+        std::vector<AnalogInput*>* analogInputs;
+        std::vector<DigitalInput*>* digitalInputs;
 
         boost::mutex mtx;
 

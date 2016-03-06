@@ -286,21 +286,23 @@
 1439215842 source:c:\users\sstratter\documents\github\rfr-daq\utils.cpp
 	"utils.h"
 
-1452200537 source:/home/pi/Code/RFR-DAQ/AnalogInput.cpp
+1456996889 source:/home/pi/Code/RFR-DAQ/AnalogInput.cpp
 	"AnalogInput.h"
 	<wiringPi.h>
 	<wiringPiSPI.h>
 	"utils.h"
 
-1452297612 /home/pi/Code/RFR-DAQ/AnalogInput.h
+1456994578 /home/pi/Code/RFR-DAQ/AnalogInput.h
 	<string>
 	<utility>
 	<vector>
+	"GPIOExpander.h"
 
-1452294320 /home/pi/Code/RFR-DAQ/utils.h
+1456997062 /home/pi/Code/RFR-DAQ/utils.h
 	<string>
+	<vector>
 
-1452301361 source:/home/pi/Code/RFR-DAQ/main.cpp
+1457301633 source:/home/pi/Code/RFR-DAQ/main.cpp
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -323,12 +325,13 @@
 	<wiringSerial.h>
 	"DataAcquisitionThread.h"
 	"CSVOutputThread.h"
+	"GPIOExpander.h"
 	"SerialHubThread.h"
 	"server.hpp"
 	"mpu6050.h"
 	"mlx90616.h"
 
-1452285843 source:/home/pi/Code/RFR-DAQ/utils.cpp
+1456946478 source:/home/pi/Code/RFR-DAQ/utils.cpp
 	"utils.h"
 	<wiringPi.h>
 	<mcp23s17.h>
@@ -352,10 +355,12 @@
 	"AnalogInput.h"
 	"utils.h"
 
-1440100652 /home/pi/Code/RFR-DAQ/DigitalInput.h
+1457299156 /home/pi/Code/RFR-DAQ/DigitalInput.h
+	"GPIOExpander.h"
 	<string>
+	<vector>
 
-1452206101 source:/home/pi/Code/RFR-DAQ/DigitalInput.cpp
+1457299157 source:/home/pi/Code/RFR-DAQ/DigitalInput.cpp
 	"DigitalInput.h"
 	<wiringPi.h>
 	<wiringPiSPI.h>
@@ -454,7 +459,7 @@
 1452297116 /home/pi/Code/RFR-DAQ/mlx90616.h
 	"i2cDevice.h"
 
-1452294320 source:/home/pi/Code/RFR-DAQ/DataAcquisitionThread.cpp
+1454890117 source:/home/pi/Code/RFR-DAQ/DataAcquisitionThread.cpp
 	<boost/thread/thread.hpp>
 	<boost/thread/xtime.hpp>
 	<boost/date_time/posix_time/posix_time.hpp>
@@ -463,10 +468,12 @@
 	<fstream>
 	"DataAcquisitionThread.h"
 
-1452287854 /home/pi/Code/RFR-DAQ/DataAcquisitionThread.h
+1457302574 /home/pi/Code/RFR-DAQ/DataAcquisitionThread.h
 	<map>
 	<vector>
 	<boost/thread/mutex.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
 	<utility>
 	<string>
 	"DigitalInput.h"
@@ -510,4 +517,26 @@
 
 1452294320 /home/pi/Code/RFR-DAQ/CSVOutputThread.h
 	"DataPushThread.h"
+
+1456989542 source:/home/pi/Code/RFR-DAQ/CSExpander.cpp
+	"CSExpander.h"
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"utils.h"
+
+1456967077 /home/pi/Code/RFR-DAQ/CSExpander.h
+
+1457120102 /home/pi/Code/RFR-DAQ/GPIOExpander.h
+
+1456994578 source:/home/pi/Code/RFR-DAQ/AnalogInput.h
+	<string>
+	<utility>
+	<vector>
+	"GPIOExpander.h"
+
+1457120102 source:/home/pi/Code/RFR-DAQ/GPIOExpander.cpp
+	"GPIOExpander.h"
+	<wiringPi.h>
+	<wiringPiSPI.h>
+	"utils.h"
 

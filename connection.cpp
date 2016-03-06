@@ -32,18 +32,18 @@ boost::asio::ip::tcp::socket& connection::socket()
 
 void connection::start()
 {
-    std::vector<std::pair<std::string, float> > dataFrame = dataLoggingThread->getRecentDataFrame();
+    std::vector<std::pair<std::string, float> > *dataFrame = *dataLoggingThread->getRecentWirelessDataFrame();
 
-    if(dataFrame.size() > 0)
+    if(dataFrame->size() > 0)
     {
         std::string s;
         s += "{";
 
-        for(unsigned int i = 0; i < dataFrame.size(); i++)
+        for(unsigned int i = 0; i < dataFrame->size(); i++)
         {
-            s += "\"" + std::string(dataFrame.at(i).first) + "\":" + boost::lexical_cast<std::string>(dataFrame.at(i).second);
+            s += "\"" + std::string(dataFrame->at(i).first) + "\":" + boost::lexical_cast<std::string>(dataFrame->at(i).second);
 
-            if(i < dataFrame.size() - 1)
+            if(i < dataFrame->size() - 1)
                 s += ",";
         }
         s += "}";

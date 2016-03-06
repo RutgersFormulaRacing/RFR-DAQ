@@ -14,6 +14,7 @@ DataAcquisitionThread::DataAcquisitionThread(int sampleRate)
     this->sampleTime = (int)((1.0/sampleRate)*1000);
 
     this->isRunning = false;
+    this->isPaused = true;
 }
 
 DataAcquisitionThread::~DataAcquisitionThread()
@@ -33,26 +34,39 @@ void DataAcquisitionThread::stop()
     this->isRunning = false;
 }
 
-void DataAcquisitionThread::passDataFrameEntries(std::vector<dataFrameEntry*>* dataFrameEntries)
-{
-    this->dataFrameEntries = dataFrameEntries;
-}
-
-void DataAcquisitionThread::passAnalogInputsMap(std::map<std::string, AnalogInput*>* analogInputsMap)
-{
-    this->analogInputsMap = analogInputsMap;
-}
-
-void DataAcquisitionThread::passDigitalInputsMap(std::map<std::string, DigitalInput*>* digitalInputsMap)
-{
-    this->digitalInputsMap = digitalInputsMap;
-}
-
-std::vector<std::pair<std::string, float> > DataAcquisitionThread::getRecentDataFrame()
+void DataAcquisitionThread::pause()
 {
     mtx.lock();
 
-    std::vector<std::pair<std::string, float> > ret = recentDataFrame;
+    this->isPaused = true;
+
+    mtx.unlock();
+}
+
+void DataAcquisitionThread::play()
+{
+    mtx.lock();
+
+    this->isPaused = false;
+
+    mtx.unlock();
+}
+
+void DataAcquisitionThread::passAnalogInputs(std::vector<AnalogInput*>* analogInputs)
+{
+    this->analogInputs = analogInputs;
+}
+
+void DataAcquisitionThread::passDigitalInputs(std::vector<DigitalInput*>* digitalInputs)
+{
+    this->digitalInputs = digitalInputs;
+}
+
+std::vector<std::pair<std::string, float> >** DataAcquisitionThread::getRecentWirelessDataFrame()
+{
+    mtx.lock();
+
+    std::vector<std::pair<std::string, float> >** ret = &wirelessDataFrameReadPtr;
 
     mtx.unlock();
 
@@ -63,6 +77,31 @@ void DataAcquisitionThread::run()
 {
     while(isRunning)
     {
-        boost::this_thread::sleep(boost::posix_time::milliseconds(sampleRate));
+        if(!isPaused)
+        {
+            serialDataFrameWritePtr->clear();
+            wirelessDataFrameWritePtr->clear();
+            csvDataFrameWritePtr->clear();
+
+            for(int i = 0; i < analogInputs->size(); i++)
+            {
+                float val = analogInputs->at(i)->read();
+            }
+
+            for(int i = 0; i < digitalInputs->size(); i++)
+            {
+                bool val = digitalInputs->at(i)->read();
+            }
+
+            mtx.lock();
+
+            std::swap(serialDataFrameWritePtr, serialDataFrameReadPtr);
+            std::swap(wirelessDataFrameWritePtr, wirelessDataFrameReadPtr);
+            std::swap(csvDataFrameWritePtr, csvDataFrameReadPtr);
+
+            mtx.unlock();
+
+            boost::this_thread::sleep(boost::posix_time::milliseconds(sampleRate));
+        }
     }
 }

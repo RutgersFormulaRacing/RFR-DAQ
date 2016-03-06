@@ -25,7 +25,7 @@
 	<DigitalInput>
 		<Name>FlowTrigger</Name>
 		<Bank>0</Bank>
-		<Channel>0</Channel>
+		<Channel>7</Channel>
 		<Polarity>1</Polarity>
 		<DataFrames>1,2,3</DataFrames>
 	</DigitalInput>
@@ -51,3 +51,7 @@
         <Address>0x2000</Address>
     </CAN>
 </CANBus>
+<Triggers>
+	<Trigger>
+	</Trigger>
+</Triggers>

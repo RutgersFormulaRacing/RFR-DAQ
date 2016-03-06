@@ -11,7 +11,13 @@
 #define DIGITAL_BANK_0  CS_BASE+5
 #define GPIO_BASE       CS_BASE + 16
 
+#define _BV(bit)    (1 << (bit))
+#define sbi(byte, bit)  byte |= _BV(bit)
+#define cbi(byte, bit)  byte &= ~(_BV(bit))
+
 #include <string>
+
+#include <vector>
 
 typedef struct dataFrameEntry
 {
@@ -26,7 +32,12 @@ void findAndReplace(std::string* str, char replace, char with);
 
 unsigned char crc8(const void *vptr, int len);
 
+void parseDataFrames(std::vector<int>* dataFrames, std::string str);
+
 void setupChipSelect();
 void setupDigitalInputs();
+
+void setBit(char *c, int bit);
+void clearBit(char *c, int bit);
 
 #endif

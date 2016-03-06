@@ -60,6 +60,11 @@ unsigned char crc8(const void *vptr, int len)
 	return (unsigned char)(crc >> 8);
 }
 
+void parseDataFrames(std::vector<int>* dataFrames, std::string str)
+{
+
+}
+
 void setupChipSelect()
 {
     mcp23s17Setup(CS_BASE, 0, 0);
@@ -97,8 +102,11 @@ void setupDigitalInputs()
 
         for(int i = 0; i < 16; i++)
         {
-            pinMode(GPIO_BASE + i, INPUT);
-            pullUpDnControl(GPIO_BASE + i, PUD_UP);
+            //pinMode(GPIO_BASE + i, INPUT);
+            //pullUpDnControl(GPIO_BASE + i, PUD_UP);
+            pinMode(GPIO_BASE + i, OUTPUT);
+            digitalWrite(GPIO_BASE + i, 1);
+            digitalWrite(GPIO_BASE + i, 0);
         }
 
         //Deselect the correct GPIO bank with CS expander

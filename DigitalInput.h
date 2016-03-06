@@ -3,12 +3,15 @@
 
 #define EXPANDER_SIZE   16
 
+#include "GPIOExpander.h"
+
 #include <string>
+#include <vector>
 
 class DigitalInput
 {
     public:
-    DigitalInput();
+    DigitalInput(GPIOExpander *csExpander, std::vector<GPIOExpander*>* GPIOBanks);
     ~DigitalInput();
 
     void setName(std::string);
@@ -21,9 +24,13 @@ class DigitalInput
     unsigned char getChannel();
     int getPolarity();
 
-    unsigned char read();
+    void setup();
+    bool read();
 
     private:
+    GPIOExpander *csExpander;
+    std::vector<GPIOExpander*> *GPIOBanks;
+
     std::string name;
     unsigned char bank, channel;
     int polarity;

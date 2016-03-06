@@ -17,7 +17,7 @@
 					<Add option="-DDEBUG" />
 				</Compiler>
 				<Linker>
-					<Add option="-lboost_date_time -lboost_system -lboost_thread -lpthread" />
+					<Add option="-lboost_date_time -lboost_system -lboost_thread -lpthread -lwiringPi" />
 					<Add directory="/usr/lib" />
 					<Add directory="/usr/include/boost" />
 				</Linker>
@@ -44,7 +44,9 @@
 		<Unit filename="AnalogInput.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="AnalogInput.h" />
+		<Unit filename="AnalogInput.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="CSVOutputThread.cpp" />
 		<Unit filename="CSVOutputThread.h" />
 		<Unit filename="DAQConfig.xml" />
@@ -54,6 +56,8 @@
 		<Unit filename="DataPushThread.h" />
 		<Unit filename="DigitalInput.cpp" />
 		<Unit filename="DigitalInput.h" />
+		<Unit filename="GPIOExpander.cpp" />
+		<Unit filename="GPIOExpander.h" />
 		<Unit filename="PinConfig.xml" />
 		<Unit filename="SerialHubThread.cpp" />
 		<Unit filename="SerialHubThread.h" />
