@@ -1,5 +1,8 @@
+#define F_CPU	8000000UL
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/delay.h>
 
 //check PD5 (shift enable)
 #define SHIFT_ENABLED (PIND & _BV(PD5))
@@ -23,7 +26,8 @@ void setup() {
 	sei(); //enable global interrupts
 }
 
-void loop() {
+void loop() 
+{
 	
 }
 
